@@ -1,5 +1,5 @@
 # String formatting
-## Method One
+## Method 1
 Example:\
 `There are %d %s students (2， ‘smart’)`\
 We can use different % to indicate what content needs to be inserted at this position.\
@@ -7,4 +7,5 @@ We can use different % to indicate what content needs to be inserted at this pos
 %s --- String(or any object's str(X) string)\
 %f --- Floating-point decimal\
 
+## Method 2
 
