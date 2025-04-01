@@ -1,12 +1,8 @@
 # String formatting
-## Method 1
+There are many methods to format the string in Python\
+The best way is to use .format method:\
 Example:\
-`There are %d %s students (2， ‘smart’)`\
-We can use different % to indicate what content needs to be inserted at this position.\
-%d --- decimal(base-10 integer)\
-%s --- String(or any object's str(X) string)\
-%f --- Floating-point decimal\
-
-## Method 2
-test 
+`str = 'There are {} {} students'.format (2, "smart")`
+`str = 'There are {0} {1} students'.format (2, "smart")`
+`str = 'There are {qty} {adj} students'.format (qty=2,adj="smart")`
 
