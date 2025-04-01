@@ -8,6 +8,5 @@ We can use different % to indicate what content needs to be inserted at this pos
 %f --- Floating-point decimal\
 
 ## Method 2
-test:\
-This is the first time to update.
+
 
