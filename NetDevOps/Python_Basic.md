@@ -6,8 +6,9 @@ Example:\
 `str = 'There are {0} {1} students'.format (2, "smart")`\
 `str = 'There are {qty} {adj} students'.format (qty=2,adj="smart")`\
 There are three holdplace in above example:
-1) only{}, means sequence site.
-
+1) only{ }, means sequence site.
+2) 
+3) 
 
 
 
