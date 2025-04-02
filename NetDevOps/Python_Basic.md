@@ -4,7 +4,7 @@ The best way is to use .format method.\
 Example:\
 `str = 'There are {} {} students'.format (2, "smart")`\
 `str = 'There are {0} {1} students'.format (2, "smart")`\
-`str = 'There are {qty} {adj} students'.format (qty=2,adj="smart")`\
+`str = 'There are {qty} {adj} students'.format (qty=2,adj="smart")`
 
 There are three placeholders in above example:
 1) If there is nothing inside the { }, it means that items are filled in sequence. That is, the parameters following the format function will be inserted into the preceding { } in order.
