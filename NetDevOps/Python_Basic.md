@@ -12,7 +12,7 @@ There are three placeholders in above example:
 * Although the positions marked by {number} can be in any order, the order of the parameters in the format function remains unchanged.
 3) When strings are added inside the { }, these strings act as names for those positions. Values can then be assigned to these named positions through the format function, and both the positions and format arguments can be freely arranged.
 ## Formatting types
-:<		Left aligns the result (within the available space)\
+:<  |   Left aligns the result (within the available space)\
 :>		Right aligns the result (within the available space)\
 :^		Center aligns the result (within the available space)\
 :=		Places the sign to the left most position\
@@ -64,7 +64,7 @@ $	    Ends with	                                                                
 ()	    Capture and group
 
 ## Special Sequences
-\A	    Returns a match if the specified characters are at the beginning of the string	              \	
+\A  |   Returns a match if the specified characters are at the beginning of the string	              \	
 \b	    Returns a match where the specified characters are at the beginning or at the end of a word\
         (the "r" in the beginning is making sure that the string is being treated as a "raw string")	   
 \B	    Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word\
