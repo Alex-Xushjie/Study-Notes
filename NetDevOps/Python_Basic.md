@@ -40,7 +40,7 @@ There are three placeholders in above example:
 # 正则表达式
 正则表达式是通过一些特殊的字符，在一段文字中匹配特定的字符。\
 在编程中，正则表达式是比较复杂的内容，但是对于网络运维而言，需要用到的正则表达式还算比较简单。因为大多数的网络设备都是使用标准的ASCI码，所以不需要去考虑特殊或复杂字符的情况。\
-在网络运维中，网络设备存在很多回显的内容，我们需要使用正则表达式去提取回显内容中的关键词，整理成新的内容进一步分析处理。\
+在网络运维中，网络设备存在很多回显的内容，我们需要使用正则表达式去提取回显内容中的关键词，整理成新的内容进一步分析处理。
 
 Example：\
 `import re   //导入re模块，内置模块，不需要安装`\
@@ -51,17 +51,17 @@ Example：\
 `re.match(r'正则表达式', str)`\
 
 ## Metacharacters
-[]  |   A set of characters	                                                           \
-\  |   Signals a special sequence (can also be used to escape special characters)	      \
-.  |   Any character (except newline character)	                                   \	
-^  |   Starts with	                                                                     \	
-$  |   Ends with	                                                                  \	
-*  |   Zero or more occurrences	                                                  	    \
-+  |   One or more occurrences	                                                       \
-?  |   Zero or one occurrences	                                                        \
-{}  |   Exactly the specified number of occurrences	                                     \
-|  |   Either or	                                                                 	\
-()  |   Capture and group
+\[\]  |   A set of characters	                                                           \
+\\  |   Signals a special sequence (can also be used to escape special characters)	      \
+\.  |   Any character (except newline character)	                                   \	
+\^  |   Starts with	                                                                     \	
+\$  |   Ends with	                                                                  \	
+\*  |   Zero or more occurrences	                                                  	    \
+\+  |   One or more occurrences	                                                       \
+\?  |   Zero or one occurrences	                                                        \
+\{\}  |   Exactly the specified number of occurrences	                                     \
+\|  |   Either or	                                                                 	\
+\(\)  |   Capture and group
 
 ## Special Sequences
 \A  |   Returns a match if the specified characters are at the beginning of the string	              \	
