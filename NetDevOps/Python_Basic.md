@@ -13,28 +13,28 @@ There are three placeholders in above example:
 3) When strings are added inside the { }, these strings act as names for those positions. Values can then be assigned to these named positions through the format function, and both the positions and format arguments can be freely arranged.
 ## Formatting types
 :<  |   Left aligns the result (within the available space)\
-:>		Right aligns the result (within the available space)\
-:^		Center aligns the result (within the available space)\
-:=		Places the sign to the left most position\
-:+		Use a plus sign to indicate if the result is positive or negative\
-:-		Use a minus sign for negative values only\
-: 		Use a space to insert an extra space before positive numbers (and a minus sign before negative numbers)\
-:,		Use a comma as a thousand separator\
-:_		Use a underscore as a thousand separator\
-:b		Binary format\
-:c		Converts the value into the corresponding unicode character\
-:d		Decimal format\
-:e		Scientific format, with a lower case e\
-:E		Scientific format, with an upper case E\
-:f		Fix point number format\
-:F		Fix point number format, in uppercase format (show inf and nan as INF and NAN)\
-:g		General format\
-:G		General format (using a upper case E for scientific notations)\
-:o		Octal format\
-:x		Hex format, lower case\
-:X		Hex format, upper case\
-:n		Number format\
-:%		Percentage format\
+:>  |   Right aligns the result (within the available space)\
+:^  |   Center aligns the result (within the available space)\
+:=  |   Places the sign to the left most position\
+:+  |   Use a plus sign to indicate if the result is positive or negative\
+:-  |   Use a minus sign for negative values only\
+:   |   Use a space to insert an extra space before positive numbers (and a minus sign before negative numbers)\
+:,  |   Use a comma as a thousand separator\
+:_  |   Use a underscore as a thousand separator\
+:b  |   Binary format\
+:c  |   Converts the value into the corresponding unicode character\
+:d  |   Decimal format\
+:e  |   Scientific format, with a lower case e\
+:E  |   Scientific format, with an upper case E\
+:f  |   Fix point number format\
+:F  |   Fix point number format, in uppercase format (show inf and nan as INF and NAN)\
+:g  |   General format\
+:G  |   General format (using a upper case E for scientific notations)\
+:o  |   Octal format\
+:x  |   Hex format, lower case\
+:X  |   Hex format, upper case\
+:n  |   Number format\
+:%  |   Percentage format\
 
 
 # 正则表达式
@@ -51,42 +51,42 @@ Example：\
 `re.match(r'正则表达式', str)`\
 
 ## Metacharacters
-[]	    A set of characters	                                                            "[a-m]"	    \
-\	    Signals a special sequence (can also be used to escape special characters)	    "\d"	    \
-.	    Any character (except newline character)	                                    "he..o"     \	
-^	    Starts with	                                                                    "^hello"    \	
-$	    Ends with	                                                                    "planet$"   \	
-*	    Zero or more occurrences	                                                    "he.*o"	    \
-+	    One or more occurrences	                                                        "he.+o"	    \
-?	    Zero or one occurrences	                                                        "he.?o"	    \
-{}	    Exactly the specified number of occurrences	                                    "he.{2}o"	    \
-|	    Either or	                                                                    "falls|stays"	\
-()	    Capture and group
+[]  |   A set of characters	                                                           \
+\  |   Signals a special sequence (can also be used to escape special characters)	      \
+.  |   Any character (except newline character)	                                   \	
+^  |   Starts with	                                                                     \	
+$  |   Ends with	                                                                  \	
+*  |   Zero or more occurrences	                                                  	    \
++  |   One or more occurrences	                                                       \
+?  |   Zero or one occurrences	                                                        \
+{}  |   Exactly the specified number of occurrences	                                     \
+|  |   Either or	                                                                 	\
+()  |   Capture and group
 
 ## Special Sequences
 \A  |   Returns a match if the specified characters are at the beginning of the string	              \	
-\b	    Returns a match where the specified characters are at the beginning or at the end of a word\
+\b  |   Returns a match where the specified characters are at the beginning or at the end of a word\
         (the "r" in the beginning is making sure that the string is being treated as a "raw string")	   
-\B	    Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word\
+\B  |   Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word\
         (the "r" in the beginning is making sure that the string is being treated as a "raw string")	   \
-\d	    Returns a match where the string contains digits (numbers from 0-9)	\                         	
-\D	    Returns a match where the string DOES NOT contain digits\
-\s	    Returns a match where the string contains a white space character\
-\S	    Returns a match where the string DOES NOT contain a white space character\
-\w	    Returns a match where the string contains any word characters \
+\d  |   Returns a match where the string contains digits (numbers from 0-9)	\                         	
+\D  |   Returns a match where the string DOES NOT contain digits\
+\s  |   Returns a match where the string contains a white space character\
+\S  |   Returns a match where the string DOES NOT contain a white space character\
+\w  |   Returns a match where the string contains any word characters \
         (characters from a to Z, digits from 0-9, and the underscore _ character)	\
-\W	    Returns a match where the string DOES NOT contain any word characters	\
-\Z	    Returns a match if the specified characters are at the end of the string	\
+\W  |   Returns a match where the string DOES NOT contain any word characters	\
+\Z  |   Returns a match if the specified characters are at the end of the string	\
 
 ## Sets
-[arn]	    Returns a match where one of the specified characters (a, r, or n) is present	\
-[a-n]	    Returns a match for any lower case character, alphabetically between a and n	\
-[^arn]	    Returns a match for any character EXCEPT a, r, and n	\
-[0123]	    Returns a match where any of the specified digits (0, 1, 2, or 3) are present	\
-[0-9]	    Returns a match for any digit between 0 and 9	\
-[0-5][0-9]	Returns a match for any two-digit numbers from 00 and 59	\
-[a-zA-Z]	Returns a match for any character alphabetically between a and z, lower case OR upper case	\
-[+]	        In sets, +, *, ., |, (), $,{} has no special meaning, so [+] means: return a match for any + character in the string\
+[arn]  |   Returns a match where one of the specified characters (a, r, or n) is present	\
+[a-n]  |   Returns a match for any lower case character, alphabetically between a and n	\
+[^arn]  |   Returns a match for any character EXCEPT a, r, and n	\
+[0123]  |   Returns a match where any of the specified digits (0, 1, 2, or 3) are present	\
+[0-9]  |   Returns a match for any digit between 0 and 9	\
+[0-5][0-9]  |   Returns a match for any two-digit numbers from 00 and 59	\
+[a-zA-Z]  |   Returns a match for any character alphabetically between a and z, lower case OR upper case	\
+[+]  |   In sets, +, *, ., |, (), $,{} has no special meaning, so [+] means: return a match for any + character in the string\
 
 
 
