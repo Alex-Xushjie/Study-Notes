@@ -11,6 +11,7 @@ There are three placeholders in above example:
 2) When numbers are added inside the { }, they indicate the corresponding positions (0th position, 1st position, etc.). The parameters following the format function are assigned as the 0, 1, 2... positions sequentially.
 * Although the positions marked by {number} can be in any order, the order of the parameters in the format function remains unchanged.
 3) When strings are added inside the { }, these strings act as names for those positions. Values can then be assigned to these named positions through the format function, and both the positions and format arguments can be freely arranged.
+
 ## Formatting types
 <pre>
 :<     Left aligns the result (within the available space)\
