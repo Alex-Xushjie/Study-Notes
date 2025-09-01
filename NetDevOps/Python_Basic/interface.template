@@ -3,5 +3,4 @@ Value STATUS (\S+)
 Value DESCRIPTION (.*)
 
 Start
-    ^${Interface\s+Status\s+Description} -> Interface
-    ^${INTERFACE}\s+${STATUS}\s+${DESCRIPTION} -> Record
+ ^${INTERFACE}\s+${STATUS}\s+${DESCRIPTION} -> Record
