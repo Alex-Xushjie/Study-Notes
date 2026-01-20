@@ -13,7 +13,7 @@ There are three placeholders in above example:
 3) When strings are added inside the { }, these strings act as names for those positions. Values can then be assigned to these named positions through the format function, and both the positions and format arguments can be freely arranged.
 
 ## Formatting types
-<pre>
+"""
 :<     Left aligns the result (within the available space)
 :>     Right aligns the result (within the available space)
 :^     Center aligns the result (within the available space)
@@ -37,7 +37,7 @@ There are three placeholders in above example:
 :X     Hex format, upper case
 :n     Number format
 :%     Percentage format
-</pre>
+"""
 
 # 正则表达式
 正则表达式是通过一些特殊的字符，在一段文字中匹配特定的字符。\
