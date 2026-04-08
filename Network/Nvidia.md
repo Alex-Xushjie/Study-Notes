@@ -24,10 +24,11 @@ nv set interface bond2 bond member swp2
 nv set interface bond2 bridge domain br_default access 20  
 nv set interface bond2 bond mlag id 2  
 nv set interface bond2 lacp-bypass on  
-nv set interface bond2 link mtu 9216
-nv set interface bond3 bond member swp3
-nv set interface bond3 bridge domain br_default access 10
-nv set interface bond3 bond mlag id 3
-nv set interface bond3 lacp-bypass on
+nv set interface bond2 link mtu 9216  
+nv set interface bond3 bond member swp3  
+nv set interface bond3 bridge domain br_default access 10  
+nv set interface bond3 bond mlag id 3  
+nv set interface bond3 lacp-bypass on  
+
 nv set interface bond3 link mtu 9216
 
