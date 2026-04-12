@@ -10,6 +10,6 @@ PKI(Public Key Infrastructure) is a comprehenscive security framework of technol
 3) Digital Certificates: 是一个由CA签名的小型数据文件，其中包含用户或服务器的公钥以及其他身份信息。  
 4) public/private keys: 一对非对称的加密密钥。公钥是公开的，用于加密数据或验证签名；私钥是私有的，用于解密或签名数据。
 
-
+### 散列函数
 
 
