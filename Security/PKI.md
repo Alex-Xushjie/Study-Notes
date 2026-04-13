@@ -1,7 +1,7 @@
 # PKI
 
 ## Overview
-PKI(Public Key Infrastructure) is a comprehenscive security framework of technology, policies, and procedures used to manage digital certificates and public-key encryption. It authenticates identities—users, devices, or servers—over untrusted networks like the internet, securing data through encryption and ensuring integrity via digital signatures.
+PKI(Public Key Infrastructure) is a comprehenscive security framework of technology, policies, and procedures used to manage **digital certificates** and **public-key** encryption. It authenticates identities—users, devices, or servers—over untrusted networks like the internet, securing data through encryption and ensuring integrity via digital signatures.
 
 ## Concepts
 ### Key Components
@@ -11,7 +11,7 @@ PKI(Public Key Infrastructure) is a comprehenscive security framework of technol
 4) public/private keys: 一对非对称的加密密钥。公钥是公开的，用于加密数据或验证签名；私钥是私有的，用于解密或签名数据。
 
 ### 散列函数
-1. 定义：
+1. 定义  
 散列函数也叫做HASH函数，主流的散列算法有MD5，SHA-1，SHA-2。散列函数的主要任务是验证数据的**完整性**。通过散列函数计算得到的结果叫做散列值，这个散列值也常常被称为数据的指纹。
 *tips：有些debug信息中显示的指纹就是HASH值。
 
@@ -44,7 +44,7 @@ with open("./msg/plain.hash", "wb") as f:
 
 ### 对称与非对称密钥算法
 **对称密钥算法**
-1. 定义
+1. 定义  
 使用相同密钥与算法进行加解密运算的算法就叫做对称密钥算法。
 2. 优点：
 - 速度快
@@ -57,14 +57,13 @@ with open("./msg/plain.hash", "wb") as f:
 - 不支持数字签名和不可否认性。
 
 
-非对称密钥算法
-1. 定义
+**非对称密钥算法**
+1. 定义  
 使用一对密钥（公钥和私钥）来执行加密和解密操作。这两个密钥是相关联的，但是从一个密钥计算出另一个密钥是非常困难的。
 - 公钥：可以公开给任何人，用于加密信息。
 - 私钥：必须保密，用于解密信息。
-非对称密钥算法计算复杂度较高，运行较慢。
 
-2. 主要用法
+2. 主要用法  
 - 数字签名和身份验证：使用私钥创建数字签名，可以验证信息的来源和完整性。接收者可以用公钥验证签名，以确保信息是由预期的发送者创建并且未被篡改。
 - 密钥交换：通常使用非对称密钥算法安全地交换对称密钥，例如通过Diffie-Hellman密钥交换协议。
 
@@ -73,3 +72,25 @@ with open("./msg/plain.hash", "wb") as f:
 - DSA
 - ECC
 
+4. 缺点：
+- 运行速度慢
+- 密文会变长
+
+5. 优点：
+- 安全
+- 密钥的数量与参与者数量相同
+- 在交换公钥前不需要预先建立某种信任关系，不必担心公钥被劫持
+- 支持数字签名和不可否认性
+
+### 数字签名
+1. 定义  
+数字签名是发送方使用私钥**加密**明文数据的**散列值**，用于接收方验证发送方的身份。
+
+2. 工作流程：  
+- 发送方先对明文数据进行hash计算，得到散列值1；
+- 发送方使用私钥对散列值进行加密，得到数字签名；
+- 发送方将要发送的数据和数字签名一起发送给接收方；
+- 接受方解密后得到明文数据，并对该数据进行hash计算，得到散列值2
+- 接收方使用公钥对数字签名进行解密得到散列值1，比较散列值1与散列值2，如果相同，则数字签名验证通过。
+
+### 
