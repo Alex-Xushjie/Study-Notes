@@ -5,4 +5,22 @@ services:
     container_name: timesheet-backend
     ports:
       - "8000:8000"
+    depends_on:
+      - mysql
+    environment:
+      DATABASE_URL: mysql+pymysql://timesheet_user:timesheet_password@mysql:3306/timesheet_db
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: timesheet-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: timesheet_db
+      MYSQL_USER: timesheet_user
+      MYSQL_PASSWORD: timesheet_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/data:/var/lib/mysql
     restart: always
