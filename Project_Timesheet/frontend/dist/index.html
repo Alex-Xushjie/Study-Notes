@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕒 Timesheet 智能工时管理平台</title>
+    <style>
+        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background-color: #f4f6f9; color: #333; margin: 0; padding: 20px; }
+        .timesheet-container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        .header h1 { margin: 0; font-size: 26px; font-weight: 600; }
+        .user-info { margin: 8px 0 0 0; font-size: 14px; opacity: 0.9; }
+        .main-content { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; }
+        .card h2 { margin-top: 0; margin-bottom: 20px; font-size: 18px; border-bottom: 2px solid #3b82f6; padding-bottom: 8px; color: #1e3a8a; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 14px; color: #4b5563; }
+        .form-group select, .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; box-sizing: border-box; font-size: 14px; }
+        .form-group textarea { height: 90px; resize: none; }
+        .btn-submit { width: 100%; background-color: #2563eb; color: white; border: none; padding: 14px; border-radius: 6px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .btn-submit:hover { background-color: #1d4ed8; }
+        .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .metric-box { background: #f3f4f6; padding: 15px; border-radius: 8px; text-align: center; }
+        .metric-box .label { display: block; font-size: 12px; color: #6b7280; margin-bottom: 5px; }
+        .metric-box .value { font-size: 22px; font-weight: 700; color: #111827; }
+        .status-ok { background: #f0fdf4; }
+        .text-success { color: #16a34a; font-weight: bold; }
+        .history-list h3 { font-size: 14px; color: #4b5563; margin-bottom: 12px; }
+        .empty-tip { text-align: center; color: #9ca3af; font-size: 13px; padding: 30px 0; }
+        .history-list ul { list-style: none; padding: 0; margin: 0; }
+        .history-list li { display: flex; flex-direction: column; padding: 12px; background: #f9fafb; border-radius: 6px; margin-bottom: 8px; border-left: 4px solid #3b82f6; font-size: 13px; }
+        .record-meta { display: flex; justify-content: space-between; margin-bottom: 4px; font-weight: bold; color: #2563eb; }
+        .record-desc { color: #4b5563; }
+    </style>
+</head>
+<body>
+    <div class="timesheet-container">
+        <header class="header">
+            <h1>🕒 Timesheet 智能工时管理平台</h1>
+            <p class="user-info">当前登录: <strong>Carlson Lam</strong> (Network Infrastructure Specialist)</p>
+        </header>
+
+        <main class="main-content">
+            <div class="card">
+                <h2>📊 录入今日工时</h2>
+                <div class="form-group">
+                    <label>关联项目 / 工单</label>
+                    <select id="ticketSelect">
+                        <option value="" disabled selected>-- 请选择工单 --</option>
+                        <option value="核心交换机割接 (Core-Switch-Migration)">核心交换机割接 (Core-Switch-Migration)</option>
+                        <option value="SD-WAN 部署维护 (SD-WAN-Deployment)">SD-WAN 部署维护 (SD-WAN-Deployment)</option>
+                        <option value="防火墙策略审计 (Firewall-Policy-Audit)">防火墙策略审计 (Firewall-Policy-Audit)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>投入工时 (Hours)</label>
+                    <input type="number" id="hoursInput" min="0.5" max="24" step="0.5" placeholder="请输入小时数，例如: 4.5">
+                </div>
+                <div class="form-group">
+                    <label>工作内容描述</label>
+                    <textarea id="descInput" placeholder="请简要描述跟进的技术进展或割接报告..."></textarea>
+                </div>
+                <button onclick="submitTimesheet()" class="btn-submit">确认提交工时</button>
+            </div>
+
+            <div class="card">
+                <h2>📅 今日工时看板</h2>
+                <div class="dashboard-grid">
+                    <div class="metric-box">
+                        <span class="label">今日累计工时</span>
+                        <span class="value" id="totalHours">0 小时</span>
+                    </div>
+                    <div class="metric-box status-ok">
+                        <span class="label">系统连接状态</span>
+                        <span class="value text-success">Nginx ⇄ API ⇄ DB [OK]</span>
+                    </div>
+                </div>
+
+                <div class="history-list">
+                    <h3>📋 今日提交记录</h3>
+                    <div id="emptyTip" class="empty-tip">暂无提交记录，请在左侧填报。</div>
+                    <ul id="recordList"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let total = 0;
+        function submitTimesheet() {
+            const ticket = document.getElementById('ticketSelect').value;
+            const hours = parseFloat(document.getElementById('hoursInput').value);
+            const desc = document.getElementById('descInput').value;
+
+            if (!ticket || !hours || !desc) {
+                alert('请完整填写工单、工时和工作描述！');
+                return;
+            }
+            if (hours <= 0 || hours > 24) {
+                alert('单次申报工时必须在 0 到 24 小时之间！');
+                return;
+            }
+
+            // 更新全局工时
+            total += hours;
+            document.getElementById('totalHours').innerText = total + ' 小时';
+
+            // 隐藏空提示
+            document.getElementById('emptyTip').style.display = 'none';
+
+            // 插入新记录
+            const ul = document.getElementById('recordList');
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="record-meta">
+                    <span>工单: ${ticket}</span>
+                    <span>⏱️ ${hours} 小时</span>
+                </div>
+                <div class="record-desc">${desc}</div>
+            `;
+            ul.appendChild(li);
+
+            // 弹出成功提示
+            alert(`🎉 提交成功！已为 [${ticket}] 成功录入 ${hours} 小时。`);
+
+            // 清空输入框
+            document.getElementById('hoursInput').value = '';
+            document.getElementById('descInput').value = '';
+        }
+    </script>
+</body>
+</html>

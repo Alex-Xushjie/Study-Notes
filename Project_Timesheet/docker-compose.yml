@@ -20,7 +20,27 @@ services:
       MYSQL_USER: timesheet_user
       MYSQL_PASSWORD: timesheet_password
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./mysql/data:/var/lib/mysql
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: timesheet-frontend
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    container_name: timesheet-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      # 💡 让 Nginx 直接挂载读取本地刚刚写好的 dist/index.html 网页
+      - ./frontend/dist:/usr/share/nginx/html
+    depends_on:
+      - backend
+      - frontend
     restart: always
