@@ -174,3 +174,17 @@ ib_send_lat -d mlx5_0 -i 1 -x 3 172.16.40.109
 ![server04_client](images/lab/server04_client.png)
 ![server05_result](images/lab/server05_result.png)
 
+# 实验四：RDMA带宽测试
+## Rail 4 单流带宽测试
+Server-05
+```bash
+ib_write_bw -d <server05_rail4_rdma_device> -i 1 -x <gid_index>
+# 设备名称通过'ibdev2netdev'查看，然后通过'show_gids'查看对应的GID
+```
+例如:
+```bash
+ib_write_bw -d mlx5_0 -i 1 -x 3
+```
+server05_test_bw
+
+
