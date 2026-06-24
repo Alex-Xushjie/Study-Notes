@@ -102,6 +102,12 @@ nvidia-smi topo -m
 ```
 ![check_GPU_topo1](images/lab/check_GPU_topo1.png)
 
+```bash
+lspci -tv
+# 进一步查看GPU、NIC具体在什么位置
+```
+![check_GPU_topo2](images/lab/check_GPU_topo2.png)
+
 ## 查看GPU PCIe信息
 ```bash
 lspci | grep -i nvidia
@@ -187,4 +193,5 @@ ib_write_bw -d mlx5_0 -i 1 -x 3
 ```
 server05_test_bw
 
+Server-04
 
