@@ -5,22 +5,34 @@ As the opening chapter of this entire series, this section sets the baseline ton
 
 
 At their core, all Routing and Switching protocols serve the identical purpose: controlling and forwarding data traffic. These protocols share a high degree of commonality and are deeply intertwined by their underlying logic. Consequently, every protocol within the R&S domain can be systematically analyzed through the following conceptual model.
-+-------------------------------------------------+
-|   1. 控制面 (Control Plane)                     | --> 它是怎么“沟通”并达成共识的？
-|   (协议报文、状态机、邻居建立、算法计算、数据库同步)      |     (大脑思考)
-+-------------------------------------------------+
+```text
++---------------------------------------------------+
+|   1. Control Plane                                |
+|   (Protocol Packets, State Machines, Neighbor     |
+|    Establishment, Algorithms, DB Synchronization) |
++---------------------------------------------------+
+ * Context: The Brain / Cognitive Processing
+ * Logic: How do they "communicate" and reach a consensus?
                         |
-                        v 下发/映射
+                        v Programmed / Mapped to
 +-------------------------------------------------+
-|   2. 转发面 (Data/Forwarding Plane)             | --> 最终落到硬件芯片上，数据包怎么走？
-|   (CAM表、FIB前缀树、LFIB标签表、数据封装/剥离)        |     (肌肉执行)
+|   2. Data / Forwarding Plane                    |
+|   (CAM Tables, FIB Prefix Trees, LFIBs,         |
+|    Encap / Decapsulation)                       |
 +-------------------------------------------------+
+ * Context: The Muscle / Hardware Execution
+ * Logic: How are packets routed on the hardware ASICs?
                         |
-                        v 保障/联动
+                        v Secured / Bound with
 +-------------------------------------------------+
-|   3. 维护管理 (Infrastructure/Maintenance)       | --> 出现异常、震荡或安全威胁时，怎么兜底？
-|   (BFD毫秒级联动、GR不中断转发、Dot1x/MAB接入控制)   |     (免疫系统)
+|   3. Infrastructure & Maintenance               |
+|   (Sub-second BFD, Non-Stop Forwarding/GR,      |
+|    Dot1x/MAB Access Control)                    |
 +-------------------------------------------------+
+ * Context: The Immune System
+ * Logic: How does the network fail-safe against 
+          anomalies, flaps, or security threats?
+```
 
 Based on this conceptual model, I have compiled a concise overview of the most ubiquitous routing and switching protocols encountered in production environments:
 ## I. Layer 2 Switching & Topology Control Family
