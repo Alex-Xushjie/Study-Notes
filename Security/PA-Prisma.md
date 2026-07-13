@@ -1,19 +1,23 @@
-# Palo Alto PRISMA note
-## Palo Alto Prisma 简介
+# Palo Alto Prisma 学习笔记
 
-### 1. Prisma 是什么？
+## 1. Prisma 产品概览
+
+### 1.1 Prisma 是什么
 
 **Prisma 不是一台具体设备，而是 Palo Alto Networks 推出的一组云网络和云安全产品。**
 
+### 1.2 Prisma 产品关系
+
 对于网络工程师来说，别人提到 Prisma，通常主要指：
 
-* Prisma Access
-* Prisma SASE
-* Prisma Cloud
+- Prisma Access
+- Prisma SD-WAN
+- Prisma SASE
+- Prisma Cloud
 
----
+## 2. Prisma Access
 
-### 2. Prisma Access
+### 2.1 基本概念
 
 可以把 **Prisma Access** 理解为：
 
@@ -23,7 +27,7 @@
 
 Prisma Access 则把安全检查能力放在 Palo Alto 的云基础设施中，由 Palo Alto 负责底层平台的部署和维护。
 
-#### 2.1 远程用户接入
+### 2.2 远程用户接入
 
 远程用户通常通过 **GlobalProtect** 接入 Prisma Access。
 
@@ -44,9 +48,7 @@ Prisma Access
 
 用户流量会先经过 Prisma Access 的安全检查，然后再访问 Internet、SaaS 或企业内部应用。
 
----
-
-#### 2.2 分支机构接入
+### 2.3 分支机构接入
 
 分支机构可以通过 IPsec Tunnel 或 SD-WAN 接入 Prisma Access。
 
@@ -64,19 +66,17 @@ Prisma Access
 
 分支机构和 Prisma Access 之间通常可以使用：
 
-* Static Route
-* BGP
+- Static Route
+- BGP
 
----
-
-#### 2.3 Service Connection
+### 2.4 Service Connection
 
 **Service Connection** 用于连接 Prisma Access 和企业内部网络，例如：
 
-* Headquarters
-* Data Center
-* Private Cloud
-* Internal Applications
+- Headquarters
+- Data Center
+- Private Cloud
+- Internal Applications
 
 ```text
 Mobile User / Branch Office
@@ -91,9 +91,7 @@ Mobile User / Branch Office
 
 通过 Service Connection，远程用户和分支机构可以访问企业内部应用。
 
----
-
-### 3. Prisma Access 与传统 Palo Alto 防火墙的区别
+### 2.5 与传统 Palo Alto 防火墙的区别
 
 | 对比项  | 传统 Palo Alto 防火墙  | Prisma Access                  |
 | ---- | ----------------- | ------------------------------ |
@@ -105,9 +103,9 @@ Mobile User / Branch Office
 | 设备维护 | 企业自行维护            | Palo Alto 维护底层平台               |
 | 路由方式 | Static、OSPF、BGP 等 | 主要使用 Static 或 BGP              |
 
----
+## 3. Prisma SASE
 
-### 4. Prisma SASE
+### 3.1 组成部分
 
 SASE 的全称是：
 
@@ -124,34 +122,36 @@ Prisma SASE
 
 其中：
 
-* **Prisma Access**：负责云端安全访问
-* **Prisma SD-WAN**：负责分支和 WAN 连接
-* **ADEM**：负责用户和应用体验监控
+- **Prisma Access**：负责云端安全访问
+- **Prisma SD-WAN**：负责分支和 WAN 连接
+- **ADEM**：负责用户和应用体验监控
+
+### 3.2 与 Prisma Access 的关系
 
 可以记成：
 
 > Prisma Access 主要解决安全访问问题，Prisma SASE 同时解决连接、安全和体验监控问题。
 
----
+## 4. Prisma Cloud
 
-### 5. Prisma Cloud
-
-**Prisma Cloud 和 Prisma Access 不是同一种产品。**
-
-* **Prisma Access**：保护用户和网络流量
-* **Prisma Cloud**：保护公有云、容器、Kubernetes、云工作负载和应用
+### 4.1 主要保护对象
 
 Prisma Cloud 更偏向：
 
-* Cloud Security
-* Container Security
-* Kubernetes Security
-* Workload Security
-* DevSecOps
+- Cloud Security
+- Container Security
+- Kubernetes Security
+- Workload Security
+- DevSecOps
 
----
+### 4.2 与 Prisma Access 的区别
 
-### 6. 简单记忆方法
+**Prisma Cloud 和 Prisma Access 不是同一种产品。**
+
+- **Prisma Access**：保护用户和网络流量
+- **Prisma Cloud**：保护公有云、容器、Kubernetes、云工作负载和应用
+
+## 5. 核心概念速记
 
 ```text
 Prisma Access
@@ -167,19 +167,17 @@ Prisma Cloud
 = 保护云平台、容器、应用和工作负载
 ```
 
----
-
-### 7. 网络工程师的学习重点
+## 6. 网络工程师学习路线
 
 对于网络工程师，学习 Prisma 时应重点关注：
 
-* GlobalProtect
-* Mobile Users
-* Remote Networks
-* Service Connections
-* IPsec
-* BGP
-* Traffic Flow
-* Routing Control
-* High Availability
-* Security Policy
+- [ ] GlobalProtect
+- [ ] Mobile Users
+- [ ] Remote Networks
+- [ ] Service Connections
+- [ ] IPsec
+- [ ] BGP
+- [ ] Traffic Flow
+- [ ] Routing Control
+- [ ] High Availability
+- [ ] Security Policy
