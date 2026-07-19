@@ -1,116 +1,1043 @@
+---
+status: en-draft
+title: IPv4 Multicast to Ethernet MAC Mapping
+chapter: 03
+tags:
+  - Multicast
+  - Ethernet
+  - MAC Address
+  - IPv4
+  - Address Planning
+---
 
-# 03-Multicast-MAC-Mapping.md (组播 IP 与 MAC 地址映射冲突及规划)
+# 03 - IPv4 Multicast to Ethernet MAC Mapping
 
-## 1. 组播 MAC 地址的构造规则与数学推导
+## 1. Chapter Objectives
 
-### 1.1 IANA 预留的二层前缀与空间局限
-* **固定前缀识别**：为了让交换机 ASIC 芯片在二层数据帧层面一眼识别出组播流量，IANA 组织专门申请了一块高 24 位的 MAC 地址空间，固定为 `01:00:5E`。
-* **第 25 位的物理锁死**：在剩余的 24 位可用空间中，IANA 规定**第 25 位（即第 4 字节的最高位）必须强制固定为 0**。
-* **可用二进制位**：因此，48 位 MAC 地址中，真正允许用来映射三层组播 IP 的空间**只剩下了最后的 23 位**。
-* **二层地址合法范围**：十六进制范围严格限定在 `01:00:5E:00:00:00` 至 `01:00:5E:7F:FF:FF` 之间。
+This chapter focuses exclusively on **how IPv4 multicast addresses map to Ethernet multicast MAC addresses**, including:
 
-### 1.2 三层 IP 到二层 MAC 的硬件映射机制
-组播在二层没有单播的 ARP 动态解析协议。它是直接将三层组播 IP 地址的**低 23 位（二进制）**，“生硬地”复制粘贴到二层组播 MAC 地址的**低 23 位**中：
+- Why an IPv4 multicast packet needs a Layer 2 multicast destination address;
+- The purpose of the `01:00:5E` prefix;
+- How the lower 23 bits of an IPv4 group map to a MAC address;
+- Why `32:1` address overlap occurs;
+- The possible Layer 2 forwarding impact of MAC address overlap;
+- How to identify and avoid unnecessary overlap during address planning;
+- How to verify mapping results with packet captures and scripts.
+
+The complete IGMP Snooping forwarding-table process, platform hardware-entry structures, and multicast routing are covered in later chapters.
+
+---
+
+## 2. Why Multicast IP Addresses Must Map to Multicast MAC Addresses
+
+In an Ethernet network, switches perform Layer 2 forwarding according to the Ethernet frame's destination MAC address.
+
+At Layer 3, an IPv4 multicast packet uses a group address such as:
 
 ```text
-三层组播 IP 32-bit 位分布：
- ┌─────┬───────────┬────────────────────────┐
- │ 1110│ 5-bit丢弃 │      23-bit保留映射     │
- └─────┴───────────┴────────────────────────┘
- 1    4 5         9 10                     32
+239.1.1.1
+```
 
-映射到位级 MAC 48-bit 结构：
- ┌────────────────────────┬───┬────────────────────────┐
- │ 24-bit IANA (01:00:5E) │ 0 │      23-bit复制区域     │
- └────────────────────────┴───┴────────────────────────┘
- 1                      24  25 26                     48
+When transmitted over Ethernet, the packet must also be encapsulated with a corresponding Layer 2 destination address:
+
+```text
+Destination IP:  239.1.1.1
+Destination MAC: 01:00:5e:01:01:01
+```
+
+This is not the unicast MAC address of any receiver, nor is it dynamically resolved through ARP.
+
+It is calculated directly from the IPv4 multicast group:
+
+> IPv4 multicast addresses are deterministically mapped to Ethernet multicast MAC addresses.
+
+The source therefore does not need to know each receiver's unicast MAC address.
+
+---
+
+## 3. Ethernet Multicast MAC Address
+
+### 3.1 Individual/Group Bit
+
+The least significant bit of the first octet of an Ethernet MAC address is called the:
+
+```text
+I/G Bit
+```
+
+Where:
+
+```text
+0 = Individual Address
+1 = Group Address
+```
+
+For example:
+
+```text
+00:50:56:aa:bb:cc
+```
+
+The first octet is `00`, so the I/G bit is 0 and this is a unicast MAC address.
+
+In contrast:
+
+```text
+01:00:5e:01:01:01
+```
+
+The first octet is `01`, so the I/G bit is 1 and this is a multicast MAC address.
+
+---
+
+### 3.2 Fixed MAC Prefix Used by IPv4 Multicast
+
+IPv4 multicast over Ethernet uses the fixed prefix:
+
+```text
+01:00:5E
+```
+
+The complete mapping range is:
+
+```text
+01:00:5E:00:00:00
+-
+01:00:5E:7F:FF:FF
+```
+
+The most significant bit of the fourth octet is fixed at 0:
+
+```text
+01:00:5E:0xxxxxxx:xxxxxxxx:xxxxxxxx
+```
+
+Only the final 23 bits are therefore available to carry IPv4 group information.
+
+---
+
+## 4. Bit Structure of an IPv4 Multicast Address
+
+IPv4 multicast uses:
+
+```text
+224.0.0.0/4
+```
+
+The four most significant bits are fixed at:
+
+```text
+1110
+```
+
+The remaining 28 bits represent different multicast groups:
+
+```text
+┌──────────┬────────────────────────────┐
+│   1110   │       Group ID: 28 bits    │
+└──────────┴────────────────────────────┘
+  4 bits             28 bits
+```
+
+However, the Ethernet mapping space can retain only 23 bits:
+
+```text
+IPv4 Group ID: 28 bits
+Ethernet Mapping: 23 bits
+```
+
+Five bits of information cannot be retained during mapping.
+
+---
+
+## 5. IPv4-to-MAC Mapping Rules
+
+### 5.1 Bit-Level Mapping
+
+The lower 23 bits of an IPv4 multicast address are copied into the lower 23 bits of the Ethernet multicast MAC address.
+
+```text
+IPv4 Multicast Address:
+
+┌──────────┬─────────────┬────────────────────────┐
+│   1110   │ 5 bits lost │   Lowest 23 bits kept  │
+└──────────┴─────────────┴────────────────────────┘
+  4 bits       5 bits              23 bits
+
+
+Ethernet Multicast MAC:
+
+┌────────────────────────┬───┬────────────────────────┐
+│       01:00:5E          │ 0 │   Lowest 23 IP bits    │
+└────────────────────────┴───┴────────────────────────┘
+         24 bits          1 bit         23 bits
+```
+
+The five discarded bits are:
+
+- The lower four bits of the first IPv4 octet, excluding the fixed `1110` prefix;
+- The most significant bit of the second IPv4 octet.
+
+The retained bits are:
+
+- The lower seven bits of the second IPv4 octet;
+- All eight bits of the third octet;
+- All eight bits of the fourth octet.
+
+---
+
+### 5.2 Quick Calculation Formula
+
+Assume the IPv4 group is:
+
+```text
+A.B.C.D
+```
+
+The corresponding multicast MAC is:
+
+```text
+01:00:5E:(B & 0x7F):C:D
+```
+
+Where:
+
+```text
+B & 0x7F
+```
+
+means retaining only the lower seven bits of the second octet.
+
+---
+
+### 5.3 Mental Decimal Calculation
+
+Calculation procedure:
+
+1. Fix the first three MAC octets:
+
+   ```text
+   01:00:5E
+   ```
+
+2. Process the second octet of the group IP:
+
+   - If it is less than 128, leave it unchanged;
+   - If it is greater than or equal to 128, subtract 128.
+
+3. Convert the processed second octet and the original third and fourth octets to hexadecimal.
+
+---
+
+## 6. Mapping Examples
+
+### 6.1 `239.1.1.1`
+
+Second octet:
+
+```text
+1 & 127 = 1
+```
+
+Convert to hexadecimal:
+
+```text
+1  = 01
+1  = 01
+1  = 01
+```
+
+Final result:
+
+```text
+239.1.1.1
+→ 01:00:5E:01:01:01
 ```
 
 ---
 
-## 2. 32:1 地址重叠物理陷阱的底层成因
+### 6.2 `232.100.1.10`
 
-### 2.1 消失的 5 位二进制
-* **三层可用空间**：D 类 IP 地址由于前 4 位固定为 `1110`，剩下的 28 位用来表示截然不同的逻辑频道。
-* **映射空间断层**：由于二层 MAC 只有 23 位空间来接收这 28 位的有效信息，在映射过程中，三层 IP 地址中有 **$28 - 23 = 5$ 位** 二进制信息被硬件直接丢弃（即 IP 地址第一字节的最后 4 位，以及第二字节的第 1 位）。
-* **冲突概率计算**：由于有 5 位二进制缺失，意味着会有 $2^5 = 32$ 个截然不同的三层组播 IP 地址，在转换成二层 MAC 地址时，**会得到完全相同的同一个 MAC 地址**。这就是网络工程著名的 32:1 重叠陷阱。
+Second octet:
 
-### 2.2 经典重叠实例验证
-以下 32 个组播 IP 地址在映射到二层时，产生的 MAC 地址全部都是 `01:00:5E:01:01:01`：
-* `224.1.1.1`
-* `224.129.1.1`
-* `225.1.1.1`
-* `232.1.1.1` (交易所常用的公网 SSM 段)
-* `239.1.1.1` (量化公司常用的内网私有段)
+```text
+100 & 127 = 100
+```
 
----
+Convert to hexadecimal:
 
-## 3. 同一 VLAN 内的二层转发冲突与规避
+```text
+100 = 64
+1   = 01
+10  = 0A
+```
 
-### 3.1 碰撞导致的转发歧义
-在同一 VLAN / 桥接域内，不同的组播流若发生 32:1 重叠，其表现取决于交换机的硬件转发模式（RFC 4541）：
-* **MAC-based Forwarding（基于 MAC 的组播转发）**：
-  * 在此类型的平台上，交换机仅在二层硬件表项中关联 `组播 MAC -> 物理端口`。
-  * **故障场景**：若策略机 A（连接在 Port 1）仅订阅了 `232.1.1.1`（股票行情），交换机在硬件表中写入 `01:00:5E:01:01:01 -> Port 1`。此时，若同一 VLAN 内的另一个数据源开始向 `239.1.1.1`（期货行情）发送高频流量，由于两者的二层 MAC 撞车，交换机无法进行二层隔离，会将 `239.1.1.1` 的高频流量强行塞入 Port 1。这导致策略机 A 的网卡被迫接收并向上递交无用数据，产生严重的系统中断开销和内核层延迟抖动（Jitter）。
-* **IP-based / (S, G) Forwarding（基于 IP 的组播转发）**：
-  * 现代高端量化交换机（如 Cisco Nexus 系列）遵循 RFC 4541 规范，支持基于三层组播 IP 甚至更精确的 `(S, G)` 进行二层转发过滤。
-  * 在此平台上，交换机能够识别 `232.1.1.1` 和 `239.1.1.1` 是两个截然不同的三层组，并**精确阻断非订阅流量**。即便发生 MAC 碰撞，非订阅的流量也绝不会漏进该物理端口，从而完美免疫 32:1 碰撞。
+Final result:
 
-### 3.2 生产环境下的组播地址规划红线
-在量化网络规划中，即使接入交换机硬件支持基于 IP 转发，在全局设计上也**必须通过地址规划主动避开 32:1 冲突**。这是为了防止在设备故障切换、降级兼容、或混合厂商组网时由于硬件 TCAM 溢出而导致转发降级。
-
-* **黄金原则**：在同一个 VLAN 内规划的所有组播 IP，必须进行 $IP \pmod{2^{23}}$ 的位比对校验，确保没有组播 IP 命中相同的低 23 位。
-* **规划技巧（大跨度步长法）**：
-  * **第二字节控制法**：在划分不同业务模块的前缀时，第二字节的增量必须大跨度错开。由于第二字节的最高位（第 9 位）是被丢弃的，而低 7 位（第 10-16 位）是保留映射的。因此，第二字节的规划**步长必须大于 128**。
-    * *示例*：`239.1.0.0/16` 与 `239.129.0.0/16` 的第 9 位不同（分别对应二进制的 0 和 1），在映射时这 1 位会被丢弃，导致它们**依然会发生 MAC 碰撞**。
-    * *正确实践*：第二字节采用大跨度（如以 32 为步长：`239.10.1.1` 与 `239.42.1.1`）来改变低 7 位的二进制排布，以此在硬件层面天然错开二层 MAC。
-  * **后两字节唯一法（最安全推荐）**：在局域网内部规划中，最简单且不易出错的方式是保持前两字节固定（如 `239.100.X.X`），让所有的本地组播组在**第三字节**或**第四字节**上产生差异，从而确保映射出的 23 位 MAC 在物理上绝对唯一。
-> 💡 **避坑核心：** 在上述规划中，由于第二字节（1, 2, 3...）在二进制的低 7 位中互不相同，转换到 MAC 地址后，各个模块的二层地址段被**天然错开**，从源头上掐灭了二层撞车的可能。
+```text
+232.100.1.10
+→ 01:00:5E:64:01:0A
+```
 
 ---
 
-## 4. 地址映射冲突的工程审视直觉
+### 6.3 `239.192.10.20`
 
-### 4.1 二进制位移的心算本能
-面对任何给定的组播 IP，网络工程师必须能在 3 秒内判定其二层 MAC 地址，并检查冲突：
-* **心算技巧**：将 IP 的第二字节减去 128（若大于128）并转换为十六进制，作为 MAC 的第 4 字节前半部分。第三、四字节直接转十六进制。
-* **排查直觉**：在遇到开盘瞬间网卡 CPU 中断暴增、但交易程序显示无流量的诡异故障时，第一直觉不是去查交易代码，而是立刻登录交换机使用 `show mac address-table`，检查是否存在不同的组播 IP 撞车到了同一个二层 MAC 表项中。
-  
-### 4.2 生产排查与验证工具
-网络工程师和量化系统管理员必须通过工具交叉验证组播地址的二三层状态，快速定位由于二层冲突导致的网卡丢包抖动：
+Second octet:
 
-#### A. Wireshark 与 tcpdump 过滤表达式
-* 若要在服务器网卡处精准抓取并验证组播 MAC 映射：
-  ```bash
-  # 使用 tcpdump 精准捕获映射到 01:00:5e:01:01:01 的所有二层数据帧
-  tcpdump -i eth0 -e ether dst 01:00:5e:01:01:01 -nn
-  ```
-* 检查是否存在不属于期望IP的重叠流量（如在订阅232.1.1.1时排查重叠流）：
-  ```bash
-  Wireshark 过滤表达式: eth.dst == 01:00:5e:01:01:01 and not ip.dst == 232.1.1.1
-  ```
-#### B. 交换机Snooping表验证（Cisco Nexus示例）
-通过以下命令可以验证交换机当前运行的 Snooping 是基于 MAC 还是基于 IP 转发：
+```text
+192 - 128 = 64
+```
+
+Convert to hexadecimal:
+
+```text
+64 = 40
+10 = 0A
+20 = 14
+```
+
+Final result:
+
+```text
+239.192.10.20
+→ 01:00:5E:40:0A:14
+```
+
+---
+
+### 6.4 `224.129.1.1`
+
+Second octet:
+
+```text
+129 - 128 = 1
+```
+
+Final result:
+
+```text
+224.129.1.1
+→ 01:00:5E:01:01:01
+```
+
+This is the same result as for `239.1.1.1`.
+
+---
+
+## 7. Why 32:1 Address Overlap Occurs
+
+### 7.1 Mathematical Reason
+
+An IPv4 multicast group has 28 variable bits, while Ethernet mapping retains only 23:
+
+```text
+28 - 23 = 5
+```
+
+Losing five bits means:
+
+```text
+2^5 = 32
+```
+
+different IPv4 multicast groups can map to the same Ethernet multicast MAC address. This is called:
+
+```text
+32:1 Multicast MAC Address Overlap
+```
+
+---
+
+### 7.2 Overlap Condition
+
+Two IPv4 multicast groups map to the same MAC address if and only if their lower 23 bits are identical:
+
+```text
+IP1 & 0x7FFFFF == IP2 & 0x7FFFFF
+```
+
+In dotted-decimal terms, all of the following must be true:
+
+1. The lower seven bits of the second octet are identical;
+2. The third octets are identical;
+3. The fourth octets are identical.
+
+Changes to the first IPv4 octet do not affect the mapping. If second octets differ by 128, their lower seven bits are also identical.
+
+---
+
+### 7.3 Typical Overlap Example
+
+The following addresses all map to:
+
+```text
+01:00:5E:01:01:01
+```
+
+Examples include:
+
+```text
+224.1.1.1
+224.129.1.1
+225.1.1.1
+225.129.1.1
+232.1.1.1
+232.129.1.1
+239.1.1.1
+239.129.1.1
+```
+
+The complete set of combinations includes:
+
+- 16 possible first-octet values, from `224` through `239`;
+- Two possible values for the most significant bit of the second octet, 0 or 1;
+- Identical third and fourth octets.
+
+Therefore:
+
+```text
+16 × 2 = 32
+```
+
+---
+
+## 8. What Does MAC Overlap Mean?
+
+### 8.1 It Does Not Mean That Two Groups Are Identical at Layer 3
+
+For example:
+
+```text
+232.1.1.1
+239.1.1.1
+```
+
+These are completely different IPv4 multicast groups. Applications and operating systems can still distinguish them by destination IP.
+
+MAC overlap does not cause:
+
+- The IPv4 group address to change;
+- The UDP port to change;
+- Two IP groups to become one application-layer channel;
+- Packet contents to be merged.
+
+---
+
+### 8.2 It Can Cause Layer 2 Over-Forwarding
+
+If a switch platform and forwarding implementation use only:
+
+```text
+VLAN + Destination Multicast MAC
+```
+
+as the Layer 2 multicast forwarding key, IP groups that map to the same MAC may share the same outgoing ports.
+
+For example:
+
+```text
+Receiver A joins 232.1.1.1
+Receiver B joins 239.1.1.1
+```
+
+Both map to:
+
+```text
+01:00:5E:01:01:01
+```
+
+With MAC-only forwarding, the switch may create:
+
+```text
+VLAN 10
+01:00:5E:01:01:01
+→ Port A, Port B
+```
+
+As a result:
+
+- Traffic for `232.1.1.1` may reach both Port A and Port B;
+- Traffic for `239.1.1.1` may also reach both Port A and Port B.
+
+This is called:
+
+```text
+Layer 2 Multicast Over-Forwarding
+```
+
+---
+
+### 8.3 A Host Can Still Drop Unrelated Traffic at Layer 3
+
+Even if an unrelated multicast frame reaches a host NIC, the operating system still checks:
+
+- Destination IP;
+- Group membership;
+- UDP port;
+- Socket binding.
+
+If the application did not join the corresponding group, the packet is normally not delivered to it.
+
+However, over-forwarding can still consume:
+
+- Interface bandwidth;
+- NIC processing resources;
+- Host receive queues;
+- Kernel packet processing;
+- Packet-capture and monitoring resources.
+
+In high-throughput, low-latency environments, these additional packets can still have an impact.
+
+---
+
+## 9. Forwarding Implementations on Different Platforms
+
+Switches do not all forward multicast traffic in exactly the same way.
+
+Possible forwarding keys include:
+
+```text
+VLAN + Multicast MAC
+```
+
+or:
+
+```text
+VLAN + Group IP
+```
+
+or the more precise:
+
+```text
+VLAN + Source IP + Group IP
+```
+
+The practical effect of the same MAC overlap can therefore vary by platform.
+
+### Incorrect Conclusion to Avoid
+
+The fact that this command displays a group IP:
+
+```text
+show ip igmp snooping groups
+```
+
+does not prove that the ASIC uses IP-based forwarding.
+
+The CLI may display group information maintained by the control plane while the actual hardware table uses a different key.
+
+Base the determination on:
+
+- The specific device model;
+- ASIC architecture;
+- Software version;
+- Vendor documentation;
+- Hardware forwarding-table inspection;
+- Actual packet-capture testing.
+
+For this chapter, remember:
+
+> Multicast MAC overlap is inherent in the IPv4-to-Ethernet mapping. Its forwarding impact depends on the switch implementation.
+
+---
+
+## 10. Address-Planning Principles
+
+### 10.1 Core Validation Rule
+
+When planning multiple multicast groups in the same VLAN or bridge domain, check whether they have identical lower 23 bits.
+
+The equivalent test is to compare all three of these components:
+
+```text
+Second octet & 0x7F
+Third octet
+Fourth octet
+```
+
+---
+
+### 10.2 Changing the First Octet Cannot Prevent a Collision
+
+These addresses:
+
+```text
+232.1.1.1
+239.1.1.1
+```
+
+have different first octets but map to the same result:
+
+```text
+01:00:5E:01:01:01
+```
+
+Therefore:
+
+> Changing only the first octet never changes the mapped Ethernet multicast MAC.
+
+---
+
+### 10.3 Second Octets That Differ by 128 Collide
+
+For example:
+
+```text
+239.1.1.1
+239.129.1.1
+```
+
+Because:
+
+```text
+1 & 0x7F   = 1
+129 & 0x7F = 1
+```
+
+the mapping results are identical.
+
+There is no universal rule requiring a fixed planning increment for the second octet. The only reliable principle is:
+
+> Compare the complete lowest 23 bits.
+
+---
+
+### 10.4 Fix the First Two Octets and Vary the Final Two
+
+Within a local planning range, one of the simplest approaches is to fix the first two octets and assign unique values in the third and fourth octets.
+
+For example:
+
+```text
+239.192.1.1
+239.192.1.2
+239.192.2.1
+239.192.2.2
+```
+
+The corresponding MAC addresses are:
+
+```text
+01:00:5E:40:01:01
+01:00:5E:40:01:02
+01:00:5E:40:02:01
+01:00:5E:40:02:02
+```
+
+They do not overlap.
+
+---
+
+### 10.5 Recheck When Planning Across Address Ranges
+
+These groups may belong to different address blocks:
+
+```text
+232.100.1.1
+239.100.1.1
+```
+
+but they map to the same MAC:
+
+```text
+01:00:5E:64:01:01
+```
+
+Do not plan SSM, ASM, or departmental addresses separately without performing a global lower-23-bit check.
+
+---
+
+### 10.6 Must All Overlap Be Completely Avoided?
+
+Not every network must eliminate all MAC overlap globally.
+
+Whether proactive avoidance is necessary depends on:
+
+- Whether groups share the same VLAN or bridge domain;
+- Whether the switch forwards based on MAC addresses;
+- Traffic volume;
+- Receiver sensitivity to additional traffic;
+- Whether resource exhaustion causes platform degradation or flooding;
+- The presence of mixed-vendor devices;
+- Whether low-latency services strictly minimize unrelated packets.
+
+Overlap may have no noticeable effect in an ordinary low-volume environment.
+
+In high-bandwidth or low-latency environments, avoid unnecessary overlap within the same Layer 2 domain whenever possible.
+
+---
+
+## 11. Python Mapping Tool
+
+The following Python 3 script converts an IPv4 multicast group into an Ethernet multicast MAC address:
+
+```python
+#!/usr/bin/env python3
+
+import ipaddress
+
+
+def multicast_ip_to_mac(group_ip: str) -> str:
+    ip = ipaddress.IPv4Address(group_ip)
+
+    if not ip.is_multicast:
+        raise ValueError(f"{group_ip} is not an IPv4 multicast address")
+
+    low_23_bits = int(ip) & 0x7FFFFF
+    mac_value = 0x01005E000000 | low_23_bits
+
+    mac_hex = f"{mac_value:012x}"
+
+    return ":".join(
+        mac_hex[index:index + 2]
+        for index in range(0, 12, 2)
+    )
+
+
+if __name__ == "__main__":
+    groups = [
+        "232.1.1.1",
+        "239.1.1.1",
+        "239.129.1.1",
+        "239.192.10.20",
+    ]
+
+    for group in groups:
+        print(f"{group:15} -> {multicast_ip_to_mac(group)}")
+```
+
+Expected output:
+
+```text
+232.1.1.1       -> 01:00:5e:01:01:01
+239.1.1.1       -> 01:00:5e:01:01:01
+239.129.1.1     -> 01:00:5e:01:01:01
+239.192.10.20   -> 01:00:5e:40:0a:14
+```
+
+---
+
+## 12. MAC Overlap Audit Script
+
+The following script checks multiple groups for MAC overlap:
+
+```python
+#!/usr/bin/env python3
+
+import ipaddress
+import re
+from collections import defaultdict
+from typing import Dict, List
+
+
+def multicast_ip_to_mac(group_ip: str) -> str:
+    """
+    Convert an IPv4 multicast address to its Ethernet multicast MAC.
+    """
+
+    ip = ipaddress.IPv4Address(group_ip)
+
+    if not ip.is_multicast:
+        raise ValueError(
+            "{} is not an IPv4 multicast address".format(group_ip)
+        )
+
+    low_23_bits = int(ip) & 0x7FFFFF
+    mac_value = 0x01005E000000 | low_23_bits
+    mac_hex = "{:012x}".format(mac_value)
+
+    return ":".join(
+        mac_hex[index:index + 2]
+        for index in range(0, 12, 2)
+    )
+
+
+def find_collisions(groups: List[str]) -> Dict[str, List[str]]:
+    """
+    Find multicast IP addresses that map to the same Ethernet MAC.
+    """
+
+    mapping = defaultdict(list)
+
+    for group in groups:
+        mac = multicast_ip_to_mac(group)
+        mapping[mac].append(group)
+
+    return {
+        mac: addresses
+        for mac, addresses in mapping.items()
+        if len(addresses) > 1
+    }
+
+
+def collect_multicast_groups() -> List[str]:
+    """
+    Collect multicast addresses interactively.
+
+    Users may enter one or multiple addresses per line.
+    Spaces and commas are both accepted as separators.
+    Submit an empty line to start the audit.
+    """
+
+    groups = []
+
+    print("IPv4 Multicast MAC Collision Audit")
+    print("----------------------------------")
+    print("Enter one or more multicast IP addresses.")
+    print("Separate multiple addresses with spaces or commas.")
+    print("Press Enter on an empty line to start the audit.\n")
+
+    while True:
+        try:
+            user_input = input("Multicast IP: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            break
+
+        if not user_input:
+            break
+
+        addresses = re.split(r"[\s,]+", user_input)
+
+        for address in addresses:
+            if not address:
+                continue
+
+            try:
+                ip = ipaddress.IPv4Address(address)
+
+                if not ip.is_multicast:
+                    print(
+                        "  Skipped: {} is not an IPv4 multicast address.".format(
+                            address
+                        )
+                    )
+                    continue
+
+                normalized_address = str(ip)
+
+                if normalized_address in groups:
+                    print(
+                        "  Skipped: {} has already been entered.".format(
+                            normalized_address
+                        )
+                    )
+                    continue
+
+                groups.append(normalized_address)
+
+            except ipaddress.AddressValueError:
+                print(
+                    "  Skipped: {} is not a valid IPv4 address.".format(
+                        address
+                    )
+                )
+
+    return groups
+
+
+def print_audit_report(groups: List[str]) -> None:
+    """
+    Print all mappings and detected MAC collisions.
+    """
+
+    if not groups:
+        print("\nNo valid multicast addresses were entered.")
+        return
+
+    print("\nMulticast IP to MAC Mapping")
+    print("-" * 45)
+    print("{:<18} {}".format("Multicast IP", "Ethernet MAC"))
+    print("{:<18} {}".format("-" * 15, "-" * 17))
+
+    for group in groups:
+        print(
+            "{:<18} {}".format(
+                group,
+                multicast_ip_to_mac(group)
+            )
+        )
+
+    collisions = find_collisions(groups)
+
+    if not collisions:
+        print("\nAudit result: No multicast MAC collisions were found.")
+        return
+
+    print("\nAudit result: Multicast MAC collisions were found.")
+
+    for mac, addresses in collisions.items():
+        print("\n{}".format(mac))
+
+        for address in addresses:
+            print("  - {}".format(address))
+
+
+def main() -> None:
+    groups = collect_multicast_groups()
+    print_audit_report(groups)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+This script is suitable for auditing addresses before deploying a new group.
+
+---
+
+## 13. Packet-Capture Verification
+
+### 13.1 Wireshark
+
+Assume the group is:
+
+```text
+239.1.1.1
+```
+
+Use this display filter:
+
+```text
+ip.dst == 239.1.1.1
+```
+
+Verify the Ethernet destination with:
+
+```text
+eth.dst == 01:00:5e:01:01:01
+```
+
+Check both fields simultaneously:
+
+```text
+ip.dst == 239.1.1.1 and eth.dst == 01:00:5e:01:01:01
+```
+
+---
+
+### 13.2 Checking Other Groups Under the Same MAC Address
+
+To check whether a MAC address carries another destination IP:
+
+```text
+eth.dst == 01:00:5e:01:01:01 and ip.dst != 239.1.1.1
+```
+
+This filter shows only that other multicast packets mapped to the same MAC appeared at the capture point.
+
+By itself, it does not prove the switch's hardware forwarding key or IGMP Snooping implementation.
+
+---
+
+### 13.3 tcpdump
+
+Display the Ethernet header:
+
 ```bash
-Switch# show ip ip-igmp snooping groups
-Vlan      Group               Type        Version     Port List
-! 如果此处的 Group 显示的是 IP 地址（如 232.1.1.1），代表当前运行 IP-based 硬件转发
-10        232.1.1.1           dynamic     v3          Eth1/1, Eth1/2
-10        239.1.1.1           dynamic     v3          Eth1/5
+tcpdump -i eth0 -e -nn ether dst 01:00:5e:01:01:01
 ```
-### 4.3 生产排查清单与防撞红线
-* **冲突审计自动化**:  
-  在同一个 VLAN 内规划的所有组播 IP，必须进行 $IP \pmod{2^{23}}$ 的位比对校验。在部署新行情源或新策略前，应通过自动化脚本（如 Python 脚本）将待申请的组播 IP 转换为 MAC 地址，并与现存的 MAC 列表进行碰撞对比。
-* **硬件 TCAM 容量核验**:  
-  部分交换机虽然在协议上支持 IP-based 组播转发，但其硬件 TCAM 表项容量有限。当同一 VLAN 内的组播组（尤其是 SSM 的 `(S, G)` 条目）数量超过硬件规格时，交换机可能会被迫退化为 MAC-based 转发或直接对超出部分进行泛洪。必须通过以下命令监控硬件 resource：
-  ```bash
-  Switch# show hardware profile tcam resource
-  ```
-* **二层未注册组播控制**:  
-  为防止未订阅的组播流在 VLAN 内无脑泛洪，必须在 VLAN 下开启 igmp snooping 并配置丢弃未注册组播：
-  ```bash
-  Switch(config)# ip igmp snooping
-  Switch(config)# vlan 10
-  Switch(config-vlan)# ip igmp snooping explicit-tracking
-  ```
 
+Capture only a specific destination IP:
+
+```bash
+tcpdump -i eth0 -e -nn dst host 239.1.1.1
+```
+
+Check for packets under the same MAC that do not belong to the expected group:
+
+```bash
+tcpdump -i eth0 -e -nn \
+  'ether dst 01:00:5e:01:01:01 and not dst host 239.1.1.1'
+```
+
+---
+
+## 14. Common Misconceptions
+
+### 14.1 “One Multicast IP Corresponds to One Unique MAC Address”
+
+Incorrect.
+
+The IPv4 multicast-to-Ethernet MAC mapping ratio is:
+
+```text
+32 IPv4 Groups : 1 Ethernet Multicast MAC
+```
+
+---
+
+### 14.2 “The Same MAC Means That Two Groups Are the Same”
+
+Incorrect.
+
+The same MAC means only that their lower 23 bits are identical. Their destination IP addresses remain different.
+
+---
+
+### 14.3 “Changing the Group's First Octet Prevents a Collision”
+
+Incorrect.
+
+The first IPv4 octet is not part of the lower-23-bit mapping.
+
+---
+
+### 14.4 “The Second Octet Must Use a Planning Increment Greater Than 128”
+
+Incorrect.
+
+Only the most significant bit of the second octet is discarded, so values that differ by 128 actually collide.
+
+There is no fixed-increment rule; compare the complete lower 23 bits.
+
+---
+
+### 14.5 “If the Snooping Table Displays an IP, Hardware Must Use IP-Based Forwarding”
+
+Incorrect.
+
+The control-plane CLI display format does not directly prove the ASIC's actual forwarding key.
+
+---
+
+### 14.6 “MAC Overlap Always Causes an Application to Receive Incorrect Data”
+
+Not necessarily.
+
+Even when a packet reaches a host interface, the operating system and application still check group membership, destination IP, and UDP port.
+
+The actual effect depends on switch forwarding behavior, host processing, and traffic volume.
+
+---
+
+## 15. Chapter Summary
+
+1. IPv4 multicast packets require a multicast destination MAC on Ethernet networks.
+2. IPv4 multicast over Ethernet uses the fixed `01:00:5E` prefix.
+3. The most significant bit of the mapped MAC's fourth octet is fixed at 0.
+4. The Ethernet mapping space retains only the lower 23 bits of an IPv4 group.
+5. An IPv4 multicast address has a 28-bit group ID, so five bits are lost during mapping.
+6. Because `2^5 = 32`, up to 32 different groups map to the same MAC address.
+7. The quick calculation formula is `01:00:5E:(B & 0x7F):C:D`.
+8. Changing the first IPv4 octet does not change the mapped MAC address.
+9. MAC overlap occurs when second octets differ by 128 and the final two octets are identical.
+10. MAC overlap does not make two IPv4 groups the same group at Layer 3.
+11. On a MAC-based Layer 2 multicast-forwarding platform, overlap may cause over-forwarding.
+12. A host can still drop unrelated traffic based on destination IP and membership.
+13. Different switches may use the MAC address, group IP, or `(S,G)` as the forwarding key.
+14. A CLI displaying a group IP does not directly prove that the ASIC uses IP-based forwarding.
+15. Address planning should compare the complete lower 23 bits rather than rely on a fixed increment.
+16. Avoid unnecessary MAC overlap in high-bandwidth or low-latency Layer 2 domains.
+17. Python scripts can automate mapping calculations and address-conflict audits.
+18. A later chapter covers specific IGMP Snooping state and forwarding mechanisms.
+
+---
+
+## 16. References
+
+- RFC 1112 — Host Extensions for IP Multicasting
+- RFC 4541 — Considerations for Internet Group Management Protocol Snooping Switches
+- IANA — Ethernet Numbers
+- IANA — IPv4 Multicast Address Space
