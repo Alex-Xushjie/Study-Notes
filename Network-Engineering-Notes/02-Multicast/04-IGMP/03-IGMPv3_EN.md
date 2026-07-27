@@ -1,5 +1,5 @@
 ---
-status: cn-draft
+status: en-draft
 title: IGMP Version 3
 module: 04-IGMP
 file: 03-IGMPv3
@@ -13,55 +13,39 @@ tags:
 
 # 03 - IGMPv3
 
-## 1. 本章目标
+## 1. Chapter Objectives
 
-本章学习 IGMP Version 3 相比 IGMPv2 的核心扩展：
+This chapter covers IGMPv3 extensions over IGMPv2: source filtering; INCLUDE/EXCLUDE modes; source lists; three Query types; Membership Reports and Group Records; Current-State and State-Change Records; SSM; multi-application aggregation; version compatibility; and packet-capture checkpoints.
 
-- Source Filtering；
-- INCLUDE Mode 与 EXCLUDE Mode；
-- Source List；
-- General Query、Group-Specific Query 和 Group-and-Source-Specific Query；
-- IGMPv3 Membership Report；
-- Group Record；
-- Current-State Record 与 State-Change Record；
-- IGMPv3 与 SSM；
-- 多应用状态聚合；
-- IGMPv1/v2/v3 兼容机制；
-- 抓包时需要检查的关键字段。
-
-本章仍然只讨论 Receiver Host 与直连 Multicast Router 之间的三层 Membership。
-
-IGMP Snooping 对 IGMPv3 Source List 的处理将在第 05 章中详细研究。
+It discusses only Layer 3 membership between receiver hosts and directly connected multicast routers. Chapter 05 covers IGMP Snooping handling of IGMPv3 source lists.
 
 ---
 
-## 2. 为什么需要 IGMPv3
+## 2. Why Is IGMPv3 Needed?
 
-IGMPv1 和 IGMPv2 只能表达：
+IGMPv1/v2 can state:
 
 ```text
 I want to receive Group G.
 ```
 
-例如：
-
 ```text
 Join 239.1.1.1
 ```
 
-但它们不能表达：
+but not:
 
 ```text
 Receive Group G only from Source S1.
 ```
 
-也不能表达：
+or:
 
 ```text
 Receive Group G from all sources except S2.
 ```
 
-同一个 Group 可能存在多个 Source：
+One group may have multiple sources:
 
 ```text
 Source A ─┐
@@ -69,15 +53,13 @@ Source A ─┐
 Source B ─┘
 ```
 
-Receiver 可能只需要 Source A。
-
-IGMPv3 因此增加：
+A receiver may need only Source A. IGMPv3 therefore adds:
 
 ```text
 Source Filtering
 ```
 
-Receiver 不再只报告 Group，而是报告：
+The receiver reports:
 
 ```text
 Filter Mode + Group + Source List
@@ -87,11 +69,7 @@ Filter Mode + Group + Source List
 
 ## 3. INCLUDE Mode
 
-INCLUDE Mode 表示：
-
-> 只接收 Source List 中列出的 Source 发往 Group G 的流量。
-
-例如：
+INCLUDE means receiving Group G traffic only from sources in the source list.
 
 ```text
 Mode:   INCLUDE
@@ -101,8 +79,6 @@ Source:
 - 10.1.1.20
 ```
 
-含义：
-
 ```text
 Receive:
 (10.1.1.10, 232.1.1.1)
@@ -111,35 +87,29 @@ Receive:
 Do not receive other sources for 232.1.1.1.
 ```
 
-可简写为：
-
 ```text
 INCLUDE {S1,S2} for G
 ```
 
-### 3.1 INCLUDE 空列表
+### 3.1 Empty INCLUDE List
 
 ```text
 INCLUDE {}
 ```
 
-表示：
+means:
 
 ```text
 Receive no source for Group G.
 ```
 
-它通常代表该接口不再希望接收这个 Group。
+It normally means the interface no longer wants the group.
 
 ---
 
 ## 4. EXCLUDE Mode
 
-EXCLUDE Mode 表示：
-
-> 接收所有 Source 发往 Group G 的流量，但排除 Source List 中列出的 Source。
-
-例如：
+EXCLUDE means receiving Group G traffic from every source except those listed.
 
 ```text
 Mode:   EXCLUDE
@@ -148,43 +118,37 @@ Source:
 - 10.1.1.20
 ```
 
-含义：
-
 ```text
 Receive all sources for 239.1.1.1
 except 10.1.1.20.
 ```
 
-可简写为：
-
 ```text
 EXCLUDE {S2} for G
 ```
 
-### 4.1 EXCLUDE 空列表
+### 4.1 Empty EXCLUDE List
 
 ```text
 EXCLUDE {}
 ```
 
-表示：
+means:
 
 ```text
 Receive Group G from all sources.
 ```
 
-这相当于传统 ASM 的 Group Membership。
+This is equivalent to traditional ASM group membership.
 
 ---
 
-## 5. INCLUDE 与 EXCLUDE 对比
+## 5. INCLUDE Versus EXCLUDE
 
-| Mode | Source List 的含义 | 示例 |
+| Mode | Meaning of Source List | Example |
 |---|---|---|
-| INCLUDE | 只接收列表中的 Source | `INCLUDE {S1,S2}` |
-| EXCLUDE | 接收列表之外的所有 Source | `EXCLUDE {S3}` |
-
-最容易混淆的是：
+| INCLUDE | Receive only listed sources | `INCLUDE {S1,S2}` |
+| EXCLUDE | Receive all sources except those listed | `EXCLUDE {S3}` |
 
 ```text
 INCLUDE {}
@@ -196,19 +160,15 @@ EXCLUDE {}
 
 ---
 
-## 6. IGMPv3 与 ASM、SSM
+## 6. IGMPv3 with ASM and SSM
 
 ### 6.1 ASM
 
-传统 ASM Receiver 只指定 Group，不指定 Source。
-
-在 IGMPv3 中通常表现为：
+An ASM receiver specifies a group but no source. In IGMPv3 this normally appears as:
 
 ```text
 EXCLUDE {}
 ```
-
-例如：
 
 ```text
 Group: 239.1.1.1
@@ -216,45 +176,37 @@ Mode:  EXCLUDE
 List:  Empty
 ```
 
-含义：
-
 ```text
 Receive 239.1.1.1 from any source.
 ```
 
 ### 6.2 SSM
 
-SSM Receiver 必须明确指定：
+An SSM receiver specifies:
 
 ```text
 (S,G)
 ```
-
-例如：
 
 ```text
 Source: 10.1.1.10
 Group:  232.1.1.1
 ```
 
-IGMPv3 可以表达为：
+IGMPv3 expresses this as:
 
 ```text
 INCLUDE {10.1.1.10}
 for Group 232.1.1.1
 ```
 
-因此：
-
 > IGMPv3 provides the standard receiver-membership mechanism for SSM.
 
-IGMPv3 只负责 Receiver 向 Last-Hop Router 表达 Source-specific Interest。Router 之间如何建立 `(S,G)` 转发树属于后续组播路由章节。
+IGMPv3 expresses source-specific interest from the receiver to the last-hop router. Building an inter-router `(S,G)` tree belongs to multicast routing.
 
 ---
 
-## 7. IGMPv3 报文封装
-
-IGMPv3 直接封装在 IPv4 中：
+## 7. IGMPv3 Encapsulation
 
 ```text
 Ethernet
@@ -264,20 +216,18 @@ IPv4
 IGMP
 ```
 
-IPv4 Header：
-
 ```text
 Protocol = 2
 TTL      = 1
 ```
 
-IGMPv3 报文应携带：
+IGMPv3 should carry:
 
 ```text
 IPv4 Router Alert Option
 ```
 
-常见目的地址：
+Common destinations:
 
 ```text
 General Query:
@@ -295,15 +245,11 @@ IGMPv3 Membership Report:
 
 ---
 
-## 8. IGMPv3 Query 格式
-
-IGMPv3 Query 使用：
+## 8. IGMPv3 Query Format
 
 ```text
 Type = 0x11
 ```
-
-格式如下：
 
 ```text
   0                   1                   2                   3
@@ -320,26 +266,24 @@ Type = 0x11
  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
-主要字段：
-
 | Field | Meaning |
 |---|---|
-| Type | Query，固定为 `0x11` |
-| Max Resp Code | Receiver 最长响应时间 |
-| Group Address | 目标 Group |
+| Type | Query, fixed at `0x11` |
+| Max Resp Code | Maximum receiver response time |
+| Group Address | Target group |
 | S | Suppress Router-side Processing |
 | QRV | Querier's Robustness Variable |
 | QQIC | Querier's Query Interval Code |
-| Number of Sources | Source List 数量 |
-| Source Address List | 被查询的 Source |
+| Number of Sources | Source-list count |
+| Source Address List | Queried sources |
 
 ---
 
-## 9. Max Resp Code、QRV 与 QQIC
+## 9. Max Resp Code, QRV, and QQIC
 
 ### 9.1 Max Resp Code
 
-当数值小于 128 时：
+For values below 128:
 
 ```text
 Max Response Time
@@ -347,13 +291,11 @@ Max Response Time
 Max Resp Code × 0.1 second
 ```
 
-例如：
-
 ```text
 100 → 10 seconds
 ```
 
-当数值大于或等于 128 时，使用浮点编码。
+Values of 128 or more use floating-point encoding.
 
 ### 9.2 QRV
 
@@ -361,7 +303,7 @@ Max Resp Code × 0.1 second
 QRV = Querier's Robustness Variable
 ```
 
-默认通常为：
+Default:
 
 ```text
 2
@@ -373,7 +315,7 @@ QRV = Querier's Robustness Variable
 QQIC = Querier's Query Interval Code
 ```
 
-默认 Query Interval 通常为：
+The default Query Interval is normally:
 
 ```text
 125 seconds
@@ -381,11 +323,11 @@ QQIC = Querier's Query Interval Code
 
 ---
 
-## 10. IGMPv3 的三种 Query
+## 10. The Three IGMPv3 Queries
 
 ### 10.1 General Query
 
-用于询问当前接口上的全部 Group 和 Source Filter State。
+Queries all group and source-filter state on an interface.
 
 ```text
 IPv4 Destination: 224.0.0.1
@@ -395,7 +337,7 @@ Number of Sources: 0
 
 ### 10.2 Group-Specific Query
 
-用于询问是否仍有 Receiver 对 Group G 感兴趣。
+Checks whether receivers still want Group G.
 
 ```text
 IPv4 Destination: Group G
@@ -405,7 +347,7 @@ Number of Sources: 0
 
 ### 10.3 Group-and-Source-Specific Query
 
-用于询问是否仍有 Receiver 需要 Group G 中的特定 Source。
+Checks whether receivers still need specific sources within Group G.
 
 ```text
 IPv4 Destination: Group G
@@ -416,33 +358,27 @@ Source List:
 - S2
 ```
 
-这是 IGMPv3 相比 IGMPv2 的关键扩展。
+This is a key IGMPv3 extension over IGMPv2.
 
 ---
 
 ## 11. IGMPv3 Membership Report
 
-IGMPv3 Membership Report 使用：
-
 ```text
 Type = 0x22
 ```
 
-IPv4 Destination：
+IPv4 destination:
 
 ```text
 224.0.0.22
 ```
 
-与 IGMPv1/v2 不同：
-
-- Report 不再直接发送到所报告的 Group；
-- 一个 Report 可以携带多个 Group Record；
-- 每个 Group Record 可以携带 Source List。
+Unlike IGMPv1/v2, the Report is not sent to the reported group, can contain multiple Group Records, and each record can contain a source list.
 
 ---
 
-## 12. IGMPv3 Report 格式
+## 12. IGMPv3 Report Format
 
 ```text
   0                   1                   2                   3
@@ -459,11 +395,11 @@ IPv4 Destination：
  +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
-一个 Report 可以包含多个 Group Record。
+One Report can contain multiple Group Records.
 
 ---
 
-## 13. Group Record 格式
+## 13. Group Record Format
 
 ```text
   0                   1                   2                   3
@@ -480,15 +416,15 @@ IPv4 Destination：
 
 | Field | Meaning |
 |---|---|
-| Record Type | 当前状态或状态变化 |
-| Aux Data Len | Auxiliary Data 长度 |
-| Number of Sources | Source 数量 |
+| Record Type | Current state or state change |
+| Aux Data Len | Auxiliary Data length |
+| Number of Sources | Source count |
 | Multicast Address | Group G |
-| Source Address List | Source List |
+| Source Address List | Source list |
 
 ---
 
-## 14. 六种 Group Record Type
+## 14. Six Group Record Types
 
 | Value | Record Type |
 |---:|---|
@@ -499,7 +435,7 @@ IPv4 Destination：
 | `5` | ALLOW_NEW_SOURCES |
 | `6` | BLOCK_OLD_SOURCES |
 
-它们分为：
+They divide into:
 
 ```text
 Current-State Record
@@ -510,7 +446,7 @@ State-Change Record
 
 ## 15. Current-State Record
 
-用于响应 Query，报告当前 Filter State。
+Used in Query responses to report current filter state.
 
 ### 15.1 MODE_IS_INCLUDE
 
@@ -518,7 +454,7 @@ State-Change Record
 MODE_IS_INCLUDE {Source List}
 ```
 
-表示当前状态是 INCLUDE。
+The current state is INCLUDE.
 
 ### 15.2 MODE_IS_EXCLUDE
 
@@ -526,9 +462,7 @@ MODE_IS_INCLUDE {Source List}
 MODE_IS_EXCLUDE {Source List}
 ```
 
-表示当前状态是 EXCLUDE。
-
-例如：
+The current state is EXCLUDE.
 
 ```text
 MODE_IS_EXCLUDE
@@ -536,15 +470,13 @@ Group: 239.1.1.1
 Sources: Empty
 ```
 
-表示接收该 Group 的所有 Source。
+means receiving the group from all sources.
 
 ---
 
 ## 16. State-Change Record
 
-用于通知 Router：Receiver 的 Filter State 发生了变化。
-
-包括：
+Notifies a router that receiver filter state changed:
 
 ```text
 CHANGE_TO_INCLUDE_MODE
@@ -555,7 +487,7 @@ BLOCK_OLD_SOURCES
 
 ### 16.1 CHANGE_TO_INCLUDE_MODE
 
-状态切换为：
+Changes state to:
 
 ```text
 INCLUDE {Source List}
@@ -563,7 +495,7 @@ INCLUDE {Source List}
 
 ### 16.2 CHANGE_TO_EXCLUDE_MODE
 
-状态切换为：
+Changes state to:
 
 ```text
 EXCLUDE {Source List}
@@ -571,7 +503,7 @@ EXCLUDE {Source List}
 
 ### 16.3 ALLOW_NEW_SOURCES
 
-新增希望接收的 Source。
+Adds desired sources:
 
 ```text
 Before:
@@ -581,7 +513,7 @@ After:
 INCLUDE {S1,S2}
 ```
 
-可发送：
+It can send:
 
 ```text
 ALLOW_NEW_SOURCES {S2}
@@ -589,7 +521,7 @@ ALLOW_NEW_SOURCES {S2}
 
 ### 16.4 BLOCK_OLD_SOURCES
 
-不再希望接收某些 Source。
+Stops requesting sources:
 
 ```text
 Before:
@@ -599,7 +531,7 @@ After:
 INCLUDE {S1}
 ```
 
-可发送：
+It can send:
 
 ```text
 BLOCK_OLD_SOURCES {S2}
@@ -607,14 +539,12 @@ BLOCK_OLD_SOURCES {S2}
 
 ---
 
-## 17. Current-State 与 State-Change 的区别
+## 17. Current-State Versus State-Change
 
 | Category | Record Type | Typical Use |
 |---|---|---|
-| Current-State | MODE_IS_INCLUDE / MODE_IS_EXCLUDE | 响应 Query |
-| State-Change | CHANGE_TO_* / ALLOW_NEW_SOURCES / BLOCK_OLD_SOURCES | Join、Leave 或 Source List 变化 |
-
-记忆方式：
+| Current-State | MODE_IS_INCLUDE / MODE_IS_EXCLUDE | Respond to a Query |
+| State-Change | CHANGE_TO_* / ALLOW_NEW_SOURCES / BLOCK_OLD_SOURCES | Join, Leave, or source-list change |
 
 ```text
 MODE_IS_*
@@ -628,23 +558,23 @@ BLOCK_OLD_SOURCES
 
 ---
 
-## 18. SSM 加组流程
+## 18. SSM Join Process
 
-假设应用希望接收：
+Assume an application wants:
 
 ```text
 Source: 10.1.1.10
 Group:  232.1.1.1
 ```
 
-Host 建立：
+The host creates:
 
 ```text
 INCLUDE {10.1.1.10}
 for 232.1.1.1
 ```
 
-并发送：
+and sends:
 
 ```text
 Destination: 224.0.0.22
@@ -660,7 +590,7 @@ Source:
 10.1.1.10
 ```
 
-后续响应 Query 时发送：
+Later Query responses use:
 
 ```text
 MODE_IS_INCLUDE
@@ -670,23 +600,21 @@ Source: 10.1.1.10
 
 ---
 
-## 19. ASM 加组流程
+## 19. ASM Join Process
 
-应用希望接收：
+An application wants:
 
 ```text
 239.1.1.1
 ```
 
-并接受所有 Source。
-
-Host 建立：
+from all sources. The host creates:
 
 ```text
 EXCLUDE {}
 ```
 
-并发送：
+and sends:
 
 ```text
 CHANGE_TO_EXCLUDE_MODE
@@ -694,7 +622,7 @@ Group: 239.1.1.1
 Source List: Empty
 ```
 
-后续响应 Query 时报告：
+Later Query responses report:
 
 ```text
 MODE_IS_EXCLUDE
@@ -704,23 +632,23 @@ Source List: Empty
 
 ---
 
-## 20. IGMPv3 离组
+## 20. Leaving with IGMPv3
 
-### 20.1 离开 SSM Channel
+### 20.1 Leaving an SSM Channel
 
-当前状态：
+Current state:
 
 ```text
 INCLUDE {S1}
 ```
 
-离组后：
+After leaving:
 
 ```text
 INCLUDE {}
 ```
 
-Host 可以发送：
+The host can send:
 
 ```text
 CHANGE_TO_INCLUDE_MODE
@@ -728,27 +656,27 @@ Group: G
 Source List: Empty
 ```
 
-### 20.2 离开 ASM Group
+### 20.2 Leaving an ASM Group
 
-当前状态：
+Current state:
 
 ```text
 EXCLUDE {}
 ```
 
-离组后同样变为：
+After leaving it also becomes:
 
 ```text
 INCLUDE {}
 ```
 
-IGMPv3 使用 Group Record 表达离组和 Source List 变化，而不是依赖一个新的独立 Leave Message。
+IGMPv3 uses Group Records to express leaving and source-list changes rather than a new standalone Leave message.
 
 ---
 
-## 21. 多应用状态聚合
+## 21. Multi-Application State Aggregation
 
-同一台 Host 上多个应用可能对同一 Group 提出不同请求：
+Applications on one host may request different sources for the same group:
 
 ```text
 Application A:
@@ -758,37 +686,37 @@ Application B:
 INCLUDE {S2}
 ```
 
-操作系统聚合后，接口级状态可能是：
+The operating system may aggregate the interface state as:
 
 ```text
 INCLUDE {S1,S2}
 ```
 
-因此需要区分：
+Distinguish:
 
 ```text
 Per-Socket Filter State
 ```
 
-和：
+from:
 
 ```text
 Per-Interface Filter State
 ```
 
-IGMP Report 反映的是接口级聚合结果。
+IGMP Reports reflect the aggregated interface state.
 
 ---
 
-## 22. Router 端 Membership State
+## 22. Router-Side Membership State
 
-IGMPv3 Router 不再只维护：
+An IGMPv3 router maintains more than:
 
 ```text
 Interface + Group
 ```
 
-还需要维护：
+It maintains:
 
 ```text
 Interface
@@ -796,8 +724,6 @@ Interface
 + Filter Mode
 + Source State
 ```
-
-例如：
 
 ```text
 Interface: Ethernet0/1
@@ -808,72 +734,53 @@ Sources:
 - 10.1.1.20
 ```
 
-Router 可能维护：
-
-- Group Filter Mode；
-- Group Timer；
-- Per-Source Timer；
-- Source List；
-- Older-Version Host Present State。
+It may maintain group filter mode, group and per-source timers, source lists, and older-version host state.
 
 ---
 
 ## 23. IGMPv3 Querier Election
 
-IGMPv3 延续 IGMPv2 的规则：
+IGMPv3 retains the IGMPv2 rule:
 
 ```text
 Lowest IPv4 address wins.
 ```
 
-Non-Querier 仍然：
-
-- 监听 Query；
-- 监听 Report；
-- 维护 Membership State；
-- 运行 Other Querier Present Timer。
-
-IGMP Querier 与 PIM DR 是不同角色。
+A Non-Querier still listens to Queries and Reports, maintains membership, and runs the Other Querier Present Timer. The IGMP Querier and PIM DR are different roles.
 
 ---
 
-## 24. IGMPv1/v2/v3 兼容
+## 24. IGMPv1/v2/v3 Compatibility
 
-IGMPv3 Host 听到旧版本 Query 后，会进入兼容模式。
+An IGMPv3 host enters compatibility mode after hearing an older Query.
 
-### 24.1 听到 IGMPv2 Query
+### 24.1 Hearing an IGMPv2 Query
 
-Host 使用：
+The host uses:
 
 ```text
 IGMPv2 Membership Report
 Type = 0x16
 ```
 
-无法完整表达 Source Filter State。
+and cannot fully express source-filter state.
 
-### 24.2 听到 IGMPv1 Query
+### 24.2 Hearing an IGMPv1 Query
 
-Host 使用：
+The host uses:
 
 ```text
 IGMPv1 Membership Report
 Type = 0x12
 ```
 
-同样不能表达 Source Filtering。
+and likewise cannot express source filtering.
 
-### 24.3 Router 发现旧版本 Host
+### 24.3 Router Discovers an Older Host
 
-IGMPv3 Router 收到旧版本 Report 后，会为相应 Group 维护 Older-Version Host Present State。
+After receiving an older Report, an IGMPv3 router maintains Older-Version Host Present State for the group. This can degrade source filtering and fast leave, and make group behavior follow the lowest version.
 
-旧版本 Host 可能导致：
-
-- Source Filtering 能力退化；
-- Fast Leave 行为退化；
-- Group 行为受最低版本限制。
-
-部署 SSM 时必须确认：
+For SSM, confirm:
 
 ```text
 Receiver supports IGMPv3
@@ -883,16 +790,16 @@ No version downgrade is occurring
 
 ---
 
-## 25. IGMPv3 与 Report Suppression
+## 25. IGMPv3 and Report Suppression
 
-IGMPv1/v2 的经典模型是：
+The classic IGMPv1/v2 model is:
 
 ```text
 One host reports
 Other hosts suppress their reports
 ```
 
-但 IGMPv3 中，不同 Host 可能对同一个 Group 使用不同 Source List：
+In IGMPv3, hosts may have different source lists:
 
 ```text
 Host A:
@@ -902,43 +809,39 @@ Host B:
 INCLUDE {S2}
 ```
 
-一个 Host 的状态不能完整代表另一个 Host。
-
-因此，不能把 IGMPv1/v2 的简单 Suppression 模型直接套用到所有 IGMPv3 Report。
-
-尤其是 State-Change Report，必须根据本 Host 的状态变化可靠发送。
+One host's state cannot fully represent another's. The simple IGMPv1/v2 Suppression model therefore does not apply to every IGMPv3 Report. State-Change Reports in particular must reliably report the local host's changes.
 
 ---
 
-## 26. 抓包分析
+## 26. Packet-Capture Analysis
 
-### 26.1 Wireshark 过滤器
+### 26.1 Wireshark Filters
 
-显示所有 IGMP：
+All IGMP:
 
 ```text
 igmp
 ```
 
-显示 Query：
+Queries:
 
 ```text
 igmp.type == 0x11
 ```
 
-显示 IGMPv3 Report：
+IGMPv3 Reports:
 
 ```text
 igmp.type == 0x22
 ```
 
-查看发送到 IGMPv3 Router Group 的 Report：
+Reports to the IGMPv3 Router group:
 
 ```text
 ip.dst == 224.0.0.22 and igmp.type == 0x22
 ```
 
-### 26.2 General Query 检查点
+### 26.2 General Query Checkpoints
 
 | Field | Expected Value |
 |---|---|
@@ -950,7 +853,7 @@ ip.dst == 224.0.0.22 and igmp.type == 0x22
 | Group Address | `0.0.0.0` |
 | Number of Sources | `0` |
 
-### 26.3 Group-Specific Query 检查点
+### 26.3 Group-Specific Query Checkpoints
 
 | Field | Expected Value |
 |---|---|
@@ -959,7 +862,7 @@ ip.dst == 224.0.0.22 and igmp.type == 0x22
 | Group Address | Group G |
 | Number of Sources | `0` |
 
-### 26.4 Group-and-Source-Specific Query 检查点
+### 26.4 Group-and-Source-Specific Query Checkpoints
 
 | Field | Expected Value |
 |---|---|
@@ -969,7 +872,7 @@ ip.dst == 224.0.0.22 and igmp.type == 0x22
 | Number of Sources | Greater than `0` |
 | Source List | Target Sources |
 
-### 26.5 IGMPv3 Report 检查点
+### 26.5 IGMPv3 Report Checkpoints
 
 | Field | Expected Value |
 |---|---|
@@ -985,65 +888,63 @@ ip.dst == 224.0.0.22 and igmp.type == 0x22
 
 ---
 
-## 27. 常见误解
+## 27. Common Misconceptions
 
-### “IGMPv3 就是加入 `(S,G)`”
+### “IGMPv3 Simply Means Joining `(S,G)`”
 
-不完整。IGMPv3 同时支持 INCLUDE 和 EXCLUDE，也可以表达 ASM Membership。
+Incomplete. IGMPv3 supports INCLUDE and EXCLUDE and can also express ASM membership.
 
-### “INCLUDE 空列表表示接收所有 Source”
+### “An Empty INCLUDE List Means All Sources”
 
-错误。
+Incorrect.
 
 ```text
 INCLUDE {}
 → Receive nothing
 ```
 
-### “EXCLUDE 空列表表示不接收任何 Source”
+### “An Empty EXCLUDE List Means No Sources”
 
-错误。
+Incorrect.
 
 ```text
 EXCLUDE {}
 → Receive from all sources
 ```
 
-### “IGMPv3 Report 发送到 Group 本身”
+### “An IGMPv3 Report Is Sent to the Group Itself”
 
-错误。IGMPv3 Report 发送到：
+Incorrect. It is sent to:
 
 ```text
 224.0.0.22
 ```
 
-### “一个 IGMPv3 Report 只能报告一个 Group”
+### “One IGMPv3 Report Can Report Only One Group”
 
-错误。一个 Report 可以携带多个 Group Record。
+Incorrect. One Report can carry multiple Group Records.
 
-### “MODE_IS_INCLUDE 表示状态发生变化”
+### “MODE_IS_INCLUDE Indicates a State Change”
 
-错误。它是 Current-State Record。
+Incorrect. It is a Current-State Record.
 
-### “IGMPv3 可以单独建立跨 Router 的 `(S,G)` Tree”
+### “IGMPv3 Alone Can Build an Inter-Router `(S,G)` Tree”
 
-错误。IGMPv3 只表达 Receiver Interest。
+Incorrect. IGMPv3 only expresses receiver interest.
 
-### “IGMPv3 Host 一定正在使用 SSM”
+### “An IGMPv3 Host Must Be Using SSM”
 
-错误。IGMPv3 Host 也可以使用 `EXCLUDE {}` 表达 ASM。
+Incorrect. It can express ASM with `EXCLUDE {}`.
 
 ---
 
-## 28. 三个版本的演进逻辑
+## 28. Evolution Across the Three Versions
 
-| Version | Receiver 能表达什么 |
+| Version | What the Receiver Can Express |
 |---|---|
-| IGMPv1 | “我需要 Group G。” |
-| IGMPv2 | “我加入或离开 Group G。” |
-| IGMPv3 | “我需要或排除 Group G 中的特定 Source。” |
-
-简化理解：
+| IGMPv1 | “I need Group G.” |
+| IGMPv2 | “I am joining or leaving Group G.” |
+| IGMPv3 | “I need or exclude specific sources within Group G.” |
 
 ```text
 IGMPv1:
@@ -1060,28 +961,23 @@ Group Membership + Source Filtering
 
 ## 29. Chapter Summary
 
-1. IGMPv3 的核心能力是 Source Filtering。
-2. Receiver 使用 Filter Mode、Group 和 Source List 表达接收需求。
-3. INCLUDE 表示只接收列表中的 Source。
-4. EXCLUDE 表示接收列表之外的所有 Source。
-5. `INCLUDE {}` 表示不接收任何 Source。
-6. `EXCLUDE {}` 表示接收所有 Source。
-7. SSM Membership 通常使用 `INCLUDE {S}`。
-8. ASM Membership 通常使用 `EXCLUDE {}`。
-9. IGMPv3 Query Type 仍为 `0x11`。
-10. IGMPv3 定义 General、Group-Specific 和 Group-and-Source-Specific Query。
-11. IGMPv3 Report Type 为 `0x22`。
-12. IGMPv3 Report 发送到 `224.0.0.22`。
-13. 一个 Report 可以包含多个 Group Record。
-14. Current-State Record 包括 MODE_IS_INCLUDE 和 MODE_IS_EXCLUDE。
-15. State-Change Record 包括 CHANGE_TO_INCLUDE_MODE、CHANGE_TO_EXCLUDE_MODE、ALLOW_NEW_SOURCES 和 BLOCK_OLD_SOURCES。
-16. IGMPv3 使用 Group Record 表达 Join、Leave 和 Source List Change。
-17. Host 会把多个 Socket 的接收需求聚合为 Interface-level Filter State。
-18. Router 需要维护 Group Mode 和 Source State。
-19. IGMPv3 延续最低 IPv4 地址成为 Querier 的规则。
-20. 旧版本 Host 或 Querier 可能导致功能降级。
-21. IGMPv3 只表达 Receiver Interest，不负责建立 Router 间组播树。
-22. IGMP Snooping 如何处理 IGMPv3 Source List 将在第 05 章中研究。
+1. IGMPv3's core capability is source filtering.
+2. Receivers express demand with filter mode, group, and source list.
+3. INCLUDE receives only listed sources; EXCLUDE receives all except listed sources.
+4. `INCLUDE {}` receives nothing; `EXCLUDE {}` receives all sources.
+5. SSM normally uses `INCLUDE {S}`; ASM normally uses `EXCLUDE {}`.
+6. IGMPv3 Query remains Type `0x11` and supports General, Group-Specific, and Group-and-Source-Specific Queries.
+7. IGMPv3 Report is Type `0x22` and is sent to `224.0.0.22`.
+8. One Report can contain multiple Group Records.
+9. Current-State Records are MODE_IS_INCLUDE and MODE_IS_EXCLUDE.
+10. State-Change Records are CHANGE_TO_INCLUDE_MODE, CHANGE_TO_EXCLUDE_MODE, ALLOW_NEW_SOURCES, and BLOCK_OLD_SOURCES.
+11. Group Records express joins, leaves, and source-list changes.
+12. A host aggregates multiple socket requests into interface-level filter state.
+13. A router maintains group mode and source state.
+14. The lowest IPv4 address remains Querier.
+15. Older hosts or Queriers may degrade functionality.
+16. IGMPv3 expresses receiver interest but does not build inter-router multicast trees.
+17. Chapter 05 covers IGMP Snooping handling of IGMPv3 source lists.
 
 ---
 
