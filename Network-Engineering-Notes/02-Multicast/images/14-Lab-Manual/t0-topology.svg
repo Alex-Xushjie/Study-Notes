@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1000" viewBox="0 0 1900 1000">
+<rect width="1900" height="1000" fill="#f7f9fc" />
+<text x="950.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#152c49">T0 | Base Multicast Network</text>
+<text x="950.0" y="90.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">EVE-NG build plan  |  Logical interface names; adapt them to your selected node images</text>
+<polyline points="190.70588235294116,323.0 309.29411764705884,407.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="229.0" y="304.5" width="102.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="280" y="320.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">eth0 / port 2</text>
+<polyline points="190.70588235294116,577.0 309.29411764705884,493.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="229.0" y="604.5" width="102.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="280" y="620.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">eth0 / port 3</text>
+<polyline points="448.0,450.0 562.0,450.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="455.75" y="393.5" width="108.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="510" y="409.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">port 1 / Gi0/0</text>
+<polyline points="688.16,407.0 871.84,243.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="668.5" y="274.0" width="153.0" height="52.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="745" y="289.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">10.0.12.0/30</text>
+<text x="745" y="310.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">R1 Gi0/1 / R2 Gi0/0</text>
+<polyline points="969.88,243.0 1160.12,407.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1023.5" y="274.0" width="153.0" height="52.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1100" y="289.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">10.0.23.0/30</text>
+<text x="1100" y="310.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">R2 Gi0/1 / R3 Gi0/1</text>
+<polyline points="686.3076923076923,493.0 873.6923076923077,667.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="668.5" y="599.0" width="153.0" height="52.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="745" y="614.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">10.0.14.0/30</text>
+<text x="745" y="635.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">R1 Gi0/2 / R4 Gi0/0</text>
+<polyline points="967.9615384615385,667.0 1162.0384615384614,493.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1023.5" y="599.0" width="153.0" height="52.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1100" y="614.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">10.0.34.0/30</text>
+<text x="1100" y="635.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">R4 Gi0/1 / R3 Gi0/2</text>
+<polyline points="1288.0,450.0 1402.0,450.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1290.75" y="393.5" width="108.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1345" y="409.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Gi0/0 / port 1</text>
+<polyline points="1548.2941176470588,407.0 1681.7058823529412,323.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1559.0" y="304.5" width="102.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1610" y="320.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">port 2 / eth0</text>
+<polyline points="1548.2941176470588,493.0 1681.7058823529412,577.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1559.0" y="604.5" width="102.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1610" y="620.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">port 3 / eth0</text>
+<rect x="292.75" y="152.0" width="224.5" height="56.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="405" y="168.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24364b">SOURCE LAN</text>
+<text x="405" y="191.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24364b">10.10.10.0/24 | Gateway .1</text>
+<rect x="1367.75" y="152.0" width="224.5" height="56.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1480" y="168.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24364b">RECEIVER LAN</text>
+<text x="1480" y="191.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24364b">10.30.30.0/24 | Gateway .1</text>
+<rect x="45" y="869" width="1810" height="106" rx="12" fill="#ffffff" stroke="#dbe3ed" stroke-width="1" />
+<text x="950.0" y="909.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">Loopbacks: R1 10.255.0.1/32 | R2 10.255.0.2/32 | R3 10.255.0.3/32 | R4 10.255.0.4/32</text>
+<text x="950.0" y="931.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">ASM: 239.10.10.10 | SSM: 232.10.10.10 | UDP port: 5000 | Base transit endpoints: see the manual</text>
+<rect x="52" y="237" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="130" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">S1</text>
+<text x="130" y="297.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Source A</text>
+<rect x="71.0" y="332.0" width="118.0" height="30.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="130" y="347.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#24364b">10.10.10.10/24</text>
+<rect x="52" y="577" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="130" y="605.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">S2</text>
+<text x="130" y="637.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Source B</text>
+<rect x="71.0" y="672.0" width="118.0" height="30.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="130" y="687.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#24364b">10.10.10.20/24</text>
+<rect x="292" y="407" width="156" height="86" rx="12" fill="#e2f5f1" stroke="#177d70" stroke-width="2" />
+<text x="370" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#177d70">SW1</text>
+<text x="370" y="467.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#177d70">Source VLAN 10</text>
+<rect x="562" y="407" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="640" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">R1</text>
+<text x="640" y="467.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Source router</text>
+<rect x="842" y="157" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="920" y="185.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">R2</text>
+<text x="920" y="217.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">RP candidate A</text>
+<rect x="842" y="667" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="920" y="695.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">R4</text>
+<text x="920" y="727.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">RP candidate B</text>
+<rect x="1132" y="407" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="1210" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">R3</text>
+<text x="1210" y="467.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Receiver router</text>
+<rect x="1402" y="407" width="156" height="86" rx="12" fill="#e2f5f1" stroke="#177d70" stroke-width="2" />
+<text x="1480" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#177d70">SW2</text>
+<text x="1480" y="467.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#177d70">Receiver VLAN 30</text>
+<rect x="1672" y="237" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="1750" y="265.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">H1</text>
+<text x="1750" y="297.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Receiver A</text>
+<rect x="1691.0" y="332.0" width="118.0" height="30.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1750" y="347.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#24364b">10.30.30.10/24</text>
+<rect x="1672" y="577" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="1750" y="605.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">H2</text>
+<text x="1750" y="637.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Receiver B</text>
+<rect x="1691.0" y="672.0" width="118.0" height="30.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1750" y="687.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#24364b">10.30.30.20/24</text>
+</svg>
