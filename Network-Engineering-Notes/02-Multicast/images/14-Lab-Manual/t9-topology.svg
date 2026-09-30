@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
+<rect width="1500" height="900" fill="#f7f9fc" />
+<text x="750.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#152c49">T9 | VXLAN / EVPN Multicast Fabric</text>
+<text x="750.0" y="90.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Separate tenant membership, VTEP replication, and the routed underlay</text>
+<polyline points="484.5,407.0 685.5,273.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="412.0" y="289.5" width="206.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="515" y="305.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Leaf1 uplink / Spine1 port 1</text>
+<polyline points="814.5,273.0 1015.5,407.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="907.0" y="289.5" width="206.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1010" y="305.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Spine1 port 2 / Leaf2 uplink</text>
+<polyline points="260.95238095238096,617.0 379.04761904761904,493.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="186.75" y="544.5" width="176.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="275" y="560.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Host-facing access link</text>
+<polyline points="1120.952380952381,493.0 1239.047619047619,617.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1136.75" y="544.5" width="176.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1225" y="560.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Host-facing access link</text>
+<rect x="584.75" y="447.0" width="330.5" height="56.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="750" y="463.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24364b">Logical overlay: VTEP1 &lt;-&gt; VTEP2</text>
+<text x="750" y="486.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="17" font-weight="400" fill="#24364b">Example tenant: VLAN 30 / L2VNI 10030</text>
+<rect x="45" y="769" width="1410" height="106" rx="12" fill="#ffffff" stroke="#dbe3ed" stroke-width="1" />
+<text x="750.0" y="809.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">Add a separate tenant subnet and supported L3VNI/VRF roles for the routed-tenant extension.</text>
+<text x="750.0" y="831.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">Underlay group, tenant group, VNI, and VRF are separate identities: document all of them in your experiment.</text>
+<rect x="672" y="187" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="750" y="215.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">Spine1</text>
+<text x="750" y="247.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Underlay / fabric</text>
+<rect x="342" y="407" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="420" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">Leaf1</text>
+<text x="420" y="467.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">VTEP1</text>
+<rect x="1002" y="407" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="1080" y="435.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">Leaf2</text>
+<text x="1080" y="467.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">VTEP2</text>
+<rect x="142" y="617" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="220" y="645.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">S1</text>
+<text x="220" y="677.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Tenant source</text>
+<rect x="1202" y="617" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="1280" y="645.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">H1</text>
+<text x="1280" y="677.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Remote receiver</text>
+</svg>

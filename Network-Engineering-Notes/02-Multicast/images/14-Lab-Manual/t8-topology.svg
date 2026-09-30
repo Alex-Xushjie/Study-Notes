@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="740" viewBox="0 0 1900 740">
+<rect width="1900" height="740" fill="#f7f9fc" />
+<text x="950.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#152c49">T8 | Provider Multicast VPN</text>
+<text x="950.0" y="90.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Keep customer multicast state and provider transport state visible as separate layers</text>
+<polyline points="208.0,355.0 325.3333333333333,355.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="206.16666666666663" y="264.5" width="121.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="266.66666666666663" y="280.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Customer LAN</text>
+<polyline points="481.3333333333333,355.0 598.6666666666666,355.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="479.25" y="424.5" width="121.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="540.0" y="440.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Customer VRF</text>
+<polyline points="754.6666666666666,355.0 872.0,355.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="742.3333333333333" y="264.5" width="142.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="813.3333333333333" y="280.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Provider transport</text>
+<polyline points="1028.0,355.0 1145.3333333333333,355.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1015.6666666666665" y="424.5" width="142.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1086.6666666666665" y="440.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Provider transport</text>
+<polyline points="1301.3333333333333,355.0 1418.6666666666665,355.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1299.25" y="264.5" width="121.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1360.0" y="280.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Customer VRF</text>
+<polyline points="1574.6666666666665,355.0 1692.0,355.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1572.8333333333333" y="424.5" width="121.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1633.3333333333333" y="440.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Customer LAN</text>
+<rect x="45" y="609" width="1810" height="106" rx="12" fill="#ffffff" stroke="#dbe3ed" stroke-width="1" />
+<text x="950.0" y="649.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">Choose one supported MVPN architecture before building this extension; BLUE is the customer VPN.</text>
+<text x="950.0" y="671.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">Suggested chain interface convention: left-facing Gi0/0, right-facing Gi0/1; host links use eth0.</text>
+<rect x="52.0" y="312" width="156.0" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="130.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">S1</text>
+<text x="130.0" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Customer source</text>
+<rect x="325.3333333333333" y="312" width="156.0" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="403.3333333333333" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">CE1</text>
+<text x="403.3333333333333" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Customer edge</text>
+<rect x="598.6666666666666" y="312" width="156.0" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="676.6666666666666" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">PE1</text>
+<text x="676.6666666666666" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Provider edge</text>
+<rect x="872.0" y="312" width="156.0" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="950.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">P</text>
+<text x="950.0" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Provider core</text>
+<rect x="1145.3333333333333" y="312" width="156.0" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="1223.3333333333333" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">PE2</text>
+<text x="1223.3333333333333" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Provider edge</text>
+<rect x="1418.6666666666665" y="312" width="156.0" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="1496.6666666666665" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">CE2</text>
+<text x="1496.6666666666665" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Customer edge</text>
+<rect x="1692.0" y="312" width="156.0" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="1770.0" y="340.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">H1</text>
+<text x="1770.0" y="372.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Customer receiver</text>
+</svg>

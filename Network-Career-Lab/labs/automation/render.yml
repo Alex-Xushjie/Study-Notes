@@ -1,0 +1,19 @@
+---
+- name: Render lab configuration locally
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  vars_files:
+    - intent.yml
+  tasks:
+    - name: Validate intent
+      ansible.builtin.assert:
+        that:
+          - local_as is integer
+          - router_id is defined
+          - neighbors | length > 0
+    - name: Render FRR learning fragment (no deployment)
+      ansible.builtin.template:
+        src: bgp.j2
+        dest: "{{ playbook_dir }}/rendered-bgp.conf"
+        mode: '0600'

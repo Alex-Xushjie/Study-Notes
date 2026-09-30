@@ -1,0 +1,7 @@
+---
+local_as: 65000
+router_id: 10.255.0.1
+neighbors:
+  - address: 192.0.2.2
+    remote_as: 65001
+    description: LAB-ISP1

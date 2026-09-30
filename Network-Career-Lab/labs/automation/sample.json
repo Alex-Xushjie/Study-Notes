@@ -1,0 +1,7 @@
+{
+  "devices": [
+    {"name": "edge-good", "bgp": [{"peer": "192.0.2.2", "state": "Established"}]},
+    {"name": "edge-fault", "bgp": [{"peer": "192.0.2.6", "state": "Idle"}]},
+    {"name": "edge-unreachable", "error": "Simulated SSH timeout"}
+  ]
+}

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="800" viewBox="0 0 1800 800">
+<rect width="1800" height="800" fill="#f7f9fc" />
+<text x="900.0" y="44.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#152c49">T10 | IGMP Proxy Edge</text>
+<text x="900.0" y="90.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#526477">Observe membership separately on the upstream and downstream sides of the proxy</text>
+<polyline points="208.0,350.0 392.0,350.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="250.25" y="284.5" width="99.5" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="300" y="300.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">eth0 / Gi0/0</text>
+<polyline points="548.0,350.0 762.0,350.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="567.5" y="254.0" width="175.0" height="52.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="655" y="269.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Gi0/1 / eth0</text>
+<text x="655" y="290.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Upstream membership</text>
+<polyline points="918.0,350.0 1132.0,350.0" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="927.75" y="254.0" width="194.5" height="52.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1025" y="269.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">eth1 / port 1</text>
+<text x="1025" y="290.5" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">Downstream membership</text>
+<polyline points="1288.0,328.4473684210526 1512.0,266.5526315789474" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1349.0" y="204.5" width="102.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1400" y="220.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">port 2 / eth0</text>
+<polyline points="1288.0,383.86842105263156 1512.0,481.13157894736844" fill="none" stroke="#7c8da0" stroke-width="3" stroke-linejoin="round" />
+<rect x="1349.0" y="499.5" width="102.0" height="31.0" rx="6" fill="#f7f9fc" stroke="#f7f9fc" stroke-width="1" />
+<text x="1400" y="515.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="15" font-weight="400" fill="#24364b">port 3 / eth0</text>
+<rect x="45" y="669" width="1710" height="106" rx="12" fill="#ffffff" stroke="#dbe3ed" stroke-width="1" />
+<text x="900.0" y="709.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">Source, upstream transit, and downstream receiver LANs use separate subnets.</text>
+<text x="900.0" y="731.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#526477">The multicast VLAN-service experiment is a separate switch-based variant; see the taskbook for the port/VLAN plan.</text>
+<rect x="52" y="307" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="130" y="335.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">S1</text>
+<text x="130" y="367.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Source</text>
+<rect x="392" y="307" width="156" height="86" rx="12" fill="#e8f1ff" stroke="#2863a6" stroke-width="2" />
+<text x="470" y="335.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2863a6">R-UP</text>
+<text x="470" y="367.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#2863a6">Upstream router</text>
+<rect x="762" y="307" width="156" height="86" rx="12" fill="#f0e8ff" stroke="#7953ab" stroke-width="2" />
+<text x="840" y="335.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#7953ab">PROXY</text>
+<text x="840" y="367.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#7953ab">Two-interface host</text>
+<rect x="1132" y="307" width="156" height="86" rx="12" fill="#e2f5f1" stroke="#177d70" stroke-width="2" />
+<text x="1210" y="335.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#177d70">SW-EDGE</text>
+<text x="1210" y="367.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#177d70">Receiver LAN</text>
+<rect x="1512" y="202" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="1590" y="230.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">H1</text>
+<text x="1590" y="262.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Receiver A</text>
+<rect x="1512" y="472" width="156" height="86" rx="12" fill="#fff3dc" stroke="#aa7020" stroke-width="2" />
+<text x="1590" y="500.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#aa7020">H2</text>
+<text x="1590" y="532.0" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#aa7020">Receiver B</text>
+</svg>

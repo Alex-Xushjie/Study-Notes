@@ -1,0 +1,7 @@
+! Learning fragment: review interface addressing and route policies before use
+router bgp {{ local_as }}
+ bgp router-id {{ router_id }}
+{% for neighbor in neighbors %}
+ neighbor {{ neighbor.address }} remote-as {{ neighbor.remote_as }}
+ neighbor {{ neighbor.address }} description {{ neighbor.description }}
+{% endfor %}
