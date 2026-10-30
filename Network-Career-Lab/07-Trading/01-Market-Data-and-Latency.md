@@ -43,3 +43,7 @@ DPDK 常以用户态 polling 和专用数据面减少部分内核路径开销；
 CPU pinning、NUMA local memory、IRQ affinity、RSS 和 interrupt coalescing 都是实验变量。减少 coalescing 可能降低等待，同时提高 CPU/中断开销。关闭所有 offload 不一定更快；先测基线，单变量测试，比较尾延迟、丢包和 CPU，而不是只看平均时延。
 
 自测：A 有 gap、B 没有 gap，应先做什么？参考：对齐 channel/sequence/time，定位首次出现差异的位置；不能直接把问题归到交换机。
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

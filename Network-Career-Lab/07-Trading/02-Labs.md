@@ -53,3 +53,7 @@ lscpu
 至少列两个可推翻自身假设的证据。交付 RCA：影响、时间线、事实与假设、根因证据、修复、预防、尚未确认的事项。英文结尾练习：*The average link utilization did not rule out a short burst. We correlated queue drops with the affected sequence range before changing the configuration.*
 
 W24 验收：用已有 [白板题](../../Quant%20Trading/90-Interview-Drills/03-Whiteboard-Cases.md) 选一道，30 分钟录制，覆盖需求、拓扑、故障域、测量、运维取舍。不要跳过前六阶段只做面试背诵。
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

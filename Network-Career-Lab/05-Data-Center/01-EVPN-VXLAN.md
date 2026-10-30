@@ -44,3 +44,7 @@ MLAG 用厂商双机协同呈现聚合；EVPN multihoming 用 Ethernet Segment/E
 Enterprise DC：EVPN/VXLAN 保留租户二层/三层隔离，防火墙与负载均衡需明确部署位置及对称路径。Large-scale DC：L3 to server 将路由延伸到主机/机架边界，减少二层范围，但要求主机路由、自动化和运维生态支持。不是“规模大就一定必须 BGP everywhere”。
 
 设计题：为同一业务分别画 L2 overlay 和 L3 to server，列出移动性、地址管理、故障域、运维、硬件资源与迁移代价。选择其中一个，并写出不满足哪项条件时会改选另一种。
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

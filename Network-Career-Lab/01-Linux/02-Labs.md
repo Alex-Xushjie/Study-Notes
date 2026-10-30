@@ -121,3 +121,7 @@ sudo ip netns exec ncl-c ip route del blackhole 10.20.0.0/24 table 100
 先在服务/抓包终端按 Ctrl+C 停止进程，再运行 `sudo bash labs/linux/netns.sh down`。脚本发现 namespace 内还有进程会拒绝清理，先结束你启动的进程再重试。
 
 随机选“回程缺失、监听错误、转发过滤、MTU、策略路由”两种故障，在 20 分钟内给出观测→假设→验证→恢复。英文练习：*The packet reaches the server interface, but the response has no valid return route.*
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

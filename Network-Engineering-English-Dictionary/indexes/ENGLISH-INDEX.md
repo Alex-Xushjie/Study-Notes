@@ -1,0 +1,818 @@
+# English Index
+
+[Home](../README.md) · [Contents](../TABLE-OF-CONTENTS.md)
+
+- [802.1X authenticator](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/authenticator.md) — Chapter 18
+- [802.1X supplicant](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/supplicant.md) — Chapter 18
+- [AAA accounting](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/accounting.md) — Chapter 18
+- [AAA server](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/aaa-server.md) — Chapter 18
+- [acceptance criteria](../chapters/part-07/chapter-25-requirements-and-constraints/entries/acceptance-criteria.md) — Chapter 25
+- [acceptance test](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/acceptance-test.md) — Chapter 04
+- [access card](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/access-card.md) — Chapter 04
+- [access control entry](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/acl-entry.md) — Chapter 17
+- [access control list](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/access-control-list.md) — Chapter 17
+- [access layer](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/access-layer.md) — Chapter 13
+- [access port](../chapters/part-02/chapter-06-ethernet-and-switching/entries/access-port.md) — Chapter 06
+- [access switch](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/access-switch.md) — Chapter 03
+- [access window](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/access-window.md) — Chapter 04
+- [According to the logs, …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/according-to-the-logs.md) — Chapter 30
+- [Action required: …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/action-required.md) — Chapter 30
+- [active-active](../chapters/part-05/chapter-19-high-availability-and-failover/entries/active-active.md) — Chapter 19
+- [active-standby](../chapters/part-05/chapter-19-high-availability-and-failover/entries/active-standby.md) — Chapter 19
+- [address aggregation](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/address-aggregation.md) — Chapter 07
+- [address allocation](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/address-allocation.md) — Chapter 07
+- [administrative distance](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/administrative-distance.md) — Chapter 09
+- [administratively down](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/administratively-down.md) — Chapter 03
+- [air intake](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/air-intake.md) — Chapter 01
+- [airflow](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/airflow.md) — Chapter 01
+- [airtime utilization](../chapters/part-04/chapter-14-wireless-networks/entries/airtime-utilization.md) — Chapter 14
+- [An alternative is to …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/an-alternative-is.md) — Chapter 32
+- [anycast gateway](../chapters/part-04/chapter-15-data-center-networks/entries/anycast-gateway.md) — Chapter 15
+- [API endpoint](../chapters/part-07/chapter-28-automation-and-apis/entries/api-endpoint.md) — Chapter 28
+- [API rate limiting](../chapters/part-07/chapter-28-automation-and-apis/entries/rate-limiting.md) — Chapter 28
+- [API request](../chapters/part-07/chapter-28-automation-and-apis/entries/api-request.md) — Chapter 28
+- [API response](../chapters/part-07/chapter-28-automation-and-apis/entries/api-response.md) — Chapter 28
+- [application control](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/application-control.md) — Chapter 17
+- [application layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/application-layer.md) — Chapter 05
+- [application programming interface](../chapters/part-07/chapter-28-automation-and-apis/entries/api.md) — Chapter 28
+- [Are we agreed on …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/are-we-agreed.md) — Chapter 29
+- [area border router](../chapters/part-03/chapter-10-ospf-and-is-is/entries/area-border-router.md) — Chapter 10
+- [arrange access](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/request-room-access.md) — see Could you arrange access to …?; Chapter 01
+- [as-built documentation](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/as-built-documentation.md) — Chapter 27
+- [as-built drawing](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/as-built-drawing.md) — Chapter 04
+- [AS_PATH](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/as-path.md) — Chapter 11
+- [asset inventory](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/asset-inventory.md) — Chapter 27
+- [asset tag](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/asset-tag.md) — Chapter 04
+- [authentication](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/authentication.md) — Chapter 18
+- [authentication authorization and accounting](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/aaa.md) — Chapter 18
+- [authentication fallback](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/fallback-authentication.md) — Chapter 18
+- [authoritative name server](../chapters/part-02/chapter-08-transport-and-application-services/entries/authoritative-name-server.md) — Chapter 08
+- [authorization](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/authorization.md) — Chapter 18
+- [auto-negotiation](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/auto-negotiation.md) — Chapter 03
+- [automation inventory](../chapters/part-07/chapter-28-automation-and-apis/entries/inventory.md) — Chapter 28
+- [automation pipeline](../chapters/part-07/chapter-28-automation-and-apis/entries/pipeline.md) — Chapter 28
+- [automation secret](../chapters/part-07/chapter-28-automation-and-apis/entries/secret.md) — Chapter 28
+- [automation validation](../chapters/part-07/chapter-28-automation-and-apis/entries/automation-validation.md) — Chapter 28
+- [autonomous system](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/autonomous-system.md) — Chapter 11
+- [autonomous system boundary router](../chapters/part-03/chapter-10-ospf-and-is-is/entries/autonomous-system-boundary-router.md) — Chapter 10
+- [autonomous system number](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/asn.md) — Chapter 11
+- [availability requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/availability-requirement.md) — Chapter 25
+- [availability zone](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/availability-zone.md) — Chapter 16
+- [baseline check](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/baseline-check.md) — Chapter 24
+- [basic service set identifier](../chapters/part-04/chapter-14-wireless-networks/entries/bssid.md) — Chapter 14
+- [bend radius](../chapters/part-01/chapter-02-cabling-and-connectors/entries/bend-radius.md) — Chapter 02
+- [BFD for failover](../chapters/part-05/chapter-19-high-availability-and-failover/entries/bfd-failover.md) — Chapter 19
+- [BGP](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp.md) — see Border Gateway Protocol; Chapter 11
+- [BGP best path](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-best-path.md) — Chapter 11
+- [BGP community](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-community.md) — Chapter 11
+- [BGP Established state](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-established.md) — Chapter 11
+- [BGP export policy](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/export-policy.md) — Chapter 11
+- [BGP import policy](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/import-policy.md) — Chapter 11
+- [BGP LOCAL_PREF](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/local-preference.md) — Chapter 11
+- [BGP multi-exit discriminator](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/med.md) — Chapter 11
+- [BGP NEXT_HOP](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-next-hop.md) — Chapter 11
+- [BGP path attribute](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-path-attribute.md) — Chapter 11
+- [BGP peer](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-peer.md) — Chapter 11
+- [BGP prefix](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-prefix.md) — Chapter 11
+- [BGP route advertisement](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-advertisement.md) — Chapter 11
+- [BGP route flap](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-route-flap.md) — Chapter 11
+- [BGP route reflector](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/route-reflector.md) — Chapter 11
+- [BGP route target](../chapters/part-04/chapter-15-data-center-networks/entries/route-target.md) — Chapter 15
+- [BGP route withdrawal](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-withdrawal.md) — Chapter 11
+- [BGP routing policy](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-policy.md) — Chapter 11
+- [BGP session](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-session.md) — Chapter 11
+- [BGP UPDATE message](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-update.md) — Chapter 11
+- [Bidirectional Forwarding Detection](../chapters/part-03/chapter-10-ospf-and-is-is/entries/bfd.md) — Chapter 10
+- [black-hole route](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/black-hole-route.md) — Chapter 09
+- [blanking panel](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/blanking-panel.md) — Chapter 01
+- [Border Gateway Protocol](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp.md) — Chapter 11
+- [branch network](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/branch-network.md) — Chapter 13
+- [broadcast](../chapters/part-02/chapter-06-ethernet-and-switching/entries/broadcast.md) — Chapter 06
+- [broadcast domain](../chapters/part-02/chapter-06-ethernet-and-switching/entries/broadcast-domain.md) — Chapter 06
+- [business requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/business-requirement.md) — Chapter 25
+- [By when do we need to …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/by-when.md) — Chapter 29
+- [cabinet](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-cabinet.md) — see equipment cabinet; Chapter 01
+- [cable category](../chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-category.md) — Chapter 02
+- [cable certification](../chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-certification.md) — Chapter 02
+- [cable label](../chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-label.md) — Chapter 02
+- [cable management panel](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-manager.md) — see cable manager; Chapter 01
+- [cable manager](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-manager.md) — Chapter 01
+- [cable schedule](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/cable-schedule.md) — Chapter 04
+- [cable tester](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/cable-tester.md) — Chapter 04
+- [cable tray](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-tray.md) — Chapter 01
+- [cabling schedule](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/cabling-schedule.md) — Chapter 27
+- [cage nut](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/cage-nut.md) — Chapter 04
+- [campus network](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/campus-network.md) — Chapter 13
+- [Can we review …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/can-we-review.md) — Chapter 29
+- [Can we take this offline?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/can-we-take-this-offline.md) — Chapter 29
+- [Can you confirm the estimated time?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/can-you-confirm-eta.md) — Chapter 31
+- [capacity headroom](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/headroom.md) — Chapter 26
+- [capacity planning](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/capacity-planning.md) — Chapter 26
+- [capacity requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/capacity-requirement.md) — Chapter 25
+- [carrier circuit](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/carrier-circuit.md) — Chapter 12
+- [certificate authority](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/certificate-authority.md) — Chapter 18
+- [change approval](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-approval.md) — Chapter 24
+- [change closure](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-closure.md) — Chapter 24
+- [change deployment](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/deployment.md) — Chapter 24
+- [change freeze](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-freeze.md) — Chapter 24
+- [change log](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-log.md) — Chapter 24
+- [change owner](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-owner.md) — Chapter 24
+- [change plan](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-plan.md) — Chapter 24
+- [change prerequisite](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/prerequisite.md) — Chapter 24
+- [change request](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-request.md) — Chapter 24
+- [change scope](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change-scope.md) — Chapter 24
+- [change window](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/maintenance-window.md) — see maintenance window; Chapter 24
+- [circuit ID](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/circuit-id.md) — Chapter 12
+- [class of service](../chapters/part-05/chapter-20-qos-and-performance/entries/class-of-service.md) — Chapter 20
+- [Classless Inter-Domain Routing](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/cidr.md) — Chapter 07
+- [clipboard](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/clipboard.md) — Chapter 04
+- [cloud DNS](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-dns.md) — Chapter 16
+- [cloud egress traffic](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-egress.md) — Chapter 16
+- [cloud load balancer](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-load-balancer.md) — Chapter 16
+- [cloud network](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-network.md) — Chapter 16
+- [cloud network ACL](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/network-acl-cloud.md) — Chapter 16
+- [cloud network address translation](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-nat.md) — Chapter 16
+- [cloud network interface](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-network-interface.md) — Chapter 16
+- [cloud private endpoint](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/private-endpoint.md) — Chapter 16
+- [cloud region](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-region.md) — Chapter 16
+- [cloud route propagation](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-route-propagation.md) — Chapter 16
+- [cloud route table](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-route-table.md) — Chapter 16
+- [cloud security group](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-security-group.md) — Chapter 16
+- [cloud subnet](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-subnet.md) — Chapter 16
+- [cloud transit gateway](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/transit-gateway.md) — Chapter 16
+- [cloud virtual machine](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-virtual-machine.md) — Chapter 16
+- [cloud VPN](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-vpn.md) — Chapter 16
+- [cluster quorum](../chapters/part-05/chapter-19-high-availability-and-failover/entries/quorum.md) — Chapter 19
+- [cold aisle](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cold-aisle.md) — Chapter 01
+- [cold-aisle](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cold-aisle.md) — see cold aisle; Chapter 01
+- [collapsed core](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/collapsed-core.md) — Chapter 13
+- [Compared with …, …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/compared-with.md) — Chapter 32
+- [compliance requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/compliance-requirement.md) — Chapter 25
+- [configuration backup](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/configuration-backup.md) — Chapter 24
+- [configuration drift](../chapters/part-07/chapter-28-automation-and-apis/entries/configuration-drift.md) — Chapter 28
+- [confirm equipment location](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/locate-equipment.md) — see Could you confirm the exact location of …?; Chapter 01
+- [console port](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/console-port.md) — Chapter 03
+- [contributing factor](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/contributing-factor.md) — Chapter 22
+- [core layer](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/core-layer.md) — Chapter 13
+- [core switch](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/core-switch.md) — Chapter 03
+- [Could you arrange access to …?](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/request-room-access.md) — Chapter 01
+- [Could you check your side?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/could-you-check-your-side.md) — Chapter 31
+- [Could you clarify …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-clarify.md) — Chapter 29
+- [Could you confirm the exact location of …?](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/locate-equipment.md) — Chapter 01
+- [Could you confirm the service details?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/could-you-confirm-service.md) — Chapter 31
+- [Could you confirm …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-confirm.md) — Chapter 29
+- [Could you give an example?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-give-an-example.md) — Chapter 29
+- [Could you repeat that?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-repeat.md) — Chapter 29
+- [Could you run a test?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/could-you-run-a-test.md) — Chapter 31
+- [Could you share …?](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/could-you-share.md) — Chapter 30
+- [Could you walk us through …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-walk-us-through.md) — Chapter 29
+- [credentials](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/credentials.md) — Chapter 18
+- [customer edge](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/customer-edge.md) — Chapter 12
+- [customer-premises equipment](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/customer-premises-equipment.md) — Chapter 12
+- [data center interconnect](../chapters/part-04/chapter-15-data-center-networks/entries/data-center-interconnect.md) — Chapter 15
+- [data center network](../chapters/part-04/chapter-15-data-center-networks/entries/data-center-network.md) — Chapter 15
+- [data link layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/data-link-layer.md) — Chapter 05
+- [data schema](../chapters/part-07/chapter-28-automation-and-apis/entries/schema.md) — Chapter 28
+- [datagram](../chapters/part-02/chapter-05-models-frames-and-packets/entries/datagram.md) — Chapter 05
+- [decapsulation](../chapters/part-02/chapter-05-models-frames-and-packets/entries/decapsulation.md) — Chapter 05
+- [default gateway](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/default-gateway.md) — Chapter 07
+- [default gateway redundancy](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/default-gateway-redundancy.md) — Chapter 13
+- [default route](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/default-route.md) — Chapter 09
+- [demarcation point](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/demarcation-point.md) — Chapter 12
+- [deny traffic](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/deny.md) — Chapter 17
+- [dependency mapping](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/dependency-mapping.md) — Chapter 26
+- [design alternative](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-alternative.md) — Chapter 26
+- [design assumption](../chapters/part-07/chapter-25-requirements-and-constraints/entries/assumption.md) — Chapter 25
+- [design complexity](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/complexity.md) — Chapter 26
+- [design constraint](../chapters/part-07/chapter-25-requirements-and-constraints/entries/constraint.md) — Chapter 25
+- [design criterion](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-criterion.md) — Chapter 26
+- [design decision](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-decision.md) — Chapter 26
+- [design failure domain](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/failure-domain-design.md) — Chapter 26
+- [design input](../chapters/part-07/chapter-25-requirements-and-constraints/entries/design-input.md) — Chapter 25
+- [design option](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-option.md) — Chapter 26
+- [design principle](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-principle.md) — Chapter 26
+- [design rationale](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-rationale.md) — Chapter 26
+- [design requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/requirement.md) — Chapter 25
+- [design review](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-review.md) — Chapter 26
+- [design trade-off](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/trade-off.md) — Chapter 26
+- [design validation](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/design-validation.md) — Chapter 26
+- [desired state](../chapters/part-07/chapter-28-automation-and-apis/entries/desired-state.md) — Chapter 28
+- [destination address](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/destination-address.md) — Chapter 17
+- [destination MAC address](../chapters/part-02/chapter-06-ethernet-and-switching/entries/destination-mac-address.md) — Chapter 06
+- [destination network address translation](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/destination-nat.md) — Chapter 17
+- [destination port](../chapters/part-02/chapter-08-transport-and-application-services/entries/destination-port.md) — Chapter 08
+- [destination prefix](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/destination-prefix.md) — Chapter 09
+- [DHCP lease](../chapters/part-02/chapter-08-transport-and-application-services/entries/dhcp-lease.md) — Chapter 08
+- [DHCP relay](../chapters/part-02/chapter-08-transport-and-application-services/entries/dhcp-relay.md) — Chapter 08
+- [DHCP server](../chapters/part-02/chapter-08-transport-and-application-services/entries/dhcp-server.md) — Chapter 08
+- [diagnostic evidence](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/evidence.md) — Chapter 22
+- [diagnostic packet capture](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/packet-capture-troubleshooting.md) — Chapter 22
+- [diagram legend](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/diagram-legend.md) — Chapter 27
+- [Differentiated Services Code Point](../chapters/part-05/chapter-20-qos-and-performance/entries/dscp.md) — Chapter 20
+- [digital certificate](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/certificate.md) — Chapter 18
+- [directly connected route](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/directly-connected-route.md) — Chapter 09
+- [distribution layer](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/distribution-layer.md) — Chapter 13
+- [DNS](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns.md) — see Domain Name System; Chapter 08
+- [DNS A record](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns-a-record.md) — Chapter 08
+- [DNS AAAA record](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns-aaaa-record.md) — Chapter 08
+- [DNS client](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns-client.md) — Chapter 08
+- [DNS lookup](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/dns-lookup.md) — Chapter 22
+- [DNS query](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns-query.md) — Chapter 08
+- [DNS resource record](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns-record.md) — Chapter 08
+- [DNS time to live](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns-ttl.md) — Chapter 08
+- [document owner](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/document-owner.md) — Chapter 27
+- [document revision history](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/revision-history.md) — Chapter 27
+- [Domain Name System](../chapters/part-02/chapter-08-transport-and-application-services/entries/dns.md) — Chapter 08
+- [downlink](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/downlink.md) — Chapter 13
+- [downlink port](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/downlink-port.md) — Chapter 03
+- [dry run](../chapters/part-07/chapter-28-automation-and-apis/entries/dry-run.md) — Chapter 28
+- [duplex fiber](../chapters/part-01/chapter-02-cabling-and-connectors/entries/duplex-fiber.md) — Chapter 02
+- [duplex mode](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/duplex-mode.md) — Chapter 03
+- [Dynamic Host Configuration Protocol](../chapters/part-02/chapter-08-transport-and-application-services/entries/dhcp.md) — Chapter 08
+- [dynamic route](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/dynamic-route.md) — Chapter 09
+- [east-west traffic](../chapters/part-04/chapter-15-data-center-networks/entries/east-west-traffic.md) — Chapter 15
+- [encapsulation](../chapters/part-02/chapter-05-models-frames-and-packets/entries/encapsulation.md) — Chapter 05
+- [encryption](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/encryption.md) — Chapter 12
+- [end-of-row switching](../chapters/part-04/chapter-15-data-center-networks/entries/end-of-row.md) — Chapter 15
+- [ephemeral port](../chapters/part-02/chapter-08-transport-and-application-services/entries/ephemeral-port.md) — Chapter 08
+- [equal-cost multipath](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/equal-cost-multipath.md) — Chapter 09
+- [equipment cabinet](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-cabinet.md) — Chapter 01
+- [equipment clearance](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/equipment-clearance.md) — Chapter 04
+- [equipment rack](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-rack.md) — Chapter 01
+- [escort](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/escort.md) — Chapter 04
+- [Ethernet](../chapters/part-02/chapter-06-ethernet-and-switching/entries/ethernet.md) — Chapter 06
+- [Ethernet cable](../chapters/part-01/chapter-02-cabling-and-connectors/entries/ethernet-cable.md) — Chapter 02
+- [Ethernet port](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/ethernet-port.md) — Chapter 03
+- [Ethernet VPN](../chapters/part-04/chapter-15-data-center-networks/entries/evpn.md) — Chapter 15
+- [event timestamp](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/timestamp.md) — Chapter 21
+- [EVPN route](../chapters/part-04/chapter-15-data-center-networks/entries/evpn-route.md) — Chapter 15
+- [exhaust vent](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/exhaust-vent.md) — Chapter 01
+- [external BGP](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/ebgp.md) — Chapter 11
+- [fabric overlay](../chapters/part-04/chapter-15-data-center-networks/entries/fabric-overlay.md) — Chapter 15
+- [fabric underlay](../chapters/part-04/chapter-15-data-center-networks/entries/fabric-underlay.md) — Chapter 15
+- [failback](../chapters/part-05/chapter-19-high-availability-and-failover/entries/failback.md) — Chapter 19
+- [failover](../chapters/part-05/chapter-19-high-availability-and-failover/entries/failover.md) — Chapter 19
+- [failure detection](../chapters/part-05/chapter-19-high-availability-and-failover/entries/failure-detection.md) — Chapter 19
+- [failure domain](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/failure-domain.md) — Chapter 13
+- [fault isolation](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/fault-isolation.md) — Chapter 26
+- [fiber patch cord](../chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-patch-cord.md) — Chapter 02
+- [fiber polarity](../chapters/part-01/chapter-02-cabling-and-connectors/entries/polarity.md) — Chapter 02
+- [fiber-optic cable](../chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-optic-cable.md) — Chapter 02
+- [firewall](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/firewall.md) — Chapter 17
+- [firewall appliance](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/firewall-appliance.md) — Chapter 03
+- [firewall log](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/firewall-log.md) — Chapter 17
+- [firewall network object](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/network-object.md) — Chapter 17
+- [firewall policy](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/firewall-policy.md) — Chapter 17
+- [firewall rule](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/firewall-rule.md) — Chapter 17
+- [firewall service object](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/service-object.md) — Chapter 17
+- [firewall session](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/firewall-session.md) — Chapter 17
+- [first-hop redundancy](../chapters/part-05/chapter-19-high-availability-and-failover/entries/first-hop-redundancy.md) — Chapter 19
+- [flashlight](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/flashlight.md) — Chapter 04
+- [For the business, this means …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/in-business-terms.md) — Chapter 32
+- [For your reference, …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/for-your-reference.md) — Chapter 30
+- [frame](../chapters/part-02/chapter-05-models-frames-and-packets/entries/frame.md) — Chapter 05
+- [frame forwarding](../chapters/part-02/chapter-06-ethernet-and-switching/entries/frame-forwarding.md) — Chapter 06
+- [From our side, …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/from-our-side.md) — Chapter 31
+- [functional requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/functional-requirement.md) — Chapter 25
+- [HA heartbeat](../chapters/part-05/chapter-19-high-availability-and-failover/entries/heartbeat.md) — Chapter 19
+- [handover](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/handover.md) — Chapter 04
+- [handover meeting](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/handover-meeting.md) — Chapter 27
+- [handover open item](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/open-item.md) — Chapter 27
+- [handover package](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/handover-package.md) — Chapter 27
+- [high availability](../chapters/part-05/chapter-19-high-availability-and-failover/entries/high-availability.md) — Chapter 19
+- [high-level design](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/high-level-design.md) — Chapter 27
+- [host address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/host-address.md) — Chapter 07
+- [hot aisle](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/hot-aisle.md) — Chapter 01
+- [Hot Standby Router Protocol](../chapters/part-05/chapter-19-high-availability-and-failover/entries/hsrp.md) — Chapter 19
+- [hot-aisle](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/hot-aisle.md) — see hot aisle; Chapter 01
+- [hot-swappable](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/hot-swappable.md) — Chapter 03
+- [HTTP method](../chapters/part-07/chapter-28-automation-and-apis/entries/http-method.md) — Chapter 28
+- [HTTP status code](../chapters/part-07/chapter-28-automation-and-apis/entries/http-status-code.md) — Chapter 28
+- [HTTPS](../chapters/part-02/chapter-08-transport-and-application-services/entries/https.md) — Chapter 08
+- [hybrid cloud](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/hybrid-cloud.md) — Chapter 16
+- [Hypertext Transfer Protocol](../chapters/part-02/chapter-08-transport-and-application-services/entries/http.md) — Chapter 08
+- [I am not sure whether …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/i-am-not-sure.md) — Chapter 29
+- [I have a question about …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/i-have-a-question-about.md) — Chapter 29
+- [idempotence](../chapters/part-07/chapter-28-automation-and-apis/entries/idempotence.md) — Chapter 28
+- [identity provider](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/identity-provider.md) — Chapter 18
+- [IDF](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/idf.md) — see intermediate distribution frame; Chapter 01
+- [IDF room](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/idf.md) — see intermediate distribution frame; Chapter 01
+- [IEEE 802.1X](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/8021x.md) — Chapter 18
+- [If I understand correctly, …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/if-i-understand-correctly.md) — Chapter 29
+- [If this component fails, …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-failure-scenario.md) — Chapter 32
+- [implementation guide](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/implementation-guide.md) — Chapter 27
+- [implementation plan](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/implementation-plan.md) — Chapter 24
+- [implicit deny](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/implicit-deny.md) — Chapter 17
+- [in scope](../chapters/part-07/chapter-25-requirements-and-constraints/entries/in-scope.md) — Chapter 25
+- [incident bridge](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-bridge.md) — Chapter 23
+- [incident commander](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-commander.md) — Chapter 23
+- [incident escalation](../chapters/part-06/chapter-23-incidents-and-escalation/entries/escalation.md) — Chapter 23
+- [incident follow-up action](../chapters/part-06/chapter-23-incidents-and-escalation/entries/follow-up-action.md) — Chapter 23
+- [incident mitigation](../chapters/part-06/chapter-23-incidents-and-escalation/entries/mitigation.md) — Chapter 23
+- [incident postmortem](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-postmortem.md) — Chapter 23
+- [incident priority](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-priority.md) — Chapter 23
+- [incident scope](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/scope.md) — Chapter 22
+- [incident severity](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-severity.md) — Chapter 23
+- [incident stakeholder](../chapters/part-06/chapter-23-incidents-and-escalation/entries/stakeholder.md) — Chapter 23
+- [incident symptom](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/symptom.md) — Chapter 22
+- [incident timeline](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-timeline.md) — Chapter 23
+- [incident update](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident-update.md) — Chapter 23
+- [insertion loss](../chapters/part-01/chapter-02-cabling-and-connectors/entries/insertion-loss.md) — Chapter 02
+- [inspection checklist](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/inspection-checklist.md) — Chapter 01
+- [installation checklist](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/installation-checklist.md) — Chapter 04
+- [inter-VLAN routing](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/inter-vlan-routing.md) — Chapter 13
+- [interface counter](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-counter.md) — Chapter 03
+- [interface error rate](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/error-rate.md) — Chapter 21
+- [interface errors](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/interface-errors.md) — Chapter 22
+- [interface inventory](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/interface-inventory.md) — Chapter 27
+- [interface speed](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-speed.md) — Chapter 03
+- [intermediate distribution frame](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/idf.md) — Chapter 01
+- [Intermediate System to Intermediate System](../chapters/part-03/chapter-10-ospf-and-is-is/entries/isis.md) — Chapter 10
+- [intermittent issue](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/intermittent.md) — Chapter 22
+- [internal BGP](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/ibgp.md) — Chapter 11
+- [Internet Protocol Security](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/ipsec.md) — Chapter 12
+- [IP address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/ip-address.md) — Chapter 07
+- [IP address conflict](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/address-conflict.md) — Chapter 07
+- [IP address management](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/ip-address-management.md) — Chapter 07
+- [IP address plan](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/ip-address-plan.md) — Chapter 27
+- [IP fragmentation](../chapters/part-02/chapter-05-models-frames-and-packets/entries/fragmentation.md) — Chapter 05
+- [IP reassembly](../chapters/part-02/chapter-05-models-frames-and-packets/entries/reassembly.md) — Chapter 05
+- [IPsec security association](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/security-association.md) — Chapter 12
+- [IPv4 address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/ipv4-address.md) — Chapter 07
+- [IPv4 directed broadcast address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/broadcast-address.md) — Chapter 07
+- [IPv4 network address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/network-address.md) — Chapter 07
+- [IPv6 address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/ipv6-address.md) — Chapter 07
+- [IPv6 global unicast address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/ipv6-global-unicast.md) — Chapter 07
+- [IPv6 unique local address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/ipv6-unique-local.md) — Chapter 07
+- [Is this covered by the SLA?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/is-this-covered-by-sla.md) — Chapter 31
+- [IS-IS Level 1](../chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-level-1.md) — Chapter 10
+- [IS-IS Level 2](../chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-level-2.md) — Chapter 10
+- [IS-IS link-state PDU](../chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-lsp.md) — Chapter 10
+- [IS-IS network entity title](../chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-net.md) — Chapter 10
+- [isolate a fault](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/isolate.md) — Chapter 22
+- [JavaScript Object Notation](../chapters/part-07/chapter-28-automation-and-apis/entries/json.md) — Chapter 28
+- [keystone jack](../chapters/part-01/chapter-02-cabling-and-connectors/entries/keystone-jack.md) — Chapter 02
+- [knowledge transfer](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/knowledge-transfer.md) — Chapter 27
+- [known-good reference](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/known-good.md) — Chapter 22
+- [label a cable](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/label-a-cable.md) — Chapter 04
+- [label-switched path](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/label-switched-path.md) — Chapter 12
+- [last mile](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/last-mile.md) — Chapter 12
+- [Layer 2 loop](../chapters/part-02/chapter-06-ethernet-and-switching/entries/switching-loop.md) — Chapter 06
+- [LC connector](../chapters/part-01/chapter-02-cabling-and-connectors/entries/lc-connector.md) — Chapter 02
+- [leaf switch](../chapters/part-04/chapter-15-data-center-networks/entries/leaf-switch.md) — Chapter 15
+- [leaf-spine topology](../chapters/part-04/chapter-15-data-center-networks/entries/leaf-spine.md) — Chapter 15
+- [leased line](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/leased-line.md) — Chapter 12
+- [least privilege](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/least-privilege.md) — Chapter 17
+- [Let me check my understanding.](../chapters/part-08/chapter-29-meetings-and-clarification/entries/let-me-check-my-understanding.md) — Chapter 29
+- [Let’s verify …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/lets-verify.md) — Chapter 29
+- [Link Aggregation Control Protocol](../chapters/part-02/chapter-06-ethernet-and-switching/entries/lacp.md) — Chapter 06
+- [link down](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-down.md) — Chapter 03
+- [link LED](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-led.md) — Chapter 03
+- [link up](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-up.md) — Chapter 03
+- [link-local address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/link-local-address.md) — Chapter 07
+- [link-state database](../chapters/part-03/chapter-10-ospf-and-is-is/entries/link-state-database.md) — Chapter 10
+- [link-state routing protocol](../chapters/part-03/chapter-10-ospf-and-is-is/entries/link-state-protocol.md) — Chapter 10
+- [load balancer health check](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/health-check.md) — Chapter 16
+- [log severity](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/log-severity.md) — Chapter 21
+- [logical network diagram](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/logical-diagram.md) — Chapter 27
+- [logical topology](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/logical-topology.md) — Chapter 13
+- [longest prefix match](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/longest-prefix-match.md) — Chapter 09
+- [loopback address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/loopback-address.md) — Chapter 07
+- [low-level design](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/low-level-design.md) — Chapter 27
+- [LSA flooding](../chapters/part-03/chapter-10-ospf-and-is-is/entries/lsa-flooding.md) — Chapter 10
+- [MAC address](../chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-address.md) — Chapter 06
+- [MAC address aging](../chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-address-aging.md) — Chapter 06
+- [MAC address table](../chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-address-table.md) — Chapter 06
+- [MAC learning](../chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-learning.md) — Chapter 06
+- [main distribution frame](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/mdf.md) — Chapter 01
+- [maintenance window](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/maintenance-window.md) — Chapter 24
+- [management escalation](../chapters/part-06/chapter-23-incidents-and-escalation/entries/management-escalation.md) — Chapter 23
+- [management plane](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/management-plane.md) — Chapter 18
+- [management port](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/management-port.md) — Chapter 03
+- [maximum transmission unit](../chapters/part-02/chapter-05-models-frames-and-packets/entries/maximum-transmission-unit.md) — Chapter 05
+- [MDF](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/mdf.md) — see main distribution frame; Chapter 01
+- [MDF room](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/mdf.md) — see main distribution frame; Chapter 01
+- [mean time to repair](../chapters/part-05/chapter-19-high-availability-and-failover/entries/mean-time-to-repair.md) — Chapter 19
+- [measuring tape](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/measuring-tape.md) — Chapter 04
+- [microsegmentation](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/microsegmentation.md) — Chapter 17
+- [modular plug](../chapters/part-01/chapter-02-cabling-and-connectors/entries/modular-plug.md) — Chapter 02
+- [monitoring agent](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/monitoring-agent.md) — Chapter 21
+- [monitoring alert](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/alert.md) — Chapter 21
+- [monitoring dashboard](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/dashboard.md) — Chapter 21
+- [monitoring data retention](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/data-retention.md) — Chapter 21
+- [monitoring event](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/event.md) — Chapter 21
+- [monitoring metric](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/metric.md) — Chapter 21
+- [monitoring polling](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/polling.md) — Chapter 21
+- [monitoring threshold](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/threshold.md) — Chapter 21
+- [mounting bracket](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/mounting-bracket.md) — Chapter 04
+- [MPLS label](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/mpls-label.md) — Chapter 12
+- [MTU mismatch](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/mtu-mismatch.md) — Chapter 22
+- [multi-chassis link aggregation](../chapters/part-04/chapter-15-data-center-networks/entries/mlag.md) — Chapter 15
+- [multi-factor authentication](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/multifactor-authentication.md) — Chapter 18
+- [multicast](../chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast.md) — Chapter 06
+- [multimode fiber](../chapters/part-01/chapter-02-cabling-and-connectors/entries/multimode-fiber.md) — Chapter 02
+- [Multiprotocol Label Switching](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/mpls.md) — Chapter 12
+- [native VLAN](../chapters/part-02/chapter-06-ethernet-and-switching/entries/native-vlan.md) — Chapter 06
+- [network address translation](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/network-address-translation.md) — Chapter 17
+- [network alarm](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/alarm.md) — Chapter 21
+- [network architecture](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/network-architecture.md) — Chapter 26
+- [network automation](../chapters/part-07/chapter-28-automation-and-apis/entries/network-automation.md) — Chapter 28
+- [network bandwidth](../chapters/part-05/chapter-20-qos-and-performance/entries/bandwidth.md) — Chapter 20
+- [network change](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/change.md) — Chapter 24
+- [network congestion](../chapters/part-05/chapter-20-qos-and-performance/entries/congestion.md) — Chapter 20
+- [network device administration](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/device-administration.md) — Chapter 18
+- [network diagram](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/network-diagram.md) — Chapter 27
+- [network documentation](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/network-documentation.md) — Chapter 27
+- [network fabric](../chapters/part-04/chapter-15-data-center-networks/entries/fabric.md) — Chapter 15
+- [network goodput](../chapters/part-05/chapter-20-qos-and-performance/entries/goodput.md) — Chapter 20
+- [network handoff](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/handoff.md) — Chapter 12
+- [network interface](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/network-interface.md) — Chapter 03
+- [network interface card](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/network-interface-card.md) — Chapter 03
+- [network latency](../chapters/part-05/chapter-20-qos-and-performance/entries/latency.md) — Chapter 20
+- [network layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/network-layer.md) — Chapter 05
+- [network monitoring](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/network-monitoring.md) — Chapter 21
+- [network observability](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/observability.md) — Chapter 21
+- [network outlet](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/network-outlet.md) — Chapter 13
+- [network overlay](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/overlay.md) — Chapter 12
+- [network oversubscription](../chapters/part-04/chapter-15-data-center-networks/entries/oversubscription.md) — Chapter 15
+- [network prefix](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/network-prefix.md) — Chapter 07
+- [network protocol](../chapters/part-02/chapter-05-models-frames-and-packets/entries/protocol.md) — Chapter 05
+- [network queue](../chapters/part-05/chapter-20-qos-and-performance/entries/queue.md) — Chapter 20
+- [network reachability](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/reachability.md) — Chapter 22
+- [network resilience](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/resilience.md) — Chapter 26
+- [network segmentation](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/network-segmentation.md) — Chapter 13
+- [network switch](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/network-switch.md) — Chapter 01
+- [network telemetry](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/telemetry.md) — Chapter 21
+- [network tenant](../chapters/part-04/chapter-15-data-center-networks/entries/tenant.md) — Chapter 15
+- [network throughput](../chapters/part-05/chapter-20-qos-and-performance/entries/throughput.md) — Chapter 20
+- [Network Time Protocol](../chapters/part-02/chapter-08-transport-and-application-services/entries/ntp.md) — Chapter 08
+- [network topology](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/network-topology.md) — Chapter 13
+- [network troubleshooting](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/troubleshooting.md) — Chapter 22
+- [network tunnel](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/tunnel.md) — Chapter 12
+- [network underlay](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/underlay.md) — Chapter 12
+- [next hop](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/next-hop.md) — Chapter 09
+- [next update time](../chapters/part-06/chapter-23-incidents-and-escalation/entries/next-update-time.md) — Chapter 23
+- [No action is required at this time.](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/no-action-required.md) — Chapter 30
+- [non-functional requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/nonfunctional-requirement.md) — Chapter 25
+- [north-south traffic](../chapters/part-04/chapter-15-data-center-networks/entries/north-south-traffic.md) — Chapter 15
+- [octet](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/octet.md) — Chapter 07
+- [on-call engineer](../chapters/part-06/chapter-23-incidents-and-escalation/entries/on-call.md) — Chapter 23
+- [on-premises network](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/on-premises-network.md) — Chapter 16
+- [One option is to …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/one-option-is.md) — Chapter 32
+- [Open Shortest Path First](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf.md) — Chapter 10
+- [operational readiness](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/operational-readiness.md) — Chapter 27
+- [operational requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/operational-requirement.md) — Chapter 25
+- [operational simplicity](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/simplicity.md) — Chapter 26
+- [operations runbook](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/runbook.md) — Chapter 27
+- [optical link budget](../chapters/part-01/chapter-02-cabling-and-connectors/entries/link-budget.md) — Chapter 02
+- [optical transceiver](../chapters/part-01/chapter-02-cabling-and-connectors/entries/optical-transceiver.md) — Chapter 02
+- [OSI model](../chapters/part-02/chapter-05-models-frames-and-packets/entries/osi-model.md) — Chapter 05
+- [OSPF adjacency](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-adjacency.md) — Chapter 10
+- [OSPF area](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-area.md) — Chapter 10
+- [OSPF backbone area](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-backbone-area.md) — Chapter 10
+- [OSPF backup designated router](../chapters/part-03/chapter-10-ospf-and-is-is/entries/backup-designated-router.md) — Chapter 10
+- [OSPF cost](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-cost.md) — Chapter 10
+- [OSPF dead interval](../chapters/part-03/chapter-10-ospf-and-is-is/entries/dead-interval.md) — Chapter 10
+- [OSPF designated router](../chapters/part-03/chapter-10-ospf-and-is-is/entries/designated-router.md) — Chapter 10
+- [OSPF hello interval](../chapters/part-03/chapter-10-ospf-and-is-is/entries/hello-interval.md) — Chapter 10
+- [OSPF hello packet](../chapters/part-03/chapter-10-ospf-and-is-is/entries/hello-packet.md) — Chapter 10
+- [OSPF link-state advertisement](../chapters/part-03/chapter-10-ospf-and-is-is/entries/lsa.md) — Chapter 10
+- [OSPF neighbor](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-neighbor.md) — Chapter 10
+- [OSPF router ID](../chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-router-id.md) — Chapter 10
+- [out of scope](../chapters/part-07/chapter-25-requirements-and-constraints/entries/out-of-scope.md) — Chapter 25
+- [out-of-band management](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/out-of-band-management.md) — Chapter 18
+- [outgoing interface](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/outgoing-interface.md) — Chapter 09
+- [packet](../chapters/part-02/chapter-05-models-frames-and-packets/entries/packet.md) — Chapter 05
+- [packet capture](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/packet-capture.md) — Chapter 21
+- [packet delay variation](../chapters/part-05/chapter-20-qos-and-performance/entries/jitter.md) — Chapter 20
+- [packet forwarding](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/forwarding.md) — Chapter 09
+- [packet loss](../chapters/part-05/chapter-20-qos-and-performance/entries/packet-loss.md) — Chapter 20
+- [packet scheduler](../chapters/part-05/chapter-20-qos-and-performance/entries/scheduler.md) — Chapter 20
+- [password](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/password.md) — Chapter 18
+- [patch cord](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/patch-cord.md) — Chapter 01
+- [patch panel](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/patch-panel.md) — Chapter 01
+- [patch-panel](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/patch-panel.md) — see patch panel; Chapter 01
+- [path diversity](../chapters/part-05/chapter-19-high-availability-and-failover/entries/path-diversity.md) — Chapter 19
+- [payload](../chapters/part-02/chapter-05-models-frames-and-packets/entries/payload.md) — Chapter 05
+- [PDU](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/pdu.md) — see power distribution unit; Chapter 01
+- [perforated floor tile](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/perforated-floor-tile.md) — Chapter 01
+- [performance baseline](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/baseline.md) — Chapter 21
+- [permit traffic](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/permit.md) — Chapter 17
+- [physical layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/physical-layer.md) — Chapter 05
+- [physical network diagram](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/physical-diagram.md) — Chapter 27
+- [physical topology](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/physical-topology.md) — Chapter 13
+- [pilot deployment](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/pilot.md) — Chapter 26
+- [ping](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/ping.md) — Chapter 22
+- [planned service impact](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/maintenance-impact.md) — Chapter 24
+- [Please confirm acceptance of …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/please-confirm-acceptance.md) — Chapter 31
+- [Please confirm the responsibility boundary.](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/please-confirm-responsibility.md) — Chapter 31
+- [Please confirm …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-confirm.md) — Chapter 30
+- [Please correct me if I am wrong.](../chapters/part-08/chapter-29-meetings-and-clarification/entries/please-correct-me.md) — Chapter 29
+- [Please escalate this issue.](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/please-escalate.md) — Chapter 31
+- [Please find attached …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-find-attached.md) — Chapter 30
+- [Please provide the case number.](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/please-provide-case-number.md) — Chapter 31
+- [Please provide …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-provide.md) — Chapter 30
+- [Please share the test results.](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/please-share-test-results.md) — Chapter 31
+- [PoE power budget](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/poe-budget.md) — Chapter 13
+- [port channel](../chapters/part-02/chapter-06-ethernet-and-switching/entries/port-channel.md) — Chapter 06
+- [port mirroring](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/port-mirroring.md) — Chapter 22
+- [post-change validation](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/post-change-validation.md) — Chapter 24
+- [post-implementation review](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/post-implementation-review.md) — Chapter 24
+- [power cord](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/power-cord.md) — Chapter 01
+- [power distribution unit](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/pdu.md) — Chapter 01
+- [power outlet](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/power-outlet.md) — Chapter 01
+- [Power over Ethernet](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/power-over-ethernet.md) — Chapter 13
+- [power sourcing equipment](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/power-sourcing-equipment.md) — Chapter 13
+- [power supply module](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/power-supply-module.md) — Chapter 01
+- [powered device](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/powered-device.md) — Chapter 13
+- [pre-change check](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/pre-change-check.md) — Chapter 24
+- [prefix filter](../chapters/part-03/chapter-11-bgp-and-routing-policy/entries/prefix-filter.md) — Chapter 11
+- [prefix length](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/prefix-length.md) — Chapter 07
+- [presentation layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/presentation-layer.md) — Chapter 05
+- [primary device](../chapters/part-05/chapter-19-high-availability-and-failover/entries/primary-device.md) — Chapter 19
+- [priority queue](../chapters/part-05/chapter-20-qos-and-performance/entries/priority-queue.md) — Chapter 20
+- [private cloud connectivity](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/private-cloud-connectivity.md) — Chapter 16
+- [private IPv4 address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/private-ipv4-address.md) — Chapter 07
+- [privileged access](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/privileged-access.md) — Chapter 18
+- [project dependency](../chapters/part-07/chapter-25-requirements-and-constraints/entries/dependency.md) — Chapter 25
+- [project issue](../chapters/part-07/chapter-25-requirements-and-constraints/entries/open-issue.md) — Chapter 25
+- [project risk](../chapters/part-07/chapter-25-requirements-and-constraints/entries/risk.md) — Chapter 25
+- [proof of concept](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/proof-of-concept.md) — Chapter 26
+- [protocol data unit](../chapters/part-02/chapter-05-models-frames-and-packets/entries/protocol-data-unit.md) — Chapter 05
+- [protocol header](../chapters/part-02/chapter-05-models-frames-and-packets/entries/header.md) — Chapter 05
+- [protocol stack](../chapters/part-02/chapter-05-models-frames-and-packets/entries/protocol-stack.md) — Chapter 05
+- [protocol trailer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/trailer.md) — Chapter 05
+- [provider edge](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/provider-edge.md) — Chapter 12
+- [provider support ticket](../chapters/part-06/chapter-23-incidents-and-escalation/entries/provider-ticket.md) — Chapter 23
+- [public IP address](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/public-ip-address.md) — Chapter 07
+- [public key infrastructure](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/public-key-infrastructure.md) — Chapter 18
+- [QoS trust boundary](../chapters/part-05/chapter-20-qos-and-performance/entries/trust-boundary.md) — Chapter 20
+- [quality of service](../chapters/part-05/chapter-20-qos-and-performance/entries/quality-of-service.md) — Chapter 20
+- [queue depth](../chapters/part-05/chapter-20-qos-and-performance/entries/queue-depth.md) — Chapter 20
+- [queue drop](../chapters/part-05/chapter-20-qos-and-performance/entries/queue-drop.md) — Chapter 20
+- [rack](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-rack.md) — see equipment rack; Chapter 01
+- [rack diagram](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-elevation.md) — see rack elevation; Chapter 01
+- [rack elevation](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-elevation.md) — Chapter 01
+- [rack elevation diagram](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/rack-elevation-document.md) — Chapter 27
+- [rack location](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-location.md) — Chapter 01
+- [rack PDU](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/pdu.md) — see power distribution unit; Chapter 01
+- [rack rail](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-rail.md) — Chapter 01
+- [rack screw](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/rack-screw.md) — Chapter 04
+- [rack space](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/rack-space.md) — Chapter 04
+- [rack unit](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-unit.md) — Chapter 01
+- [radio frequency](../chapters/part-04/chapter-14-wireless-networks/entries/radio-frequency.md) — Chapter 14
+- [raised floor](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/raised-floor.md) — Chapter 01
+- [rate limit](../chapters/part-05/chapter-20-qos-and-performance/entries/rate-limit.md) — Chapter 20
+- [read-only access](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/read-only-access.md) — Chapter 18
+- [received signal strength indicator](../chapters/part-04/chapter-14-wireless-networks/entries/rssi.md) — Chapter 14
+- [recovery point objective](../chapters/part-05/chapter-19-high-availability-and-failover/entries/recovery-point-objective.md) — Chapter 19
+- [recovery time](../chapters/part-05/chapter-19-high-availability-and-failover/entries/recovery-time.md) — Chapter 19
+- [recovery time objective](../chapters/part-05/chapter-19-high-availability-and-failover/entries/recovery-time-objective.md) — Chapter 19
+- [recursive resolver](../chapters/part-02/chapter-08-transport-and-application-services/entries/recursive-resolver.md) — Chapter 08
+- [recursive route lookup](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/recursive-route-lookup.md) — Chapter 09
+- [redundancy](../chapters/part-05/chapter-19-high-availability-and-failover/entries/redundancy.md) — Chapter 19
+- [redundant link](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/redundant-link.md) — Chapter 13
+- [reference architecture](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/reference-architecture.md) — Chapter 26
+- [remediation verification](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/verification.md) — Chapter 22
+- [Remote Authentication Dial-In User Service](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/radius.md) — Chapter 18
+- [reproduce an issue](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/reproduce.md) — Chapter 22
+- [requirement priority](../chapters/part-07/chapter-25-requirements-and-constraints/entries/requirement-priority.md) — Chapter 25
+- [requirement traceability](../chapters/part-07/chapter-25-requirements-and-constraints/entries/traceability.md) — Chapter 25
+- [requirement validation](../chapters/part-07/chapter-25-requirements-and-constraints/entries/requirement-validation.md) — Chapter 25
+- [requirements stakeholder](../chapters/part-07/chapter-25-requirements-and-constraints/entries/stakeholder-requirements.md) — Chapter 25
+- [residual risk](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/residual-risk.md) — Chapter 26
+- [REST API](../chapters/part-07/chapter-28-automation-and-apis/entries/rest-api.md) — Chapter 28
+- [restore a configuration](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/restore-configuration.md) — Chapter 24
+- [return path](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/return-path.md) — Chapter 09
+- [RF interference](../chapters/part-04/chapter-14-wireless-networks/entries/rf-interference.md) — Chapter 14
+- [risk mitigation](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/risk-mitigation.md) — Chapter 26
+- [RJ45 connector](../chapters/part-01/chapter-02-cabling-and-connectors/entries/rj45.md) — Chapter 02
+- [role-based access control](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/role-based-access-control.md) — Chapter 18
+- [roll back](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/rollback-expression.md) — see We will roll back if …; Chapter 24
+- [rollback](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/rollback-expression.md) — see We will roll back if …; Chapter 24
+- [rollback criteria](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/rollback-criteria.md) — Chapter 24
+- [rollback decision](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/rollback-decision.md) — Chapter 24
+- [rollback plan](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/rollback-plan.md) — Chapter 24
+- [room access](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/request-room-access.md) — see Could you arrange access to …?; Chapter 01
+- [room air conditioner](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/room-air-conditioner.md) — Chapter 01
+- [root bridge](../chapters/part-02/chapter-06-ethernet-and-switching/entries/root-bridge.md) — Chapter 06
+- [root cause](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/root-cause.md) — Chapter 22
+- [round-trip time](../chapters/part-05/chapter-20-qos-and-performance/entries/round-trip-time.md) — Chapter 20
+- [route](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route.md) — Chapter 09
+- [route distinguisher](../chapters/part-04/chapter-15-data-center-networks/entries/route-distinguisher.md) — Chapter 15
+- [route lookup](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/route-lookup.md) — Chapter 22
+- [route metric](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route-metric.md) — Chapter 09
+- [route preference](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route-preference.md) — Chapter 09
+- [router](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/router.md) — Chapter 03
+- [routing](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing.md) — Chapter 09
+- [routing adjacency](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-adjacency.md) — Chapter 09
+- [routing convergence](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route-convergence.md) — Chapter 09
+- [routing loop](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-loop.md) — Chapter 09
+- [routing neighbor](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-neighbor.md) — Chapter 09
+- [routing protocol](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-protocol.md) — Chapter 09
+- [routing table](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-table.md) — Chapter 09
+- [RU](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-unit.md) — see rack unit; Chapter 01
+- [SC connector](../chapters/part-01/chapter-02-cabling-and-connectors/entries/sc-connector.md) — Chapter 02
+- [scalability](../chapters/part-07/chapter-26-architecture-and-trade-offs/entries/scalability.md) — Chapter 26
+- [scope of work](../chapters/part-07/chapter-25-requirements-and-constraints/entries/scope-of-work.md) — Chapter 25
+- [screwdriver](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/screwdriver.md) — Chapter 04
+- [Secure Shell](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/ssh.md) — Chapter 18
+- [security policy hit](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/security-policy-hit.md) — Chapter 17
+- [security requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/security-requirement.md) — Chapter 25
+- [security segmentation](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/security-segmentation.md) — Chapter 17
+- [security zone](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/security-zone.md) — Chapter 17
+- [serial number](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/serial-number.md) — Chapter 04
+- [service availability](../chapters/part-05/chapter-19-high-availability-and-failover/entries/availability.md) — Chapter 19
+- [service degradation](../chapters/part-06/chapter-23-incidents-and-escalation/entries/service-degradation.md) — Chapter 23
+- [service impact](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/impact.md) — Chapter 22
+- [service incident](../chapters/part-06/chapter-23-incidents-and-escalation/entries/incident.md) — Chapter 23
+- [service outage](../chapters/part-06/chapter-23-incidents-and-escalation/entries/outage.md) — Chapter 23
+- [service provider](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/service-provider.md) — Chapter 12
+- [service regression](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/regression.md) — Chapter 22
+- [service restoration](../chapters/part-06/chapter-23-incidents-and-escalation/entries/service-restoration.md) — Chapter 23
+- [service set identifier](../chapters/part-04/chapter-14-wireless-networks/entries/ssid.md) — Chapter 14
+- [service-level agreement](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/service-level-agreement.md) — Chapter 12
+- [service-level objective](../chapters/part-05/chapter-20-qos-and-performance/entries/service-level-objective.md) — Chapter 20
+- [session layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/session-layer.md) — Chapter 05
+- [SFP port](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/sfp-port.md) — Chapter 03
+- [shielded twisted pair](../chapters/part-01/chapter-02-cabling-and-connectors/entries/shielded-twisted-pair.md) — Chapter 02
+- [shortest path first](../chapters/part-03/chapter-10-ospf-and-is-is/entries/shortest-path-first.md) — Chapter 10
+- [signal-to-noise ratio](../chapters/part-04/chapter-14-wireless-networks/entries/signal-to-noise-ratio.md) — Chapter 14
+- [Simple Network Management Protocol](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/snmp.md) — Chapter 21
+- [simplex fiber](../chapters/part-01/chapter-02-cabling-and-connectors/entries/simplex-fiber.md) — Chapter 02
+- [single point of failure](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/single-point-of-failure.md) — Chapter 13
+- [single-mode fiber](../chapters/part-01/chapter-02-cabling-and-connectors/entries/single-mode-fiber.md) — Chapter 02
+- [site contact](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/site-contact.md) — Chapter 04
+- [site resilience](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/site-resilience.md) — Chapter 13
+- [site survey](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/site-survey.md) — Chapter 04
+- [site-to-site VPN](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/site-to-site-vpn.md) — Chapter 12
+- [small form-factor pluggable transceiver](../chapters/part-01/chapter-02-cabling-and-connectors/entries/sfp.md) — Chapter 02
+- [snag list](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/snag-list.md) — Chapter 04
+- [SNMP trap](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/snmp-trap.md) — Chapter 21
+- [source address](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/source-address.md) — Chapter 17
+- [source MAC address](../chapters/part-02/chapter-06-ethernet-and-switching/entries/source-mac-address.md) — Chapter 06
+- [source network address translation](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/source-nat.md) — Chapter 17
+- [source of truth](../chapters/part-07/chapter-28-automation-and-apis/entries/source-of-truth.md) — Chapter 28
+- [source port](../chapters/part-02/chapter-08-transport-and-application-services/entries/source-port.md) — Chapter 08
+- [source repository](../chapters/part-07/chapter-28-automation-and-apis/entries/repository.md) — Chapter 28
+- [Spanning Tree Protocol](../chapters/part-02/chapter-06-ethernet-and-switching/entries/spanning-tree-protocol.md) — Chapter 06
+- [spine switch](../chapters/part-04/chapter-15-data-center-networks/entries/spine-switch.md) — Chapter 15
+- [split-brain](../chapters/part-05/chapter-19-high-availability-and-failover/entries/split-brain.md) — Chapter 19
+- [SSH host key](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/ssh-host-key.md) — Chapter 18
+- [standard operating procedure](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/standard-operating-procedure.md) — Chapter 27
+- [standby device](../chapters/part-05/chapter-19-high-availability-and-failover/entries/standby-device.md) — Chapter 19
+- [state synchronization](../chapters/part-05/chapter-19-high-availability-and-failover/entries/state-synchronization.md) — Chapter 19
+- [stateful inspection](../chapters/part-05/chapter-17-firewalls-acls-and-segmentation/entries/stateful-inspection.md) — Chapter 17
+- [static route](../chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/static-route.md) — Chapter 09
+- [status LED](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/status-led.md) — Chapter 03
+- [status update](../chapters/part-06/chapter-23-incidents-and-escalation/entries/status-update.md) — Chapter 23
+- [streaming telemetry](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/streaming-telemetry.md) — Chapter 21
+- [subnet](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/subnet.md) — Chapter 07
+- [subnet mask](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/subnet-mask.md) — Chapter 07
+- [subnetting](../chapters/part-02/chapter-07-ip-addressing-and-subnetting/entries/subnetting.md) — Chapter 07
+- [support boundary](../chapters/part-07/chapter-27-documentation-diagrams-and-handover/entries/support-boundary.md) — Chapter 27
+- [switch port](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/switch-port.md) — Chapter 01
+- [switch stack](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/access-switch-stack.md) — Chapter 13
+- [switchover](../chapters/part-05/chapter-19-high-availability-and-failover/entries/switchover.md) — Chapter 19
+- [switchport](../chapters/part-02/chapter-06-ethernet-and-switching/entries/switchport.md) — Chapter 06
+- [Syslog](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/syslog.md) — Chapter 21
+- [system log](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/log.md) — Chapter 21
+- [TACACS+](../chapters/part-05/chapter-18-identity-aaa-and-secure-access/entries/tacacs-plus.md) — Chapter 18
+- [TCP acknowledgment](../chapters/part-02/chapter-08-transport-and-application-services/entries/acknowledgment.md) — Chapter 08
+- [TCP connection](../chapters/part-02/chapter-08-transport-and-application-services/entries/tcp-connection.md) — Chapter 08
+- [TCP retransmission](../chapters/part-02/chapter-08-transport-and-application-services/entries/retransmission.md) — Chapter 08
+- [TCP segment](../chapters/part-02/chapter-05-models-frames-and-packets/entries/segment.md) — Chapter 05
+- [TCP SYN](../chapters/part-02/chapter-08-transport-and-application-services/entries/syn.md) — Chapter 08
+- [TCP SYN-ACK](../chapters/part-02/chapter-08-transport-and-application-services/entries/syn-ack.md) — Chapter 08
+- [TCP three-way handshake](../chapters/part-02/chapter-08-transport-and-application-services/entries/three-way-handshake.md) — Chapter 08
+- [TCP/IP model](../chapters/part-02/chapter-05-models-frames-and-packets/entries/tcp-ip-model.md) — Chapter 05
+- [technical escalation](../chapters/part-06/chapter-23-incidents-and-escalation/entries/technical-escalation.md) — Chapter 23
+- [technical requirement](../chapters/part-07/chapter-25-requirements-and-constraints/entries/technical-requirement.md) — Chapter 25
+- [telecom room](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/telecommunications-room.md) — see telecommunications room; Chapter 01
+- [telecommunications room](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/telecommunications-room.md) — Chapter 01
+- [telemetry collector](../chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/collector.md) — Chapter 21
+- [temperature sensor](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/temperature-sensor.md) — Chapter 01
+- [Thank you for your patience.](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/thank-you-for-your-patience.md) — Chapter 30
+- [The assumption is that …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-assumption-is.md) — Chapter 32
+- [The benefit is …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-benefit-is.md) — Chapter 32
+- [The current design uses …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-current-design.md) — Chapter 32
+- [The decision needed is …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-next-decision.md) — Chapter 32
+- [The evidence shows …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-evidence-shows.md) — Chapter 32
+- [The expected impact is …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/the-expected-impact.md) — Chapter 31
+- [The goal is to …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-goal-is.md) — Chapter 32
+- [The impact is …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-impact-is.md) — Chapter 30
+- [The issue affects …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-issue-affects.md) — Chapter 30
+- [The issue remains under investigation.](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-issue-remains.md) — Chapter 30
+- [The limitation is …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-limitation-is.md) — Chapter 32
+- [The next step is to …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/the-next-step-is.md) — Chapter 29
+- [The next step is …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-next-step.md) — Chapter 30
+- [The proposed design uses …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-proposed-design.md) — Chapter 32
+- [The remaining risk is …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-residual-risk.md) — Chapter 32
+- [The requirement is to …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-requirement-is.md) — Chapter 32
+- [The service is degraded.](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/service-is-degraded.md) — Chapter 30
+- [The service is unavailable.](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-service-is-down.md) — Chapter 30
+- [The test indicates …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-test-indicates.md) — Chapter 32
+- [The tests show …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-tests-show.md) — Chapter 30
+- [The trade-off is …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/the-trade-off-is.md) — Chapter 32
+- [There is an open question about …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/there-is-an-open-question.md) — Chapter 29
+- [This depends on …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/this-depends-on.md) — Chapter 32
+- [This does not eliminate …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/this-does-not-eliminate.md) — Chapter 32
+- [This is outside the agreed scope.](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/this-is-out-of-scope.md) — Chapter 31
+- [This is subject to verification.](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/subject-to-verification.md) — Chapter 31
+- [This reduces the risk of …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/this-reduces-risk.md) — Chapter 32
+- [time of detection](../chapters/part-06/chapter-23-incidents-and-escalation/entries/time-of-detection.md) — Chapter 23
+- [time of restoration](../chapters/part-06/chapter-23-incidents-and-escalation/entries/time-of-restoration.md) — Chapter 23
+- [To summarize, …](../chapters/part-08/chapter-29-meetings-and-clarification/entries/to-summarize.md) — Chapter 29
+- [top-of-rack switching](../chapters/part-04/chapter-15-data-center-networks/entries/top-of-rack.md) — Chapter 15
+- [TR](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/telecommunications-room.md) — see telecommunications room; Chapter 01
+- [trace a cable](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/trace-cable.md) — Chapter 01
+- [trace the cable](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/trace-cable.md) — see trace a cable; Chapter 01
+- [traceroute](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/traceroute.md) — Chapter 22
+- [traffic burst](../chapters/part-05/chapter-20-qos-and-performance/entries/burst.md) — Chapter 20
+- [traffic classification](../chapters/part-05/chapter-20-qos-and-performance/entries/classification.md) — Chapter 20
+- [traffic marking](../chapters/part-05/chapter-20-qos-and-performance/entries/marking.md) — Chapter 20
+- [traffic policing](../chapters/part-05/chapter-20-qos-and-performance/entries/policing.md) — Chapter 20
+- [traffic shaping](../chapters/part-05/chapter-20-qos-and-performance/entries/shaping.md) — Chapter 20
+- [transceiver module](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/transceiver-module.md) — Chapter 03
+- [transit attachment](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-attachment.md) — Chapter 16
+- [Transmission Control Protocol](../chapters/part-02/chapter-08-transport-and-application-services/entries/tcp.md) — Chapter 08
+- [transport layer](../chapters/part-02/chapter-05-models-frames-and-packets/entries/transport-layer.md) — Chapter 05
+- [transport port number](../chapters/part-02/chapter-08-transport-and-application-services/entries/port-number.md) — Chapter 08
+- [troubleshooting hypothesis](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/hypothesis.md) — Chapter 22
+- [trunk port](../chapters/part-02/chapter-06-ethernet-and-switching/entries/trunk-port.md) — Chapter 06
+- [tunnel endpoint](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/tunnel-endpoint.md) — Chapter 12
+- [twisted-pair cable](../chapters/part-01/chapter-02-cabling-and-connectors/entries/twisted-pair-cable.md) — Chapter 02
+- [U](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-unit.md) — see rack unit; Chapter 01
+- [unicast](../chapters/part-02/chapter-06-ethernet-and-switching/entries/unicast.md) — Chapter 06
+- [uninterruptible power supply](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/ups.md) — Chapter 01
+- [unknown unicast](../chapters/part-02/chapter-06-ethernet-and-switching/entries/unknown-unicast.md) — Chapter 06
+- [unshielded twisted pair](../chapters/part-01/chapter-02-cabling-and-connectors/entries/unshielded-twisted-pair.md) — Chapter 02
+- [uplink](../chapters/part-04/chapter-13-campus-and-branch-networks/entries/uplink.md) — Chapter 13
+- [uplink port](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/uplink-port.md) — Chapter 03
+- [UPS](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/ups.md) — see uninterruptible power supply; Chapter 01
+- [User Datagram Protocol](../chapters/part-02/chapter-08-transport-and-application-services/entries/udp.md) — Chapter 08
+- [vendor support ticket](../chapters/part-06/chapter-23-incidents-and-escalation/entries/vendor-ticket.md) — Chapter 23
+- [verify site access](../chapters/part-01/chapter-04-site-surveys-and-installation/entries/verify-site-access.md) — Chapter 04
+- [version control](../chapters/part-07/chapter-28-automation-and-apis/entries/version-control.md) — Chapter 28
+- [version-control commit](../chapters/part-07/chapter-28-automation-and-apis/entries/commit.md) — Chapter 28
+- [Virtual Extensible LAN](../chapters/part-04/chapter-15-data-center-networks/entries/vxlan.md) — Chapter 15
+- [virtual LAN](../chapters/part-02/chapter-06-ethernet-and-switching/entries/vlan.md) — Chapter 06
+- [virtual network](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/virtual-network.md) — Chapter 16
+- [virtual network peering](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/cloud-peering.md) — Chapter 16
+- [virtual private cloud](../chapters/part-04/chapter-16-cloud-and-hybrid-connectivity/entries/virtual-private-cloud.md) — Chapter 16
+- [virtual private network](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/virtual-private-network.md) — Chapter 12
+- [Virtual Router Redundancy Protocol](../chapters/part-05/chapter-19-high-availability-and-failover/entries/vrrp.md) — Chapter 19
+- [virtual routing and forwarding](../chapters/part-04/chapter-15-data-center-networks/entries/vrf.md) — Chapter 15
+- [VLAN tag](../chapters/part-02/chapter-06-ethernet-and-switching/entries/vlan-tag.md) — Chapter 06
+- [VXLAN network identifier](../chapters/part-04/chapter-15-data-center-networks/entries/vni.md) — Chapter 15
+- [VXLAN tunnel endpoint](../chapters/part-04/chapter-15-data-center-networks/entries/vtep.md) — Chapter 15
+- [We are investigating …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-are-investigating.md) — Chapter 30
+- [We are waiting for …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-are-waiting-for.md) — Chapter 30
+- [We cannot yet confirm …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/we-cannot-confirm.md) — Chapter 31
+- [We have confirmed that …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-confirmed.md) — Chapter 30
+- [We have escalated …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-escalated.md) — Chapter 30
+- [We have not tested …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/we-have-not-tested.md) — Chapter 32
+- [We have not yet confirmed …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-not-yet-confirmed.md) — Chapter 30
+- [We have observed …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/we-have-observed.md) — Chapter 31
+- [We have restored …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-restored.md) — Chapter 30
+- [We need your approval before …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/we-need-your-approval.md) — Chapter 31
+- [We recommend …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/we-recommend.md) — Chapter 32
+- [We ruled out … because …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/we-ruled-out.md) — Chapter 32
+- [We selected … because …](../chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/we-selected.md) — Chapter 32
+- [We suspect that …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-suspect.md) — Chapter 30
+- [We will follow up with …](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/we-will-follow-up.md) — Chapter 31
+- [We will provide an update by …](../chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-will-update.md) — Chapter 30
+- [We will roll back if …](../chapters/part-06/chapter-24-changes-maintenance-and-rollback/entries/rollback-expression.md) — Chapter 24
+- [What are the dependencies?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/what-are-the-dependencies.md) — Chapter 29
+- [What do you mean by …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/what-do-you-mean-by.md) — Chapter 29
+- [What has been committed?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/what-is-committed.md) — Chapter 31
+- [What have you checked so far?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/what-have-you-checked.md) — Chapter 31
+- [What is the circuit ID?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/what-is-the-circuit-id.md) — Chapter 31
+- [What is the expected impact?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/what-is-the-impact.md) — Chapter 29
+- [What is the scope of …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/what-is-the-scope.md) — Chapter 29
+- [When can we expect the next update?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/what-is-next-update.md) — Chapter 31
+- [Where is the demarcation point?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/where-is-the-demarcation.md) — Chapter 31
+- [Which option are we discussing?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/which-option.md) — Chapter 29
+- [Who is responsible for …?](../chapters/part-08/chapter-29-meetings-and-clarification/entries/who-is-responsible.md) — Chapter 29
+- [Who owns this component?](../chapters/part-08/chapter-31-vendors-customers-and-service-commitments/entries/who-owns-this-component.md) — Chapter 31
+- [Wi-Fi](../chapters/part-04/chapter-14-wireless-networks/entries/wifi.md) — Chapter 14
+- [Wi-Fi Protected Access 3](../chapters/part-04/chapter-14-wireless-networks/entries/wpa3.md) — Chapter 14
+- [wide area network](../chapters/part-03/chapter-12-wan-vpn-and-service-providers/entries/wide-area-network.md) — Chapter 12
+- [wireless access point](../chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/wireless-access-point.md) — Chapter 03
+- [wireless association](../chapters/part-04/chapter-14-wireless-networks/entries/association.md) — Chapter 14
+- [wireless authentication](../chapters/part-04/chapter-14-wireless-networks/entries/wireless-authentication.md) — Chapter 14
+- [wireless capacity](../chapters/part-04/chapter-14-wireless-networks/entries/capacity.md) — Chapter 14
+- [wireless channel](../chapters/part-04/chapter-14-wireless-networks/entries/wireless-channel.md) — Chapter 14
+- [wireless channel plan](../chapters/part-04/chapter-14-wireless-networks/entries/channel-plan.md) — Chapter 14
+- [wireless channel width](../chapters/part-04/chapter-14-wireless-networks/entries/channel-width.md) — Chapter 14
+- [wireless client](../chapters/part-04/chapter-14-wireless-networks/entries/wireless-client.md) — Chapter 14
+- [wireless coverage](../chapters/part-04/chapter-14-wireless-networks/entries/coverage.md) — Chapter 14
+- [wireless frequency band](../chapters/part-04/chapter-14-wireless-networks/entries/frequency-band.md) — Chapter 14
+- [wireless LAN](../chapters/part-04/chapter-14-wireless-networks/entries/wireless-lan.md) — Chapter 14
+- [wireless LAN controller](../chapters/part-04/chapter-14-wireless-networks/entries/wireless-controller.md) — Chapter 14
+- [wireless roaming](../chapters/part-04/chapter-14-wireless-networks/entries/roaming.md) — Chapter 14
+- [wireless signal strength](../chapters/part-04/chapter-14-wireless-networks/entries/signal-strength.md) — Chapter 14
+- [wireless site survey](../chapters/part-04/chapter-14-wireless-networks/entries/site-survey-wireless.md) — Chapter 14
+- [wiring closet](../chapters/part-01/chapter-01-network-rooms-and-facilities/entries/telecommunications-room.md) — see telecommunications room; Chapter 01
+- [workaround](../chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/workaround.md) — Chapter 22
+- [YAML](../chapters/part-07/chapter-28-automation-and-apis/entries/yaml.md) — Chapter 28

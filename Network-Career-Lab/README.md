@@ -1,36 +1,41 @@
-# Network Career Lab：24 周网络工程师进阶学习项目
+# 网络职业提升教材：从路由交换到系统设计
 
-从传统路由交换出发，依次补齐 Linux、自动化、云网络、Internet Edge、现代数据中心、AI/HPC 和交易网络。面向 Network Architect / Principal / Solutions Engineer 等方向，学习目标是能设计、验证、排错并解释取舍。
+2026-10-30 重编。以已有传统路由交换基础为起点，学习 Linux、自动化、云网络、Internet Edge、现代数据中心，并进入 AI/HPC 与交易网络专项。目标是能独立解释机制、完成验证、定位故障和说明架构取舍。
 
-本项目依据《我的目标就是百万年薪.docx》中的学习计划整理，2026-09-26 建立。文档内两次出现的相同计划已合并；以你明确说的“只有传统路由交换技术栈”为起点，不预设你已经掌握 RoCE、Python 或云网络。原对话中的薪资、招聘状态和“已设置追踪任务”不是本项目核实或执行的内容。
+本版增加七章详细教材与职业学习方法。原有概念摘要、实验、代码和个人进度继续保留。详细教材负责讲“为什么与如何判断”，实验文档负责具体操作，两者配合学习。
 
-## 从这里开始
+## 推荐阅读顺序
 
-1. 阅读 [24 周路线与周任务](00-Plan/24-Week-Roadmap.md)，按相对周数开始，不必等待某个日期。
-2. 按 [实验环境](00-Plan/Lab-Environment.md) 准备一台 Linux VM。
-3. 学习 [Linux 数据路径](01-Linux/01-Packet-Path.md)，完成 [Linux 实验](01-Linux/02-Labs.md) 的 L1。
-4. 每周填写 [进度记录](08-Portfolio/Progress.md)，每个实验保存一份 [实验记录](08-Portfolio/Lab-Report-Template.md)。
+先读 [职业方向、起点评估与学习方法](00-Plan/01-Career-and-Study-System.md)，再准备 [实验环境](00-Plan/Lab-Environment.md)。按 [24周任务表](00-Plan/24-Week-Roadmap.md) 安排主线，使用 [详细教材周阅读表](00-Plan/02-Textbook-Reading-Map.md) 找到每周章节。
 
-## 学习入口
+| 顺序 | 详细教材 | 配套操作与交付 |
+|---|---|---|
+| 1 Linux | [TCP逐包路径、主机排错、MTU与性能](01-Linux/03-Detailed-Textbook.md) | [namespace、服务、过滤、VLAN/bond实验](01-Linux/02-Labs.md) |
+| 2 自动化 | [Python、数据契约、失败处理与配置流程](02-Automation/03-Detailed-Textbook.md) | [健康检查和配置渲染项目](02-Automation/02-Project.md) |
+| 3 云网络 | [地址、TGW、hub-spoke、DNS与混合云](03-Cloud/03-Detailed-Textbook.md) | [AWS/Azure设计与故障推演](03-Cloud/02-Labs-and-Design.md) |
+| 4 Internet Edge | [路由策略、RPKI、DDoS与运行处置](04-Internet-Edge/03-Detailed-Textbook.md) | [双ISP FRR实验](04-Internet-Edge/02-Labs.md) |
+| 5 数据中心 | [underlay、封装、EVPN路由与IRB](05-Data-Center/03-Detailed-Textbook.md) | [分层验证和故障注入](05-Data-Center/02-Labs.md) |
+| 6 AI/HPC | [通信模式、RDMA、拥塞、容量与测量](06-AI-HPC/03-Detailed-Textbook.md) | [1000GPU容量例题与硬件/无硬件路径](06-AI-HPC/02-Design-and-Labs.md) |
+| 7 交易网络 | [行情序号、组播、A/B、时延、PTP与RCA](07-Trading/03-Detailed-Textbook.md) | [组播、预算、主机与时钟实验](07-Trading/02-Labs.md) |
 
-| 阶段 | 原计划时间 | 教材 | 实验 / 交付物 |
-|---|---|---|---|
-| 1 Linux | W1–6 | [数据路径、命令与 NIC](01-Linux/01-Packet-Path.md) | [路由、MTU、VLAN、bond、排错](01-Linux/02-Labs.md) |
-| 2 Automation | W4–8 | [Python 到 Ansible](02-Automation/01-Learning-Guide.md) | [网络健康检查与配置流水线](02-Automation/02-Project.md) |
-| 3 Cloud | W7–12 | [AWS / Azure 网络](03-Cloud/01-AWS-Azure.md) | [混合云设计实验](03-Cloud/02-Labs-and-Design.md) |
-| 4 Internet Edge | W10–15 | [运营商互联与路由安全](04-Internet-Edge/01-Design-and-Security.md) | [双 ISP 实验](04-Internet-Edge/02-Labs.md) |
-| 5 Modern DC | W13–18 | [EVPN/VXLAN 与 Clos](05-Data-Center/01-EVPN-VXLAN.md) | [分层验证与故障注入](05-Data-Center/02-Labs.md) |
-| 6 AI/HPC | W17–22 | [RDMA 与拥塞控制](06-AI-HPC/01-RDMA-and-Congestion.md) | [容量设计与测量](06-AI-HPC/02-Design-and-Labs.md) |
-| 7 Trading | W20–24 | [交易链路与延迟](07-Trading/01-Market-Data-and-Latency.md) | [组播、测量与时钟](07-Trading/02-Labs.md) |
+每章包括学习目标、原理推导、案例、错误判断、作业和参考答案。先独立答题，再对照答案；不要把答案抄进进度表当完成。
 
-每周总计 8–10 小时，阶段重叠时共享这个预算，不是每阶段各花 8–10 小时。正文是第一遍教材；每篇末尾的官方文档只按指定主题阅读，不要求通读数百页。
+## 怎么安排学习量
 
-## 完成的定义
+24周每周8–10小时是第一轮主线预算，重叠阶段共享时间。详细教材的必修内容配合一个完整实验完成；实机RDMA、精密PTP、复杂多归属和生产级自动化放到后续专项。没有相应平台时完成设计与模拟分析，并标明未实测项。
 
-每阶段留下一个可复核成果：拓扑、假设、配置或代码、验证输出、故障复现、恢复记录、5 分钟英文说明。只读完文章不算阶段通过。建议先完成所有核心题，再选做扩展；硬件不足时完成替代作业，并如实标记“设计验证”或“模拟数据”，不记录成实机性能结果。
+每周保留一个可复核成果：正常基线、故障现象、判断证据、恢复结果和讲述。原理、操作或设计、排错、表达各0–2分，至少6/8且无0分再进入下一阶段。学习任务不因文件已生成而自动完成。
 
-- [设计与英文面试练习](08-Portfolio/Design-and-Interview.md)
-- [官方资料索引与阅读范围](09-References/Reading-List.md)
-- [与原计划的覆盖对照](00-Plan/Plan-Coverage.md)
+## 学习记录与作品集
 
-本目录独立维护。已有笔记仅作为补充链接，未复制私人对话全文。24 周是入门到综合应用的训练周期，不代表所有方向都能在此时长内达到专家水平，也不是薪资承诺。
+- [个人进度记录](08-Portfolio/Progress.md)：保留原有内容，自行填写实际完成情况。
+- [实验记录模板](08-Portfolio/Lab-Report-Template.md)：记录环境、证据、注入和恢复。
+- [设计与英文面试](08-Portfolio/Design-and-Interview.md)：将技术成果转成可讲述案例。
+- [官方资料索引](09-References/Reading-List.md)：按问题阅读，而非用链接代替教材。
+- [原计划覆盖对照](00-Plan/Plan-Coverage.md)：追溯原七阶段内容。
+
+## 来源与验证范围
+
+初版于2026-09-26依据原职业规划材料建立，本版按“内容不足、不够细致”的反馈扩写。职业方向不构成薪资或招聘承诺，案例为教学设计，不代表你已经完成的生产项目。
+
+本次检查范围为文档结构、本地链接、代码围栏和示例计算；Linux、FRR、云、GPU与PTP实验未在本次编写过程中运行。旧代码保持原样，其历史验证记录见实验环境文档，不作为本次新测试结果。

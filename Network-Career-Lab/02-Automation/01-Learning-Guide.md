@@ -62,3 +62,7 @@ Git 每周最少做一次有意义的提交练习：看 `git status`、`git diff
 Terraform 是扩展项：在云网络课程后学习 provider、resource、plan、state、destroy。state 可能含敏感数据；plan 显示的变更仍需读懂。CI 先自动运行 schema 检查、离线单元测试和模板渲染，不把真实设备下发放进初学者的自动流水线。
 
 自测：某设备 SSH 超时，报告该写 Down 还是 UNKNOWN？参考：只能证明采集失败，应 UNKNOWN，并保留原因；设备业务面可能仍健康。
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

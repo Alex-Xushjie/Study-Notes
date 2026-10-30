@@ -47,3 +47,7 @@ NCCL 等通信库执行 AllReduce、AllGather 等 collective。应用迭代常�
 - 为什么“打开 PFC”不等于完成 RoCE 调优？参考：QoS 映射、拥塞控制、队列/缓冲、端系统与业务测量仍缺失。
 - ECN 正常但吞吐低，应看什么？参考：CNP、发送端反应、队列映射、NIC/PCIe/GPU、路径与拓扑，不仅调整一个阈值。
 - 一条 RDMA 流吞吐不足，为何加 ECMP 链路未必有效？参考：流 hash、多 QP、NIC 能力及拥塞位置。
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

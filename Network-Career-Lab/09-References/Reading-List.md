@@ -38,3 +38,12 @@
 - [交易网络白板题](../../Quant%20Trading/90-Interview-Drills/03-Whiteboard-Cases.md)：综合练习。
 
 未把旧目录中只有标题或空白的文件列为必读教材。新项目正文可独立起步；旧笔记的历史厂商功能和业务接口仍需按版本复核。
+
+## 2026-10-30 重编补充
+
+本轮重新取得Linux scaling、Python异常、AWS TGW/NACL、Azure hub-spoke、FRR BGP/EVPN、RFC6811、NVIDIA RoCE、nccl-tests性能说明和linuxptp页面内容。新增详细教材在相关章节给出直接链接。RFC编辑站点一次返回限流，改用IETF Datatracker的RFC6811正文。核对概念不代表本文所有实验步骤已经在特定设备版本运行。
+
+- [Python异常](https://docs.python.org/3/tutorial/errors.html)：区分异常与采集结果。
+- [AWS NACL](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)：检查子网双向策略。
+- [RFC6811正文及更新](https://datatracker.ietf.org/doc/html/rfc6811)：手算ROV分类。
+- [nccl-tests性能指标](https://github.com/NVIDIA/nccl-tests/blob/master/doc/PERFORMANCE.md)：理解algbw/busbw口径。

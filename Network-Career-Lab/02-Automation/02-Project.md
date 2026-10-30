@@ -54,3 +54,7 @@ ansible-playbook labs/automation/render.yml --diff
 交付：代码、脱敏 inventory、schema、样例、测试、JSON/CSV、配置 diff、README、一次失败复盘。故意加入设备超时、空结果、错误类型、邻居缺失，报告应明确原因。
 
 英文结构：*I separated collection from evaluation so that the checks can be tested offline. Missing data is reported as unknown, not healthy. Before deployment, I compare the rendered configuration and capture a baseline.*
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。

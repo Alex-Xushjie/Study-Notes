@@ -41,3 +41,7 @@
 扩展：有支持 EVPN multihoming 的镜像时，为一台主机配置双归属 ESI，观察 Type 1/4 和 DF 状态，分别断 member/leaf。没有镜像时提交 DF/BUM/已知单播的逐向转发图，并标注未实跑。
 
 交付：地址/VNI/RD/RT 台账、控制面和数据面基线、至少三种故障记录、Enterprise DC 与 L3-to-server 选择说明。通过条件：能在 15 分钟内把一次不通归到 underlay、overlay、租户映射、主机四层之一并出示证据。
+
+---
+
+重编版补充：[详细讲解、完整案例与练习答案](03-Detailed-Textbook.md)。
