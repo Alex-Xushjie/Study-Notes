@@ -6,6 +6,7 @@
 
 1. [A Troubleshooting Method](01-method.md)
 2. [Diagnostic Tools and Evidence](02-tools.md)
+3. [Interface Flapping: Describe, Escalate, Update](03-interface-flapping.md) — work-scenario pilot
 
 ## Say it at work
 

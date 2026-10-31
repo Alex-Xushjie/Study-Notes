@@ -3,7 +3,7 @@ id: "NEED-TEC-route-distinguisher"
 headword: "route distinguisher"
 type: "technical"
 chapter: "15"
-aliases: []
+aliases: ["BGP route distinguisher"]
 tags: ["data center networking"]
 status: "draft"
 updated: "2026-10-30"

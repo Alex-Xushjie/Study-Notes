@@ -50,3 +50,53 @@ The room, rack, and power-equipment pictures are AI-generated illustrative rende
 The Chapter 14 wireless picture is an original AI-generated illustrative scene made with the built-in image generator. Prompt: a laptop client, visible radio waves, a wireless access point, and a cabled Ethernet switch on a clear light background. It is not a product photograph or installation instruction.
 
 The Chapter 15 leaf-spine picture is an original vector topology diagram: each of the three leaves connects to each of two spines, and one server connects to a leaf. It shows logical physical-link relationships, not an exact wiring plan.
+
+
+## Chapter 01: realistic cooling scene
+
+The cold-aisle scene is an AI-generated, photorealistic illustration, not a photograph of a real facility. The numbered leaders and blue airflow arrows were added for teaching. It illustrates one possible raised-floor arrangement; the rear of the cabinet, hot aisle and raised-floor plenum are not visible. Equipment appearance is illustrative and model-specific details require verification.
+
+[Cisco UCS Site Preparation Guide](https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/hw/site-prep-guide/ucs_siteprep_chapter_010.html) describes front-to-back airflow for its equipment and cold-aisle alignment. [Cisco Nexus airflow requirements](https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/hw/n93180yc-fx3/cisco-n93180yc-fx3-hardware-installation-guide/site-prep/airflow-requirements.html) illustrates how airflow direction depends on the particular equipment configuration.
+
+
+## Chapter 05: OSI and encapsulation example
+
+The send-side diagram is an original conceptual illustration. HTTP over TCP, IPv4, and Ethernet is used as one example, and OSI layers 5 and 6 are shown as functional concepts rather than mandatory independent protocol headers.
+
+[RFC 9112: HTTP/1.1](https://www.rfc-editor.org/rfc/rfc9112.html) describes HTTP/1.1 message syntax. [RFC 9293: TCP](https://www.rfc-editor.org/rfc/rfc9293.html) specifies TCP headers and its byte-stream service. [RFC 791: Internet Protocol](https://www.rfc-editor.org/rfc/rfc791.html) specifies IPv4. [RFC 894: IP over Ethernet](https://www.rfc-editor.org/rfc/rfc894.html) describes IPv4 encapsulation and Ethernet padding. [Cisco OSI Reference Model](https://www.cisco.com/c/en/us/td/docs/ios/sw_upgrades/interlink/r2_0/api_con/acoview.pdf) describes the conceptual layers. The diagram is a teaching simplification and is pending independent review.
+
+
+The Chapter 05 frame illustration is an original, not-to-scale diagram of one Ethernet II / IPv4 / TCP example. It uses the same protocol references listed above; Ethernet padding and VLAN tags are intentionally omitted. The Ethernet FCS is outside the IP packet.
+
+
+## Chapter 06: access and trunk example
+
+The VLAN illustration is an original logical diagram: two VLANs cross one trunk between two switches. [Cisco access and trunk interface documentation](https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/infra/interface-characteristics/interface-characteristics-configuration-guide.html) describes access ports, 802.1Q trunks and native VLAN behavior. Exact tagging and forwarding depend on platform and configuration.
+
+
+The Chapter 06 Ethernet frame diagram is an original teaching illustration of an untagged Ethernet II frame. [RFC 894](https://www.rfc-editor.org/rfc/rfc894.html) specifies IPv4 over Ethernet and padding; [Cisco frame-format documentation](https://www.cisco.com/c/en/us/support/docs/lan-switching/8021q/17056-741-4.html) describes the FCS and VLAN tag placement.
+
+
+## Chapter 07: address diagrams
+
+The IPv4 and IPv6 diagrams use documentation address ranges described in [RFC 5737](https://www.rfc-editor.org/rfc/rfc5737.html) and [RFC 3849](https://www.rfc-editor.org/rfc/rfc3849.html). IPv6 notation is described in [RFC 4291](https://www.rfc-editor.org/rfc/rfc4291.html) and canonical text recommendations in [RFC 5952](https://www.rfc-editor.org/rfc/rfc5952.html). Prefix splits are examples, not universal fixed boundaries.
+
+
+## Chapter 08: TCP and DNS diagrams
+
+Original teaching diagrams; the handshake example follows [RFC 9293 section 3.5](https://www.rfc-editor.org/rfc/rfc9293.html#section-3.5). The DNS example follows concepts in [RFC 1034](https://www.rfc-editor.org/rfc/rfc1034.html) and [RFC 9499](https://www.rfc-editor.org/rfc/rfc9499.html).
+
+
+## Chapter 09: forwarding and prefix selection
+
+These original IPv4 forwarding diagrams use [RFC 1812](https://www.rfc-editor.org/rfc/rfc1812.html) for longest matching prefix, TTL and outgoing-link encapsulation. Examples assume an ordinary unicast forwarding context; policy routing, tunnels, NAT and alternate forwarding contexts require additional consideration.
+
+
+## Chapter 10: OSPF neighbors and SPF
+
+The original OSPFv2 teaching diagrams illustrate a point-to-point adjacency and an intra-area SPF example. [RFC 2328](https://www.rfc-editor.org/rfc/rfc2328.html) describes neighbor discovery, synchronization, LSAs and shortest-path calculation. Neighbor adjacency behavior differs by network type.
+
+
+## Work-scenario pilot: interface flapping
+
+The diagram, times, dialogue and counter values are invented for language practice. [Cisco: Troubleshoot Port Flaps on Catalyst 9000 Switches](https://www.cisco.com/c/en/us/support/docs/switches/catalyst-9500-series-switches/218397-troubleshoot-port-flaps-on-catalyst-9000.html) illustrates correlation of link-state logs and interface counters on specific platforms. An error counter increase does not by itself identify the cause of a flap. Independent technical and language review is pending.

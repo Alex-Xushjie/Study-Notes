@@ -2,6 +2,10 @@
 
 An English dictionary for network engineers: **32 chapters** covering physical infrastructure, network technology, and professional communication.
 
+## Book-style reading edition
+
+[Open the reading edition](reader/index.html) in a web browser to browse all 32 chapters, search for words, and read each page in the illustrated layout. This is a local draft; the published blog remains separate.
+
 ## How to read
 
 1. Choose a chapter below and open its page.
@@ -70,8 +74,10 @@ An English dictionary for network engineers: **32 chapters** covering physical i
 
 ## About this draft
 
-There are currently 786 English entries. Some chapters have numbered illustrations; others are text-first while their illustrations are discussed and developed. Content and illustrations still need independent technical and language review.
+There are currently 1015 English entries; the working target is at least 3,000. Some chapters have numbered illustrations; others are text-first while their illustrations are discussed and developed. Content and illustrations still need independent technical and language review.
 
 ## For editing and maintenance
+
+After editing chapter Markdown, run `python tools/build_reader_data.py` from the project folder and refresh the browser to update the reading edition.
 
 [Full contents with entry counts](TABLE-OF-CONTENTS.md) · [Style guide](STYLE-GUIDE.md) · [Entry templates](templates/README.md) · [Index rules](INDEX-RULES.md) · [Sources](SOURCES.md) · [Validation](VALIDATION.md) · [File tree](FILE-TREE.md)

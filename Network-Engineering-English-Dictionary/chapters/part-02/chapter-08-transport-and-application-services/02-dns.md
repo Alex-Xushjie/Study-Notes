@@ -4,7 +4,7 @@
 
 [Chapter](README.md) · [A TCP connection](01-tcp.md)
 
-![A DNS client, recursive resolver, authoritative name server and query path.](../../../assets/chapter08-dns.svg)
+![A DNS client asks a recursive resolver, which follows root and TLD referrals to an authoritative server on a cache miss.](../../../assets/chapter08-dns-resolution-v1.svg)
 
 *A simplified query path. Caches and intermediate DNS servers may change the actual sequence.*
 
@@ -30,3 +30,8 @@
 ## More words
 
 [DNS](entries/dns.md) · [DNS resource record](entries/dns-record.md) · [A record](entries/dns-a-record.md) · [AAAA record](entries/dns-aaaa-record.md) · [DNS time to live](entries/dns-ttl.md) · [DHCP](entries/dhcp.md) · [DHCP relay](entries/dhcp-relay.md) · [NTP](entries/ntp.md) · [HTTPS](entries/https.md)
+
+
+## Follow the exchange
+
+On a cache miss, the recursive resolver may query a root server, follow a referral to a TLD server, and then query an authoritative server. The resolver returns the answer to the client and may cache it according to applicable TTL and policy. Cached data or forwarding arrangements can change the path.

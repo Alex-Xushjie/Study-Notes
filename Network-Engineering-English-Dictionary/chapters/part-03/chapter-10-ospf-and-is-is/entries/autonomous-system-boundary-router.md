@@ -3,7 +3,7 @@ id: "NEED-TEC-autonomous-system-boundary-router"
 headword: "autonomous system boundary router"
 type: "technical"
 chapter: "10"
-aliases: []
+aliases: ["OSPF autonomous system boundary router"]
 tags: ["link-state routing"]
 status: "draft"
 updated: "2026-10-30"

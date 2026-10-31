@@ -6,11 +6,11 @@ The dictionary has eight parts and 32 chapters. All 32 chapters contain English 
 
 ## Part 01 · Physical Infrastructure
 
-- [Chapter 01 · Network Rooms & Facilities](chapters/part-01/chapter-01-network-rooms-and-facilities/README.md) — 34 entries
+- [Chapter 01 · Network Rooms & Facilities](chapters/part-01/chapter-01-network-rooms-and-facilities/README.md) — 70 entries
 
-- [Chapter 02 · Cabling & Connectors](chapters/part-01/chapter-02-cabling-and-connectors/README.md) — 24 entries
+- [Chapter 02 · Cabling & Connectors](chapters/part-01/chapter-02-cabling-and-connectors/README.md) — 66 entries
 
-- [Chapter 03 · Network Hardware & Interfaces](chapters/part-01/chapter-03-network-hardware-and-interfaces/README.md) — 24 entries
+- [Chapter 03 · Network Hardware & Interfaces](chapters/part-01/chapter-03-network-hardware-and-interfaces/README.md) — 64 entries
 
 - [Chapter 04 · Site Surveys & Installation](chapters/part-01/chapter-04-site-surveys-and-installation/README.md) — 25 entries
 
@@ -18,7 +18,7 @@ The dictionary has eight parts and 32 chapters. All 32 chapters contain English 
 
 - [Chapter 05 · Models, Frames & Packets](chapters/part-02/chapter-05-models-frames-and-packets/README.md) — 24 entries
 
-- [Chapter 06 · Ethernet & Switching](chapters/part-02/chapter-06-ethernet-and-switching/README.md) — 24 entries
+- [Chapter 06 · Ethernet & Switching](chapters/part-02/chapter-06-ethernet-and-switching/README.md) — 50 entries
 
 - [Chapter 07 · IP Addressing & Subnetting](chapters/part-02/chapter-07-ip-addressing-and-subnetting/README.md) — 24 entries
 
@@ -26,11 +26,11 @@ The dictionary has eight parts and 32 chapters. All 32 chapters contain English 
 
 ## Part 03 · Routing & Connectivity
 
-- [Chapter 09 · Routing Fundamentals & Static Routes](chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/README.md) — 24 entries
+- [Chapter 09 · Routing Fundamentals & Static Routes](chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/README.md) — 45 entries
 
-- [Chapter 10 · OSPF & IS-IS](chapters/part-03/chapter-10-ospf-and-is-is/README.md) — 25 entries
+- [Chapter 10 · OSPF & IS-IS](chapters/part-03/chapter-10-ospf-and-is-is/README.md) — 42 entries
 
-- [Chapter 11 · BGP & Routing Policy](chapters/part-03/chapter-11-bgp-and-routing-policy/README.md) — 25 entries
+- [Chapter 11 · BGP & Routing Policy](chapters/part-03/chapter-11-bgp-and-routing-policy/README.md) — 40 entries
 
 - [Chapter 12 · WAN, VPN & Service Providers](chapters/part-03/chapter-12-wan-vpn-and-service-providers/README.md) — 24 entries
 
@@ -76,9 +76,9 @@ The dictionary has eight parts and 32 chapters. All 32 chapters contain English 
 
 ## Part 08 · Professional Communication
 
-- [Chapter 29 · Meetings & Clarification](chapters/part-08/chapter-29-meetings-and-clarification/README.md) — 24 entries
+- [Chapter 29 · Meetings & Clarification](chapters/part-08/chapter-29-meetings-and-clarification/README.md) — 40 entries
 
-- [Chapter 30 · Tickets, Email & Status Updates](chapters/part-08/chapter-30-tickets-email-and-status-updates/README.md) — 24 entries
+- [Chapter 30 · Tickets, Email & Status Updates](chapters/part-08/chapter-30-tickets-email-and-status-updates/README.md) — 40 entries
 
 - [Chapter 31 · Vendors, Customers & Service Commitments](chapters/part-08/chapter-31-vendors-customers-and-service-commitments/README.md) — 24 entries
 

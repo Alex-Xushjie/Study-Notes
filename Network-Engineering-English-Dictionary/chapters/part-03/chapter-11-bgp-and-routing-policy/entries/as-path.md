@@ -3,7 +3,7 @@ id: "NEED-TEC-as-path"
 headword: "AS_PATH"
 type: "technical"
 chapter: "11"
-aliases: []
+aliases: ["BGP AS_PATH"]
 tags: ["BGP routing policy"]
 status: "draft"
 updated: "2026-10-30"

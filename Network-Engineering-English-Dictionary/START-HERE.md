@@ -2,6 +2,10 @@
 
 [← All 32 chapters](README.md#browse-by-chapter) · [Find a word](indexes/ENGLISH-INDEX.md)
 
+## Book-style reading edition
+
+Open [the reading edition](reader/index.html) in a web browser. It lists all chapters and includes word search.
+
 ## Choose a chapter
 
 Open the [dictionary home](README.md#browse-by-chapter). All 32 chapters are listed there, grouped into eight parts. Select any chapter title to open it.

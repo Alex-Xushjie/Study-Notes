@@ -4,7 +4,7 @@
 
 [Chapter](README.md) · [Longest prefix match](02-prefix.md)
 
-![A host sends a packet through two routers to a destination network.](../../../assets/chapter09-forwarding.svg)
+![A host sends a packet through two routers to a destination network.](../../../assets/chapter09-forwarding-path-v1.svg)
 
 *A simplified path. Routing and forwarding are checked independently at each router.*
 
@@ -30,3 +30,8 @@
 ## More words
 
 [Routing table](entries/routing-table.md) · [Route](entries/route.md) · [Outgoing interface](entries/outgoing-interface.md) · [Static route](entries/static-route.md) · [Dynamic route](entries/dynamic-route.md) · [Default route](entries/default-route.md) · [Return path](entries/return-path.md)
+
+
+## Follow the example
+
+Router 1 looks up the destination and forwards toward Router 2 as its next hop. Each router makes its own forwarding decision. The return path may differ; NAT and tunnels can alter how addresses and encapsulation appear.

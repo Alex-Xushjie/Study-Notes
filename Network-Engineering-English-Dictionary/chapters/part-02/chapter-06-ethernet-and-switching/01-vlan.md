@@ -4,9 +4,9 @@
 
 [Chapter](README.md) · [Ethernet frame](02-frame.md)
 
-![Two switches with access links, a trunk and a conceptual VLAN boundary.](../../../assets/chapter06-vlans.svg)
+![Two switches connect hosts in VLAN 10 and VLAN 20. A trunk carries both VLANs across the switches.](../../../assets/chapter06-vlan-topology-v1.svg)
 
-*Conceptual diagram. The outlined region indicates logical grouping, not a complete VLAN forwarding map.*
+*Example topology; blue and orange indicate logical VLAN membership. The trunk is one physical link.*
 
 ## Picture words
 
@@ -30,3 +30,10 @@
 ## More words
 
 [VLAN tag](entries/vlan-tag.md) · [Native VLAN](entries/native-vlan.md) · [Broadcast domain](entries/broadcast-domain.md) · [Spanning Tree Protocol](entries/spanning-tree-protocol.md) · [Port channel](entries/port-channel.md) · [LACP](entries/lacp.md)
+
+
+## Follow the VLANs
+
+Hosts A and B are in VLAN 10; hosts C and D are in VLAN 20. Their switch-facing links are access links in this example. The switches carry both VLANs across one trunk, subject to the allowed VLAN configuration and forwarding state.
+
+VLANs create separate Layer 2 broadcast domains. Communication between VLAN 10 and VLAN 20 requires routing or another Layer 3 function, which is not shown here. Native VLAN handling, tagging and voice VLAN features depend on the configuration and platform.

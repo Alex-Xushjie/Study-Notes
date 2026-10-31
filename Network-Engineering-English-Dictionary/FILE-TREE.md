@@ -4,6 +4,7 @@
 
 ```text
 Network-Engineering-English-Dictionary/
+  EDITORIAL-AUDIT.md
   FILE-TREE.md
   INDEX-RULES.md
   Network-Engineering-English-Dictionary.code-workspace
@@ -13,7 +14,10 @@ Network-Engineering-English-Dictionary/
   STYLE-GUIDE.md
   TABLE-OF-CONTENTS.md
   VALIDATION.md
+  VOCABULARY-PROGRESS.md
   assets/chapter01-cooling-numbered.svg
+  assets/chapter01-cooling-realistic-numbered-v1.svg
+  assets/chapter01-cooling-realistic-v1.png
   assets/chapter01-power-numbered.svg
   assets/chapter01-power.png
   assets/chapter01-rack-numbered.svg
@@ -27,17 +31,29 @@ Network-Engineering-English-Dictionary/
   assets/chapter04-installation.svg
   assets/chapter04-survey.svg
   assets/chapter05-encapsulation.svg
+  assets/chapter05-frame-encapsulation-v1.svg
   assets/chapter05-layers.svg
+  assets/chapter05-osi-encapsulation-v1.svg
   assets/chapter06-frame.svg
+  assets/chapter06-ethernet-frame-v1.svg
   assets/chapter06-vlans.svg
+  assets/chapter06-vlan-topology-v1.svg
   assets/chapter07-ipv4.svg
+  assets/chapter07-ipv4-prefix-v1.svg
   assets/chapter07-ipv6.svg
+  assets/chapter07-ipv6-prefix-v1.svg
   assets/chapter08-dns.svg
+  assets/chapter08-dns-resolution-v1.svg
   assets/chapter08-tcp.svg
+  assets/chapter08-tcp-handshake-v1.svg
   assets/chapter09-forwarding.svg
+  assets/chapter09-forwarding-path-v1.svg
   assets/chapter09-prefix.svg
+  assets/chapter09-longest-prefix-v1.svg
   assets/chapter10-01-neighbors.svg
+  assets/chapter10-ospf-neighbors-v1.svg
   assets/chapter10-02-calculation.svg
+  assets/chapter10-ospf-spf-v1.svg
   assets/chapter11-01-peering.svg
   assets/chapter11-02-policy.svg
   assets/chapter12-01-provider.svg
@@ -86,6 +102,8 @@ Network-Engineering-English-Dictionary/
   assets/chapter32-02-recommendation.svg
   assets/network-room-labeled.svg
   assets/network-room.png
+  assets/scenario-interface-flapping-v1.svg
+  assets/scenario-interface-flapping-v2.svg
   assets/visual-cable-manager.svg
   assets/visual-equipment-cabinet.svg
   assets/visual-equipment-rack.svg
@@ -97,20 +115,45 @@ Network-Engineering-English-Dictionary/
   chapters/part-01/chapter-01-network-rooms-and-facilities/03-power.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/04-cooling.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/README.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/access-control-reader.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/air-intake.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/airflow.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/backbone-cabling.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/blanking-panel.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/bonding-conductor.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/brush-panel.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-ladder.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-manager.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-rack.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-slack.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-tie.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cable-tray.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/camera-coverage.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cold-aisle.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/conduit.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/cross-connect.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/data-center.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/entrance-facility.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/environmental-sensor.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-cabinet.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-rack.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/equipment-room.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/exhaust-vent.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/fiber-enclosure.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/fire-suppression-system.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/firestop.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/floor-penetration.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/grounding-busbar.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/hook-and-loop-tie.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/horizontal-cabling.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/hot-aisle.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/humidity-sensor.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/idf.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/inspection-checklist.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/locate-equipment.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/mdf.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/meet-me-room.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/network-closet.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/network-switch.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/patch-cord.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/patch-panel.md
@@ -119,71 +162,164 @@ Network-Engineering-English-Dictionary/
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/power-cord.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/power-outlet.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/power-supply-module.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-depth.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-door.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-elevation.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-label.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-load.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-location.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-rail.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-shelf.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/rack-unit.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/raised-floor.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/request-room-access.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/riser.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/room-air-conditioner.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/server-room.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/side-panel.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/smoke-detector.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/splice-tray.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/switch-port.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/telecommunications-room.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/temperature-sensor.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/trace-cable.md
   chapters/part-01/chapter-01-network-rooms-and-facilities/entries/ups.md
+  chapters/part-01/chapter-01-network-rooms-and-facilities/entries/water-leak-detector.md
   chapters/part-01/chapter-02-cabling-and-connectors/01-copper.md
   chapters/part-01/chapter-02-cabling-and-connectors/02-fiber.md
   chapters/part-01/chapter-02-cabling-and-connectors/README.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/attenuator.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/bend-radius.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/braided-shield.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-boot.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-category.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-certification.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-jacket.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-label.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-strain-relief.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/cable-termination.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/connector-end-face.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/connector-latch.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/copper-conductor.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/crossover-cable.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/duplex-fiber.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/dust-cap.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/ethernet-cable.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-adapter.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-buffer.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-cladding.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-connector-ferrule.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-core.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-optic-cable.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-patch-cord.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-pigtail.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-polarity-test.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-splice.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fiber-strand.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/foil-shield.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/fusion-splice.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/insertion-loss.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/insulation.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/keystone-jack.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/lc-connector.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/light-source.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/link-budget.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/link-loss.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/mechanical-splice.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/modular-jack.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/modular-plug.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/multimode-fiber.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/optical-power-meter.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/optical-power.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/optical-transceiver.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/otdr.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/pair-color.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/patch-cable-length.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/polarity.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/return-loss.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/rj45.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/sc-connector.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/sfp.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/shield.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/shielded-twisted-pair.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/simplex-fiber.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/single-mode-fiber.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/solid-conductor.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/straight-through-cable.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/stranded-conductor.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/t568a.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/t568b.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/termination-scheme.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/twisted-pair-cable.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/twisted-pair.md
   chapters/part-01/chapter-02-cabling-and-connectors/entries/unshielded-twisted-pair.md
+  chapters/part-01/chapter-02-cabling-and-connectors/entries/wall-plate.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/01-devices.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/02-interfaces.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/README.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/ac-power-supply.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/access-switch.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/administratively-down.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/administratively-up.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/auto-negotiation.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/chassis.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/console-port.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/control-plane.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/core-switch.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/data-interface.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/data-plane.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/dc-power-supply.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/downlink-port.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/duplex-mismatch.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/duplex-mode.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/ethernet-port.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/fabric-module.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/fan-module.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/fan-tray.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/firewall-appliance.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/fixed-configuration-switch.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/forwarding-table.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/hot-swappable.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/input-errors.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-counter.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-name.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-reset.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-speed.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/interface-status.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/line-card.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-down.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-flap.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-led.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-negotiation.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/link-up.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/logical-interface.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/loopback-interface.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/management-interface.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/management-port.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/modular-chassis.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/network-interface-card.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/network-interface.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/operational-state.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/output-errors.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/physical-interface.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/port-capability.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/port-description.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/port-number-hardware.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/port-speed.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/power-input.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/power-supply-status.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/power-supply-unit.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/routed-port.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/router.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/sfp-port.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/speed-mismatch.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/status-led.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/subinterface.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/supervisor-module.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/switching-fabric.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/transceiver-module.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/uplink-port.md
+  chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/vlan-interface.md
   chapters/part-01/chapter-03-network-hardware-and-interfaces/entries/wireless-access-point.md
   chapters/part-01/chapter-04-site-surveys-and-installation/01-site-survey.md
   chapters/part-01/chapter-04-site-surveys-and-installation/02-installation.md
@@ -249,11 +385,36 @@ Network-Engineering-English-Dictionary/
   chapters/part-02/chapter-06-ethernet-and-switching/entries/destination-mac-address.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/ethernet.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/frame-forwarding.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-exclude-mode.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-general-query.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-group-specific-query.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-include-mode.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-leave.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-membership-report.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-querier.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-snooping-table.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-snooping.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp-source-filter.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmp.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmpv2.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/igmpv3.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/ipv4-multicast-address.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/lacp.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-address-aging.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-address-table.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-address.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/mac-learning.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-address-mapping.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-flooding.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-group-aging.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-group.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-mac-address.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-mac-aliasing.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-membership.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-receiver.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-replication.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-router-port.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast-source.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/multicast.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/native-vlan.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/port-channel.md
@@ -264,6 +425,7 @@ Network-Engineering-English-Dictionary/
   chapters/part-02/chapter-06-ethernet-and-switching/entries/switchport.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/trunk-port.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/unicast.md
+  chapters/part-02/chapter-06-ethernet-and-switching/entries/unknown-multicast.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/unknown-unicast.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/vlan-tag.md
   chapters/part-02/chapter-06-ethernet-and-switching/entries/vlan.md
@@ -329,6 +491,7 @@ Network-Engineering-English-Dictionary/
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/02-prefix.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/README.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/administrative-distance.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/any-source-multicast.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/black-hole-route.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/default-route.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/destination-prefix.md
@@ -337,10 +500,23 @@ Network-Engineering-English-Dictionary/
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/equal-cost-multipath.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/forwarding.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/longest-prefix-match.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/multicast-boundary.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/multicast-distribution-tree.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/multicast-routing.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/multicast-ttl.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/next-hop.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/outgoing-interface-list.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/outgoing-interface.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/pim-hello.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/pim-join.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/pim-neighbor.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/pim-prune.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/pim-sparse-mode.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/pim.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/recursive-route-lookup.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/rendezvous-point.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/return-path.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/reverse-path-forwarding.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route-convergence.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route-metric.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/route-preference.md
@@ -351,6 +527,13 @@ Network-Engineering-English-Dictionary/
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-protocol.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing-table.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/routing.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/rp-mapping.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/rpf-interface.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/s-g-state.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/shared-tree.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/source-specific-multicast.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/source-tree.md
+  chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/star-g-state.md
   chapters/part-03/chapter-09-routing-fundamentals-and-static-routes/entries/static-route.md
   chapters/part-03/chapter-10-ospf-and-is-is/01-neighbors.md
   chapters/part-03/chapter-10-ospf-and-is-is/02-calculation.md
@@ -363,10 +546,14 @@ Network-Engineering-English-Dictionary/
   chapters/part-03/chapter-10-ospf-and-is-is/entries/designated-router.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/hello-interval.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/hello-packet.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-csnp.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-dis.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-level-1.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-level-2.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-lsp.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-net.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-psnp.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/isis-system-id.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/isis.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/link-state-database.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/link-state-protocol.md
@@ -376,8 +563,21 @@ Network-Engineering-English-Dictionary/
   chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-area.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-backbone-area.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-cost.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-exchange-state.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-exstart-state.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-external-type-one.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-external-type-two.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-full-state.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-link-state-database.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-loading-state.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-neighbor-state.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-neighbor.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-network-lsa.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-nssa.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-router-id.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-router-lsa.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-stub-area.md
+  chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf-two-way-state.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/ospf.md
   chapters/part-03/chapter-10-ospf-and-is-is/entries/shortest-path-first.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/01-peering.md
@@ -386,16 +586,31 @@ Network-Engineering-English-Dictionary/
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/as-path.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/asn.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/autonomous-system.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-address-family.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-adj-rib-in.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-adj-rib-out.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-advertisement.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-as-path-prepending.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-best-path.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-cluster-id.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-community-attribute.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-community.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-established.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-keepalive-message.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-loc-rib.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-next-hop.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-no-export-community.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-notification-message.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-open-message.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-origin-attribute.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-originator-id.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-path-attribute.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-peer.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-policy.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-prefix.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-route-flap.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-route-reflector-client.md
+  chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-route-refresh.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-session.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-update.md
   chapters/part-03/chapter-11-bgp-and-routing-policy/entries/bgp-withdrawal.md
@@ -681,6 +896,7 @@ Network-Engineering-English-Dictionary/
   chapters/part-06/chapter-21-monitoring-logs-and-telemetry/entries/timestamp.md
   chapters/part-06/chapter-22-troubleshooting-methods-and-tools/01-method.md
   chapters/part-06/chapter-22-troubleshooting-methods-and-tools/02-tools.md
+  chapters/part-06/chapter-22-troubleshooting-methods-and-tools/03-interface-flapping.md
   chapters/part-06/chapter-22-troubleshooting-methods-and-tools/README.md
   chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/contributing-factor.md
   chapters/part-06/chapter-22-troubleshooting-methods-and-tools/entries/dns-lookup.md
@@ -873,24 +1089,40 @@ Network-Engineering-English-Dictionary/
   chapters/part-08/chapter-29-meetings-and-clarification/README.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/are-we-agreed.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/by-when.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/can-we-agree-on.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/can-we-review.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/can-we-take-this-offline.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/can-you-define.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/can-you-distinguish.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/could-we-revisit.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-clarify.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-confirm.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-elaborate.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-give-an-example.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-point-out.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-repeat.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/could-you-walk-us-through.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/did-i-miss-anything.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/how-will-we-measure.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/i-am-not-sure.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/i-have-a-question-about.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/if-i-understand-correctly.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/is-that-correct.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/is-there-a-deadline.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/let-me-check-my-understanding.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/lets-separate.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/lets-verify.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/please-correct-me.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/the-next-step-is.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/there-is-an-open-question.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/to-summarize.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/what-are-the-dependencies.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/what-are-we-deciding.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/what-do-you-mean-by.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/what-evidence-supports.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/what-happens-if.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/what-is-the-current-state.md
+  chapters/part-08/chapter-29-meetings-and-clarification/entries/what-is-the-desired-outcome.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/what-is-the-impact.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/what-is-the-scope.md
   chapters/part-08/chapter-29-meetings-and-clarification/entries/which-option.md
@@ -901,26 +1133,42 @@ Network-Engineering-English-Dictionary/
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/according-to-the-logs.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/action-required.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/could-you-share.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/for-awareness.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/for-your-reference.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/no-action-required.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/no-confirmed-cause.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/no-further-errors.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-acknowledge.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-confirm.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-find-attached.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-provide.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/please-review.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/service-is-degraded.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/subject-to-approval.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/thank-you-for-your-patience.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-affected-service.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-alert-cleared.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-change-was-completed.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-following-action.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-impact-is.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-issue-affects.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-issue-remains.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-issue-started.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-next-step.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-service-is-down.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-tests-show.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/the-validation-passed.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/validation-is-in-progress.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-are-investigating.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-are-monitoring.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-are-waiting-for.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-confirmed.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-escalated.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-not-yet-confirmed.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-have-restored.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-observed-between.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-suspect.md
+  chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-will-share-results.md
   chapters/part-08/chapter-30-tickets-email-and-status-updates/entries/we-will-update.md
   chapters/part-08/chapter-31-vendors-customers-and-service-commitments/01-provider.md
   chapters/part-08/chapter-31-vendors-customers-and-service-commitments/02-commitments.md
@@ -977,8 +1225,12 @@ Network-Engineering-English-Dictionary/
   chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/we-ruled-out.md
   chapters/part-08/chapter-32-explaining-designs-and-technical-decisions/entries/we-selected.md
   indexes/ENGLISH-INDEX.md
+  preview/network-room.html
+  reader/data.js
+  reader/index.html
   templates/EXPRESSION-ENTRY.md
   templates/PHYSICAL-ENTRY.md
   templates/README.md
   templates/TECHNICAL-ENTRY.md
+  tools/build_reader_data.py
 ```

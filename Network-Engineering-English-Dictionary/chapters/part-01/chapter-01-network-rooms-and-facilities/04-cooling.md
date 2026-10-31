@@ -4,11 +4,11 @@
 
 [Chapter](README.md) · [Picture guide](README.md#visual-pages) · [English index](../../../indexes/ENGLISH-INDEX.md)
 
-Follow the air through this simplified rack. Blue arrows show intake air; orange arrows show exhaust air.
+Look at the equipment cabinet from the cold-aisle side. The blue arrows illustrate one possible path for cool supply air.
 
-![04 · Cooling and airflow: numbered illustration; names and definitions follow.](../../../assets/chapter01-cooling-numbered.svg)
+![A photorealistic illustrative cold aisle, showing a cabinet, equipment ventilation, a perforated door and a perforated floor tile. Numbered leaders identify five visible features.](../../../assets/chapter01-cooling-realistic-numbered-v1.svg)
 
-*The picture is illustrative; equipment and layouts vary by site.*
+*AI-generated illustrative scene. Blue arrows show an example airflow path, not a measurement. Equipment airflow and room layouts vary.*
 
 ## Picture words
 
@@ -16,20 +16,25 @@ Follow the air through this simplified rack. Blue arrows show intake air; orange
 | --- | --- | --- |
 | 1 | [cold aisle](entries/cold-aisle.md) | An aisle supplying cool air to equipment intakes. |
 | 2 | [air intake](entries/air-intake.md) | An opening through which air enters equipment. |
-| 3 | [exhaust vent](entries/exhaust-vent.md) | An opening through which air leaves equipment. |
-| 4 | [hot aisle](entries/hot-aisle.md) | An aisle receiving warm exhaust air. |
-| 5 | [perforated floor tile](entries/perforated-floor-tile.md) | A floor tile with openings that let air pass through. |
-| 6 | [raised floor](entries/raised-floor.md) | A floor with a space beneath the walking surface. |
+| 3 | [perforated floor tile](entries/perforated-floor-tile.md) | A floor tile with openings that let air pass through. |
+| 4 | [rack door](entries/rack-door.md) | A door on an equipment cabinet; this one is perforated to allow airflow. |
+| 5 | [equipment cabinet](entries/equipment-cabinet.md) | An enclosure that holds rack-mounted equipment. |
 
 ## Examples and usage
 
-> Cool air enters through the air intake.
+> Cool supply air enters the cold aisle through the perforated floor tile.
 
-> Warm air leaves through the exhaust vent.
+> Check the temperature near the equipment air intake.
 
-> Keep the airflow path clear.
+> Keep the front of the cabinet clear so that air can reach the equipment.
 
-> Check the temperature near the equipment intake.
+> Verify the airflow direction in the equipment documentation.
+
+## Beyond the picture
+
+The cabinet rear and the **[hot aisle](entries/hot-aisle.md)** are not visible here. In a front-to-back cooling arrangement, warm air leaves the equipment through an **[exhaust vent](entries/exhaust-vent.md)** on the rear side.
+
+A **[raised floor](entries/raised-floor.md)** may provide space below floor panels for conditioned supply air; this space is not visible in the picture. Not all rooms use raised floors or hot and cold aisles.
 
 ## Cooling terms
 
@@ -43,4 +48,4 @@ Follow the air through this simplified rack. Blue arrows show intake air; orange
 
 > The room air conditioner is operating normally.
 
-**Usage note:** This image shows one simplified arrangement. Actual device intake and exhaust directions vary by model; not all rooms use a raised floor or hot/cold aisles.
+**Usage note:** This scene illustrates one possible arrangement. Intake and exhaust direction depends on the equipment model and its installation; verify the manufacturer's airflow specifications.

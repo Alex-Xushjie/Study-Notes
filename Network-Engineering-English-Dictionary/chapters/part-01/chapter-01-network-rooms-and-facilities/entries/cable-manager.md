@@ -11,13 +11,9 @@ updated: "2026-10-30"
 
 # cable manager
 
-**Countable noun.** · Chapter 01 · `physical`
+**Physical term** · Chapter 01
 
 [Chapter](../README.md) · [English index](../../../../indexes/ENGLISH-INDEX.md)
-
-![Illustrated detail: cable manager.](../../../../assets/visual-cable-manager.svg)
-
-*A guide that keeps cables organized. This is an illustrative detail; actual equipment varies.*
 
 ## Definition
 
@@ -25,11 +21,11 @@ A device or assembly that guides and organizes cables near equipment or patch pa
 
 ## Usage and distinctions
 
-Cable managers can be horizontal or vertical. Good cable management also preserves appropriate bend radius, labels, and access.
+A horizontal cable manager is generally mounted across a rack; a vertical cable manager runs along its side. Follow the cable and equipment manufacturers' requirements for bend radius, support, and service slack.
 
 ## Common combinations
 
-horizontal cable manager; vertical cable manager; route cables through
+horizontal cable manager; vertical cable manager; route cables through a cable manager
 
 ## Examples
 
@@ -43,4 +39,4 @@ horizontal cable manager; vertical cable manager; route cables through
 
 ## Sources and review
 
-No dedicated reference has yet been added for this entry. Original learning text; draft awaiting independent technical and language review.
+Original teaching text. Confirm product-specific cable routing and clearance in the applicable manufacturer documentation. Technical and independent English-language review are pending.

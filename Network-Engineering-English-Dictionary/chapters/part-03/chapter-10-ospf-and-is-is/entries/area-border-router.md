@@ -3,7 +3,7 @@ id: "NEED-TEC-area-border-router"
 headword: "area border router"
 type: "technical"
 chapter: "10"
-aliases: []
+aliases: ["OSPF area border router"]
 tags: ["link-state routing"]
 status: "draft"
 updated: "2026-10-30"

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inside a Network Room · Visual Dictionary</title>
+  <style>
+    :root { color-scheme: light; --ink:#162d39; --muted:#576d74; --blue:#09748b; --pale:#e6f3f2; --rule:#d6e2df; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:#e9efed; font-family:Arial,Helvetica,sans-serif; line-height:1.5; }
+    .book { max-width:1220px; margin:28px auto; background:white; box-shadow:0 9px 36px #123d4220; }
+    .topline { height:8px; background:var(--blue); }
+    .page { padding:clamp(24px,4.6vw,66px); }
+    .eyebrow { display:flex; justify-content:space-between; align-items:center; gap:16px; margin:0 0 18px; color:var(--blue); font-size:.74rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    h1,h2,p { margin:0; }
+    h1 { font-size:clamp(2.35rem,5vw,4.65rem); line-height:1.04; letter-spacing:-.045em; max-width:14ch; }
+    .intro { color:var(--muted); font-size:clamp(1rem,1.4vw,1.16rem); max-width:68ch; margin-top:16px; }
+    .picture { margin:28px 0 0; }
+    .picture img { display:block; width:100%; height:auto; border-radius:3px; background:#f8faf9; }
+    .picture figcaption { margin-top:8px; color:#728389; font-size:.76rem; }
+    .section-heading { display:flex; align-items:center; gap:15px; margin:32px 0 18px; }
+    .section-heading h2 { font-size:1.22rem; letter-spacing:-.015em; white-space:nowrap; }
+    .section-heading:after { content:""; height:1px; flex:1; background:var(--rule); }
+    .words { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); column-gap:28px; row-gap:14px; }
+    .word { display:grid; grid-template-columns:32px 1fr; gap:11px; align-items:start; padding:13px 0; border-top:1px solid var(--rule); }
+    .number { width:28px; height:28px; display:grid; place-items:center; border-radius:50%; color:#fff; background:var(--blue); font-weight:700; font-size:.88rem; }
+    .word strong { display:block; font-size:1.05rem; line-height:1.25; }
+    .word p { color:var(--muted); font-size:.9rem; margin-top:5px; }
+    .word details { margin-top:7px; }
+    .word summary { cursor:pointer; color:var(--blue); font-size:.82rem; font-weight:700; }
+    .word details p { border-left:2px solid #a9cfcc; padding-left:10px; }
+    .use { margin-top:38px; padding:25px 28px; background:var(--pale); border-left:5px solid var(--blue); }
+    .use h2 { color:#075f72; font-size:1rem; letter-spacing:.02em; }
+    .phrases { display:grid; grid-template-columns:1fr 1fr; gap:14px 30px; margin-top:15px; }
+    .phrases p { font-size:.98rem; }
+    .phrases strong { color:#075f72; }
+    .footer { display:flex; justify-content:space-between; gap:12px; margin-top:32px; padding-top:15px; border-top:1px solid var(--rule); color:#728389; font-size:.75rem; }
+    @media (max-width:760px) { .book { margin:0; } .words { grid-template-columns:repeat(2,minmax(0,1fr)); } .page { padding:28px 22px; } }
+    @media (max-width:460px) { .words,.phrases { grid-template-columns:1fr; } .word { padding:10px 0; } .use { padding:20px; } }
+    @media print { body { background:white; } .book { margin:0; box-shadow:none; } .page { padding:12mm; } .word,.use { break-inside:avoid; } }
+  </style>
+</head>
+<body>
+<main class="book">
+  <div class="topline"></div>
+  <article class="page">
+    <div class="eyebrow"><span>Network Engineering English</span><span>01 / Rooms &amp; Facilities</span></div>
+    <h1>Inside a network room</h1>
+    <p class="intro">A telecommunications room brings equipment, cabling and power together. Look at the picture, then match each number with its name below.</p>
+    <figure class="picture">
+      <img src="../assets/chapter01-room-numbered.svg" alt="Numbered illustration of an equipment rack, cabinet, cable tray, UPS, patch panel and network switch.">
+      <figcaption>Illustrative scene. Equipment and room layouts vary from site to site.</figcaption>
+    </figure>
+    <div class="section-heading"><h2>Picture words</h2></div>
+    <div class="words">
+      <div class="word"><span class="number">1</span><div><strong>equipment rack</strong><p>A frame for mounting network equipment.</p><details><summary>Learn more</summary><p>A rack provides mounting positions; a cabinet adds an enclosure.</p></details></div></div>
+      <div class="word"><span class="number">2</span><div><strong>equipment cabinet</strong><p>An enclosure that houses equipment.</p><details><summary>Learn more</summary><p>Cabinets commonly have doors, side panels and mounting rails.</p></details></div></div>
+      <div class="word"><span class="number">3</span><div><strong>cable tray</strong><p>A structure that supports cables along a route.</p><details><summary>Learn more</summary><p>Overhead trays carry cable bundles between room locations.</p></details></div></div>
+      <div class="word"><span class="number">4</span><div><strong>uninterruptible power supply</strong><p>A system that provides power during an interruption.</p><details><summary>Learn more</summary><p>Abbreviation: UPS. Runtime depends on the load and stored energy.</p></details></div></div>
+      <div class="word"><span class="number">5</span><div><strong>patch panel</strong><p>A panel of organized cable connection points.</p><details><summary>Learn more</summary><p>A patch panel is passive; it does not switch Ethernet frames.</p></details></div></div>
+      <div class="word"><span class="number">6</span><div><strong>network switch</strong><p>A device that connects ports and forwards traffic.</p><details><summary>Learn more</summary><p>The switch can connect to cable terminations through patch cords.</p></details></div></div>
+    </div>
+    <section class="use" aria-labelledby="at-work">
+      <h2 id="at-work">SAY IT AT WORK</h2>
+      <div class="phrases">
+        <p>“The switch is mounted below the <strong>patch panel</strong>.”</p>
+        <p>“The cables run along the overhead <strong>cable tray</strong>.”</p>
+        <p>“Could you confirm the <strong>rack</strong> and U position?”</p>
+        <p>“The <strong>UPS</strong> supplies power during an interruption.”</p>
+      </div>
+    </section>
+    <footer class="footer"><span>NETWORK ROOMS &amp; FACILITIES</span><span>VISUAL DICTIONARY · SAMPLE 01</span></footer>
+  </article>
+</main>
+</body>
+</html>

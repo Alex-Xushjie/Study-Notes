@@ -4,16 +4,18 @@
 
 [Chapter](README.md)
 
-*Illustration to be developed after the visual approach is agreed.*
+![Two OSPF routers exchange Hello packets and synchronize their databases over a point-to-point link.](../../../assets/chapter10-ospf-neighbors-v1.svg)
 
-## Key terms
+*Simplified OSPFv2 example; real network behavior depends on topology and configuration.*
 
-| Word | Meaning |
-| --- | --- |
-| [OSPF router](entries/ospf.md) | A router participating in OSPF. |
-| [OSPF hello packet](entries/hello-packet.md) | A message used to discover and maintain neighbors. |
-| [OSPF neighbor](entries/ospf-neighbor.md) | A router discovered through hello exchanges. |
-| [OSPF adjacency](entries/ospf-adjacency.md) | A relationship used to synchronize link-state information. |
+## Picture words
+
+| No. | Word | Meaning |
+| --- | --- | --- |
+| 1 | [OSPF router](entries/ospf.md) | A router participating in OSPF. |
+| 2 | [OSPF hello packet](entries/hello-packet.md) | A message used to discover and maintain neighbors. |
+| 3 | [OSPF neighbor](entries/ospf-neighbor.md) | A router discovered through hello exchanges. |
+| 4 | [OSPF adjacency](entries/ospf-adjacency.md) | A relationship used to synchronize link-state information. |
 
 ## Examples and usage
 
@@ -28,3 +30,8 @@
 ## More words
 
 [OSPF area](entries/ospf-area.md) · [OSPF backbone area](entries/ospf-backbone-area.md) · [area border router](entries/area-border-router.md) · [OSPF hello interval](entries/hello-interval.md) · [OSPF dead interval](entries/dead-interval.md) · [OSPF designated router](entries/designated-router.md) · [OSPF backup designated router](entries/backup-designated-router.md)
+
+
+## Follow the example
+
+On a point-to-point link the routers exchange Hellos, discover each other and, when conditions permit, synchronize their databases. Full indicates the adjacency has synchronized; it does not by itself prove that all desired routes are installed or reachable.
