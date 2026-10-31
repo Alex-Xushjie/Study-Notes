@@ -32,7 +32,7 @@
 
 - [Python 基础](../../NetDevOps/Python_Basic/Python_Basic.md)：查语法与模板。
 - [AIDC 实验](../../AIDC/lab.md)：已有 RDMA 环境记录，按实际版本复核。
-- [组播实验手册](../../Network-Engineering-Notes/02-Multicast/14-Lab-Manual/Lab-Manual.md)：T1 指定实验。
+- [组播实验手册](../../Network-Engineering-Notes/_Archive/Legacy/02-Multicast/14-Lab-Manual/Lab-Manual.md)：T1 指定实验。
 - [交易网络 10 天冲刺](../../Quant%20Trading/00-Crash-Course-Plan.md)：W24 后或临近相关面试时使用，不替代本学习顺序。
 - [PTP](../../Quant%20Trading/02-Tier-2/03-PTP.md)：时间同步补充。
 - [交易网络白板题](../../Quant%20Trading/90-Interview-Drills/03-Whiteboard-Cases.md)：综合练习。

@@ -2,7 +2,7 @@
 
 ## T1 从组播链路到业务序号
 
-使用已有 [组播实验手册](../../Network-Engineering-Notes/02-Multicast/14-Lab-Manual/Lab-Manual.md)。本阶段只选择 IGMP/snooping、PIM/RPF、抓包相关实验，限制在本周 5h 实验与排错预算内。
+使用已有 [组播实验手册](../../Network-Engineering-Notes/_Archive/Legacy/02-Multicast/14-Lab-Manual/Lab-Manual.md)。本阶段只选择 IGMP/snooping、PIM/RPF、抓包相关实验，限制在本周 5h 实验与排错预算内。
 
 先单 feed：source→L2/路由网络→receiver，确认组成员、mrouter port、组播路由、RPF 和接收接口。再建第二条独立 feed，记录二者是否共享 source、交换机、上联、电源和接收主机。
 

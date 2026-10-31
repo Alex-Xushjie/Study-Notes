@@ -5,3 +5,5 @@ If you have any questions, feel free to contact me. Additionally, if anyone has 
 Email address: alexshengchieh@gmail.com
 
 Learning project: [Network Career Lab — 24 周网络工程师进阶学习路径](Network-Career-Lab/README.md)
+
+中文进阶笔记：[网络工程师进阶知识体系](Network-Engineering-Notes/README.md)
