@@ -212,6 +212,6 @@ lladdr表示link-layer address，也就是这里的链路层MAC。该行说明�
 5. route get成功是否证明已访问目标？答案：没有发包，只是查找结果。
 6. lo为什么不需要接交换机？答案：它是本机回环接口。
 
-先把实际主机的“接口名→IP→直连路由→网关→出口”讲顺，再读[策略路由与VRF进阶](02-Policy-Routing-and-VRF.md)。进阶篇保留多网卡、查表规则与VRF案例，不作为第一遍入门要求。
+先把实际主机的“接口名→IP→直连路由→网关→出口”讲顺，再读[Namespace与虚拟网络](../03-Namespaces-and-Virtual-Networking/01-Namespaces-and-Virtual-Networking.md)。[策略路由与VRF进阶](02-Policy-Routing-and-VRF.md)可第二轮阅读；配置如何重启保留见[持久化配置](03-Persistent-Network-Configuration.md)。
 
 本次为文档讲解与示例核对，未在Linux平台执行这些命令。正式实验的注入、恢复与证据要求在配套实验手册完成。

@@ -2,45 +2,61 @@
 
 [返回笔记总目录](../Contents.md)
 
-## 从哪里开始
+## 学习起点与范围
 
-本部分的学习起点是：你已有路由交换知识，但刚开始使用Linux。网络原理按需要关联，Linux组件、工具、命令与输出从第一次接触讲起。
+你已有路由交换知识，但Linux从第一次接触开始。先认识系统组件、工具与命令，再读主机数据路径，最后进入硬件与性能。新术语首次出现先解释职责，命令先拆参数再读输出。
 
-按下面顺序阅读，先不跳到性能调优：
+本部分10个专题、15篇正文已形成完整初版，另有本学习导航。完成的是文档内容，不代表你已完成实验或取得生产经验。Linux安装部署、全面系统管理、内核/驱动开发与生产级数据面编程不在本部分范围。
 
-1. [Linux入门：先认识系统，再学习网络命令](01-Linux-Essentials/01-Linux-Essentials.md)。认识发行版、内核、终端、Shell、进程、服务、权限、文件和命令执行环境。
-2. [网卡、地址与普通路由](02-Interfaces-Routing-and-VRF/01-Interfaces-and-Routing.md)。解释接口名、ip工具和输出字段，用一块网卡的场景串起地址、网关和路由。
-3. [策略路由与VRF进阶](02-Interfaces-Routing-and-VRF/02-Policy-Routing-and-VRF.md)。能够读懂基础输出后，再进入多网卡、不同路由表与虚拟路由域。
+## 全部专题与文章
 
-## 后续专题与状态
+| 专题 | 文章与阅读重点 |
+|---|---|
+| 01 Linux入门 | [01 系统组件与命令入门](01-Linux-Essentials/01-Linux-Essentials.md)；[02 进程、服务、软件包与配置](01-Linux-Essentials/02-Processes-Services-and-Packages.md) |
+| 02 接口、路由与VRF | [01 网卡、地址与普通路由](02-Interfaces-Routing-and-VRF/01-Interfaces-and-Routing.md)；[02 策略路由与VRF进阶](02-Interfaces-Routing-and-VRF/02-Policy-Routing-and-VRF.md)；[03 持久化配置](02-Interfaces-Routing-and-VRF/03-Persistent-Network-Configuration.md) |
+| 03 虚拟网络 | [01 Namespace、veth与Bridge](03-Namespaces-and-Virtual-Networking/01-Namespaces-and-Virtual-Networking.md)；[02 VLAN与bond](03-Namespaces-and-Virtual-Networking/02-VLAN-and-Bonding.md) |
+| 04 过滤、状态与NAT | [01 Netfilter、nftables、conntrack与NAT](04-Netfilter-Conntrack-and-NAT/01-Netfilter-Conntrack-and-NAT.md) |
+| 05 应用收发与协议 | [01 Socket、TCP/UDP与缓冲](05-TCP-UDP-and-Sockets/01-TCP-UDP-and-Sockets.md) |
+| 06 观测与排错工具 | [01 抓包、DNS、请求、计数和日志](06-Network-Observation-Tools/01-Network-Observation-Tools.md) |
+| 07 网卡与报文处理 | [01 队列、IRQ、SoftIRQ、NAPI与RSS](07-NIC-Queues-and-Packet-Processing/01-NIC-Queues-and-Packet-Processing.md) |
+| 08 硬件分工与位置 | [01 Offload、CPU、NUMA与PCIe](08-Offload-CPU-NUMA-and-PCIe/01-Offload-CPU-NUMA-and-PCIe.md) |
+| 09 性能分析 | [01 基线、iperf3、吞吐与尾延迟](09-Performance-Analysis/01-Performance-Analysis.md)；[02 六个综合排错案例](09-Performance-Analysis/02-End-to-End-Troubleshooting-Cases.md) |
+| 10 专项处理路径 | [01 SR-IOV、eBPF/XDP、AF_XDP与DPDK](10-SRIOV-XDP-eBPF-and-Kernel-Bypass/01-SRIOV-XDP-eBPF-and-Kernel-Bypass.md) |
 
-| 专题 | 阅读时要解决的问题 | 状态 |
-|---|---|---|
-| [01 Linux入门](01-Linux-Essentials/01-Linux-Essentials.md) | 系统由什么组成，命令在哪里执行、怎样读？ | 已编写 |
-| [02 接口、路由与VRF](02-Interfaces-Routing-and-VRF/01-Interfaces-and-Routing.md) | 怎样先读懂普通主机，再分析多出口？ | 入门与进阶已分开 |
-| [03 Namespace与虚拟网络](03-Namespaces-and-Virtual-Networking/01-Namespaces-and-Virtual-Networking.md) | 一台主机怎样提供多个独立网络环境和虚拟连接？ | 待编写 |
-| [04 Netfilter、Conntrack与NAT](04-Netfilter-Conntrack-and-NAT/01-Netfilter-Conntrack-and-NAT.md) | Linux怎样过滤、记录连接状态和转换地址？ | 待编写 |
-| [05 TCP、UDP与Socket](05-TCP-UDP-and-Sockets/01-TCP-UDP-and-Sockets.md) | 应用怎样收发数据，缓冲和协议怎样影响结果？ | 待编写 |
-| [06 网络观测工具](06-Network-Observation-Tools/01-Network-Observation-Tools.md) | 怎样逐步使用抓包、连接状态、计数和日志？ | 待编写 |
-| [07 NIC队列与报文处理](07-NIC-Queues-and-Packet-Processing/01-NIC-Queues-and-Packet-Processing.md) | 网卡接收后，系统怎样安排处理工作？ | 待编写 |
-| [08 Offload、CPU、NUMA与PCIe](08-Offload-CPU-NUMA-and-PCIe/01-Offload-CPU-NUMA-and-PCIe.md) | 硬件分工、处理器和内存位置怎样影响网络？ | 待编写 |
-| [09 性能分析](09-Performance-Analysis/01-Performance-Analysis.md) | 怎样区分网络、主机和应用瓶颈？ | 待编写 |
-| [10 SR-IOV、XDP/eBPF与内核旁路](10-SRIOV-XDP-eBPF-and-Kernel-Bypass/01-SRIOV-XDP-eBPF-and-Kernel-Bypass.md) | 特殊加速和处理路径解决什么问题？ | 待编写 |
+所有目录分别从01编号，正文在各自专题目录内从01重起。导航使用主题名称，不参与正文编号。
 
-这些名称用于标识后续范围，不要求你在入门前认识全部术语。每个专题正式编写时先介绍所需组件与职责，再进入流程和故障。
+## 建议的三轮学习
 
-## 后续正文的写法
+第一轮：01入门两篇→02普通网卡/路由→03虚拟网络→04过滤/NAT→05 socket→06工具。先能画出“应用、socket、内核、接口、路由、下一跳”的关系，完成最小可达性排错。
 
-- 新的Linux概念首次出现时，说明它是什么、承担什么职责、与已知网络概念有什么联系。
-- 命令先拆成工具、选项、对象、动作和参数，再逐字段读示例输出。
-- 先用单网卡与普通路由建立理解，再增加多网卡、隔离和性能复杂度。
-- 示例接口名与地址明确标注为示例，说明如何替换为实际值。
-- 用自己的输出回答一个问题，再进入下一层；不以复制执行一串命令代表理解。
+第二轮：回读02策略/VRF与持久化→07队列处理→08硬件分工→09性能。把多出口、虚拟路径、CPU与统计联系起来，不依照名词数量判断理解程度。
 
-## 实践环境与实验
+第三轮：按实际岗位进入10的机制比较与相应专用实验，结合09综合案例复盘。没有硬件时可以完成认知与设计作业，但硬件操作/性能结果保持未验证。
 
-命令在Linux中执行，不能直接套到Windows PowerShell。尚无Linux环境时，先读[实验环境说明](../../Network-Career-Lab/00-Plan/Lab-Environment.md)。功能学习可以使用专用Linux VM；硬件性能结论需要相应平台和实际测量。
+## 工具准备与使用习惯
 
-本目录讲机制、输出和判断；[Linux实验手册](../../Network-Career-Lab/01-Linux/02-Labs.md)提供搭建、注入与恢复步骤。现有手册不是Linux操作入门，先完成此处基础阅读，再挑相应实验。
+命令在Linux中执行，不直接用于Windows PowerShell。先用cat /etc/os-release确认发行版，再用command -v 工具名确认是否安装；软件包与驱动能力按实际系统核验。不要为读笔记一次性安装或切换全套网络管理组件。
 
-当前仅编写入门铺垫与第一个专题，其他专题仍为空白。文中的命令输出是教学示例，本次没有在Linux平台运行命令或完成实验验收。
+观察类命令优先；修改类示例只用于专用实验VM/明确实验对象。每个命令都记录执行环境、接口、版本、时间和结果；错误可能来自权限、缺工具或硬件不支持，不能统一解释为网络故障。
+
+## 配套实践与验收
+
+先按[实验环境](../../Network-Career-Lab/00-Plan/Lab-Environment.md)准备Linux VM，再完成[已有Linux实验L1–L5](../../Network-Career-Lab/01-Linux/02-Labs.md)。现有手册覆盖路由、应用、过滤、MTU、VLAN/bond和策略路由的部分内容，不覆盖本部分所有硬件与加速专题。
+
+本部分新增的namespace最小示例在正文给出建立、观察与清理；其余练习按各篇条件选择。pcap、配置、计数和日志保存在自己的实验记录中；不用教材模拟值填实测栏。
+
+| 阶段 | 应留下的证据 |
+|---|---|
+| 基础操作 | 发行版/内核/工具版本、服务状态与接口地址 |
+| 功能路径 | 正常、故障、恢复三组路由/监听/抓包与解释 |
+| 虚拟与安全 | 对象关系图、hook路径、规则计数与精确清理 |
+| 性能 | 固定负载、重复测试、两端/每核/队列指标、单变量对比 |
+| 专项 | 能力矩阵、路径与观测边界、硬件未验证项或实测记录 |
+
+任选两个综合案例独立完成“观测→假设→区分→修复→恢复”，再逐步增加难度。原理、操作、排错和表达可以分别评估，不能以文件已生成替代能力通过。
+
+## 资料与验证边界
+
+正文在对应位置链接Linux内核、iproute2手册、nftables、systemd、Netplan、iperf3与DPDK等项目资料。latest文档会更新，实际执行应以安装版本与本机帮助为准。
+
+本次完成正文、目录、编号、链接、示例计算与文档结构核对，没有在Linux平台执行配置、抓包、压测、驱动变更或硬件调优。输出与案例明确区分教学示例、模拟数据和需要自行验证的步骤。

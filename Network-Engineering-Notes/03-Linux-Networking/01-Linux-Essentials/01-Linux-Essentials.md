@@ -1,6 +1,6 @@
 # Linux入门：先认识系统，再学习网络命令
 
-[Linux学习目录](../Linux-Networking.md) · [下一篇：读懂网卡、地址与路由](../02-Interfaces-Routing-and-VRF/01-Interfaces-and-Routing.md)
+[Linux学习目录](../Linux-Networking.md) · [下一篇：进程、服务与软件包](02-Processes-Services-and-Packages.md)
 
 ## 1. 你的起点：懂网络，但刚开始使用Linux
 
@@ -155,4 +155,4 @@ Linux里可能同时存在三样东西：配置文件、负责应用配置的管
 
 参考要点：发行版包含内核与其他组件；终端负责交互呈现，Shell解释命令；SSH会话中的命令在远端执行；ip是工具；sudo按授权切换执行身份；当前状态可能是临时设置或尚未应用配置的结果。
 
-能回答这些问题，就继续[网卡、地址与普通路由](../02-Interfaces-Routing-and-VRF/01-Interfaces-and-Routing.md)。本篇不要求背诵系统目录，也不把后面的VRF、Namespace或性能术语作为入门前提。
+能回答这些问题，先继续[进程、服务与软件包](02-Processes-Services-and-Packages.md)，再读[网卡、地址与普通路由](../02-Interfaces-Routing-and-VRF/01-Interfaces-and-Routing.md)。本篇不要求背诵系统目录，也不把后面的VRF、Namespace或性能术语作为入门前提。
