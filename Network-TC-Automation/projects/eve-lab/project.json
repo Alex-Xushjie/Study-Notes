@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "name": "EVE-NG SSH Lab",
+  "devices": [
+    {
+      "id": "R1",
+      "host": "192.168.153.111",
+      "platform": "cisco_ios",
+      "port": 22,
+      "username": "lab",
+      "group": "EVE-NG"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TC-001",
+      "device_id": "R1",
+      "command": "show version",
+      "source": "library",
+      "expected": ""
+    },
+    {
+      "id": "TC-002",
+      "device_id": "R1",
+      "command": "show ip interface brief",
+      "source": "library",
+      "expected": ""
+    }
+  ]
+}

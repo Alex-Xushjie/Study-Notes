@@ -1,0 +1,3 @@
+# Legacy Cisco IOL lab SSH compatibility
+-r requirements.txt
+paramiko>=4,<5

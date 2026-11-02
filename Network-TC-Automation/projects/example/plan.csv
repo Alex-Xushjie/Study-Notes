@@ -1,0 +1,3 @@
+﻿Test ID,Device ID,Command,Expected
+TC-001,R1,show version,
+TC-002,R1,show ip interface brief,

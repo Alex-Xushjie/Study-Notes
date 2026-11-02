@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+runtime/
+.env
+
+.venv312/
+
+**/evidence/
