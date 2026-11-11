@@ -20,6 +20,9 @@ from storage import project
 from storage.evidence import EvidenceStore, history, review
 from gui.pages import projects, devices, execution, results, evidence, settings
 BASE = Path(__file__).resolve().parents[1]
+if sys.platform == 'darwin' and getattr(sys, 'frozen', False):
+    BASE = Path.home() / 'Library' / 'Application Support' / 'Network-TC-Automation'
+    BASE.mkdir(parents=True, exist_ok=True)
 
 class Worker(QThread):
     item = Signal(object)

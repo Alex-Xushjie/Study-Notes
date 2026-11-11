@@ -1,5 +1,5 @@
 """Windows user-bound DPAPI protection; credentials never saved as plaintext."""
-import base64,ctypes,os
+import base64,ctypes,os,sys,uuid
 from ctypes import wintypes
 class Blob(ctypes.Structure):
     _fields_=[('size',wintypes.DWORD),('data',ctypes.POINTER(ctypes.c_ubyte))]
@@ -15,5 +15,23 @@ def transform(value,decrypt=False):
         data=ctypes.string_at(target.data,target.size)
         return data.decode('utf-8') if decrypt else base64.b64encode(data).decode('ascii')
     finally:ctypes.windll.kernel32.LocalFree(target.data)
-def protect(password):return transform(password)
-def unprotect(value):return transform(value,True)
+def protect(password):
+    if sys.platform == 'darwin':
+        import keyring
+        reference = str(uuid.uuid4())
+        keyring.set_password('Network-TC-Automation', reference, password)
+        return 'mac-keychain:' + reference
+    return transform(password)
+
+def unprotect(value):
+    if value.startswith('mac-keychain:'):
+        if sys.platform != 'darwin':
+            raise ValueError('Re-enter credentials on this computer')
+        import keyring
+        password = keyring.get_password('Network-TC-Automation', value.split(':', 1)[1])
+        if password is None:
+            raise ValueError('Credential not found in macOS Keychain; re-enter password')
+        return password
+    if sys.platform == 'darwin':
+        raise ValueError('Re-enter Windows credentials on macOS')
+    return transform(value, True)

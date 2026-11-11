@@ -35,7 +35,7 @@ class EvidenceStore:
         text=result.output+'\n'+result.error
         text=re.sub(r'\x1b\[[0-?]*[ -/]*[@-~]','',text).expandtabs(4)
         font=None
-        for name in ('C:/Windows/Fonts/consola.ttf','DejaVuSansMono.ttf','C:/Windows/Fonts/msyh.ttc'):
+        for name in ('C:/Windows/Fonts/consola.ttf','/System/Library/Fonts/Menlo.ttc','/System/Library/Fonts/Supplemental/Andale Mono.ttf','DejaVuSansMono.ttf','C:/Windows/Fonts/msyh.ttc'):
             try: font=ImageFont.truetype(name,16); break
             except OSError: pass
         if font is None: font=ImageFont.load_default()
